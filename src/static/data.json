@@ -1,0 +1,20 @@
+{
+    "sections":[
+        {
+            "name":"personal tidbits",
+            "splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1552457427/ryansWebsite/IMG_5740.jpg",
+            "overlay":"rgba(0,255,255, 0.5)",
+            "side":"left"
+        },{
+            "name":"client info",
+            "splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1552524212/StockSnap_C088941D0B.jpg",
+            "overlay":"rgba(240,4,4, 0.4)",
+            "side":"center"
+        },{
+            "name":"projects",
+            "splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1552517899/StockSnap_TJ20HKB9BY.jpg",
+            "overlay":"rgba(0, 0, 0, 0.41)",
+            "side":"right"
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "rbreaux2.0",
+  "version": "1.0.0",
+  "description": "Portfolio Website for Ryan Breaux",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "author": "Ryan Breaux",
+  "license": "ISC",
+  "repository": {
+    "type": "web",
+    "url": ""
+  },
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "next": "^8.0.3",
+    "normalize.css": "^8.0.1",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-pose": "^4.0.8",
+    "styled-components": "^4.1.3"
+  }
+}
