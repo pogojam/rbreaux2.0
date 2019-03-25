@@ -1,0 +1,129 @@
+{
+  "business": {
+    "title": "Startups",
+    "content": [
+      {
+        "title": "Phantrix",
+        "type": "Clothing Company"
+      },
+      {
+        "title": "JackTheHelper",
+        "type": "Student Staffing Company"
+      },
+      {
+        "title": "Black Box Group",
+        "type": "Real Estate Group"
+      }
+    ],
+    "viewImg": "https://res.cloudinary.com/dxjse9tsv/image/upload/v1537298665/Portfolio/Phantrix.jpg"
+  },
+  "personal": {
+    "title": "Personal",
+    "content": ["Health Nut", "Rock Climber", "Life Long Learner", "Mindful"],
+    "viewImg": "https://res.cloudinary.com/dxjse9tsv/image/upload/v1537298666/Portfolio/glen-canyon.jpg",
+    "pageLink": "",
+    "gitLink": ""
+  },
+  "education": {
+    "title": "Education",
+    "content": ["NAU", "Chemisty/Psychology"],
+    "viewImg": "https://res.cloudinary.com/dxjse9tsv/image/upload/e_brightness:-57/v1545683959/autumn-autumn-colours-bright-756903.jpg",
+    "pageLink": "",
+    "gitLink": ""
+  },
+  "skills": [
+    {
+      "name": "react",
+      "img": "https://res.cloudinary.com/dxjse9tsv/image/upload/v1540233824/reactLogo.png",
+      "level": "90"
+    },
+    {
+      "name": "meteor",
+      "img": "https://res.cloudinary.com/dxjse9tsv/image/upload/v1540234749/58480fcfcef1014c0b5e4942.png",
+      "level": "85"
+    },
+    {
+      "name": "firebase",
+      "img": "https://res.cloudinary.com/dxjse9tsv/image/upload/v1540346207/firebaseLogo.png",
+      "level": "20"
+    },
+    {
+      "name": "apollo",
+      "img": "https://res.cloudinary.com/dxjse9tsv/image/upload/v1540234062/apolloLogo.png",
+      "level": "60"
+    },
+    {
+      "name": "graphql",
+      "img": "https://res.cloudinary.com/dxjse9tsv/image/upload/v1540234014/graphql.svg",
+      "level": "60"
+    },
+    {
+      "name": "html",
+      "img": "https://res.cloudinary.com/dxjse9tsv/image/upload/v1540233628/css3-html5-logo.png"
+    },
+    {
+      "name": "css",
+      "img": "https://res.cloudinary.com/dxjse9tsv/image/upload/v1540233588/CSS3_logo_and_wordmark.png"
+    },
+    {
+      "name": "mongoDB",
+      "img": "https://res.cloudinary.com/dxjse9tsv/image/upload/v1540235002/MongoDB.png"
+    },
+    {
+      "name": "node",
+      "img": "https://res.cloudinary.com/dxjse9tsv/image/upload/v1540233489/if_nodejs-512_339733.png",
+      "level": "90"
+    },
+    {
+      "name": "express",
+      "img": "https://res.cloudinary.com/dxjse9tsv/image/upload/v1551337498/expressjs-logo.png.png",
+      "level": "60"
+    }
+  ],
+  "sites": [
+    {
+      "name": "Bellcaptian",
+      "discription": "A tool for distributing cash for Bell and Valet departments. This tool allows employees to log into a dashboard and keep track of all past cash distributions. Managers can input all cash drops and hours worked and the app distributes the cash accordingly using an algorithm and then sends an automated text to all users of their new adjusted cash amount.",
+      "pageLink": "https://bellcaptain.herokuapp.com",
+      "previewImg": "https://res.cloudinary.com/dxjse9tsv/image/upload/v1548393916/screencapture-bellcaptain-herokuapp-Dash-2019-01-24-22_24_37.png",
+      "gitLink": "https://github.com/pogojam/bellcaptain",
+      "imgLink": "https://res.cloudinary.com/dxjse9tsv/image/upload/v1545432169/Screen_Shot_2018-12-21_at_3.40.44_PM.png",
+      "skills": ["react", "node", "meteor", "graphql", "react", "mongoDB"]
+    },
+    {
+      "name": "Slipgen",
+      "previewImg": "https://res.cloudinary.com/dxjse9tsv/image/upload/v1548394165/screencapture-slipgen-herokuapp-2019-01-24-22_26_55.png",
+      "gitLink": "https://github.com/pogojam/SlipGen",
+      "pageLink": "https://slipgen.herokuapp.com",
+      "discription": "Tool used to generate welcome slips for front desk agents. Slipgen excepts an xml document with guests names and generates a printable welcome slips with the companies logo.",
+      "url": "",
+      "skills": ["react", "node"]
+    },
+    {
+      "name": "Thegirlimetathifi",
+      "discription": "",
+      "url": "www.theguyimetathifi.com",
+      "skills": ["react", "node"]
+    },
+    {
+      "name": "CraigslistBot",
+      "discription": "This scrapper is build primarily as a tool to automate the buying and selling of products using craigslist. One can simply enter the name of a product and out comes an average selling price on the market a recommendation on a sell and buy price. CraigScraper will monitor Craigslist for any new entries and send an alert if any items match the recommended buy price.",
+      "url": "",
+      "gitLink": "https://github.com/pogojam/craigScraper",
+      "skills": ["node", "react", "express"]
+    },
+    {
+        "name": "AZButler",
+        "discription": "A single page website for Arizona Butler Services.",
+        "url": "www.azbutler.com",
+        "gitLink": "https://github.com/pogojam/AZButler",
+        "skills": ["node", "react", "express"]
+      },{
+        "name": "FolderImporter",
+        "discription": "Automatically generate imports for new .js files created in your folders",
+        "url": "https://github.com/pogojam/folderImporter",
+        "gitLink": "https://github.com/pogojam/folderImporter",
+        "skills": ["node"]
+      }
+  ]
+}

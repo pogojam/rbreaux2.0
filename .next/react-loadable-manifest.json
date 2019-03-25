@@ -27,6 +27,20 @@
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
+    },
+    {
+      "id": 4,
+      "name": null,
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
+  ],
+  "animate.css": [
+    {
+      "id": "./node_modules/animate.css/animate.css",
+      "name": "./node_modules/animate.css/animate.css",
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
     }
   ],
   "../src/static/app.css": [

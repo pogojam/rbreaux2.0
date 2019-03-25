@@ -1,5 +1,6 @@
 import App from '../src/app'
 import 'normalize.css'
+import 'animate.css'
 import '../src/static/app.css'
 import Head from 'next/head'
 

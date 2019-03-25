@@ -1,11 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component,Fragment } from 'react'
 import styled from 'styled-components'
 import posed from 'react-pose'
-
-//sdd
+import View from '../elements/view/view'
+import anime from 'animejs'
 
 const Container = posed(styled.div`
-
 /* Mobile */
 
 @media (max-width:800px){
@@ -28,6 +27,8 @@ const Container = posed(styled.div`
 
 /* Desktop */
 
+
+
 cursor: pointer;
 background-image:url(${({splashImg})=>splashImg});
 background-size: auto 100%;
@@ -35,29 +36,12 @@ background-repeat: no-repeat;
 
 /* background-attachment: fixed; */
 
+flex-grow:1;
+
 will-change:auto;
-
-transition: all .8s cubic-bezier(0.075, 0.82, 0.165, 1);
+transition: flex-grow .8s cubic-bezier(0.075, 0.82, 0.165, 1);
 overflow:none;
-
-background-position:${({activeSection,side})=>{
-    
-  activeSection === side && 'left !important'}};
-
-
-
-background-position:${({side})=> {switch(side){
-  case 'left':
-  return ''
-  break;
-  case 'center':
-  return 'center'
-  break;
-  case 'right':
-  return 'right'
-  break;
-}}
-};
+position:relative;
 flex-grow:1;
 
 overflow:hidden;
@@ -74,28 +58,39 @@ overflow:hidden;
 &:before{
   content: "";
   display:block;
+  position:absolute;
+  top:0;
+
   width: 100%;
   height: 100%;
   background:${({overlay})=>overlay};
 }
 
-&:after{
-  content:url("https://res.cloudinary.com/dxjse9tsv/image/upload/v1552591999/Personal-active-icon.png");
-  position:absolute;
-  top:0;
-  opacity:0;
-}
+
 
 `)({
   // Animations
+  
   sectionIn:{
     
   },
   exit:{
-    
+
+    staggerChildren: 100,
+    maxWidth:0,
+    transition:{
+      type:'tween',
+      ease:'linear'
+    }
   },
   enter:{
-
+    maxWidth:'100%',
+    opacity:1,
+    x:0,
+    transition:{
+      type:'tween',
+      ease:'linear'
+    }
   }
 })
 
@@ -105,13 +100,13 @@ overflow:hidden;
 const Title = posed(styled.h1`
 
 position: relative;
-top: -21vh;
+    top: 50vh;
 text-align: center;
-color:white;
+color:white;  
 
 
 &:after{
-  transition:all .9s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: min-width .9s cubic-bezier(0.075, 0.82, 0.165, 1);
     content: '';
     position: absolute;
     left: 50%;
@@ -121,17 +116,24 @@ color:white;
     min-width: 0%;
     height: 1px;
 
+  &:before{
+    
   }
+
+  }
+
+
 `)({
   // Animations
 
+
 })
 
+
 const Icon = posed(styled.img`
-
-position: relative;
-top: -100vh;
-
+    position: absolute;
+    right: 0;
+    opacity:${({isActive})=>isActive?1:0};
 `)({
 
 })
@@ -140,16 +142,29 @@ top: -100vh;
 
 
 export default class Section extends Component {
+
+
+componentDidEnter(){
+
+  
+}
+
+
   
   render() {
-      const {name,handleSectionChange,side} = this.props
+      const {name,activeSection,handleSectionChange,side} = this.props
+      const isActive = activeSection === side
 
-      
+
     return (
-      <Container onClick={()=> handleSectionChange(side)} {...this.props} >
+      <Fragment>
+      <Container className='section'  onClick={()=> handleSectionChange(side)}  isActive={isActive} {...this.props}  ref={(e)=> this.container = e }  >
         {/* <Icon src='https://res.cloudinary.com/dxjse9tsv/image/upload/v1552591999/Personal-active-icon.png' /> */}
-      <Title>{name}</Title>
+        <Icon isActive={isActive} src="https://res.cloudinary.com/dxjse9tsv/image/upload/v1552591999/Personal-active-icon.png" />
+      <Title left >{isActive?'Home':name}</Title>
       </Container>
+     <View isActive={isActive} className={'animated fadeIn'} {...this.props} />
+      </Fragment>
     )
   }
 }

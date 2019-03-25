@@ -1,0 +1,459 @@
+import React, { Component } from "react";
+import styled from "styled-components";
+import posed from "react-pose";
+
+
+const Container = posed(styled.div`
+
+flex-direction: row;
+  display: flex;
+  background: #0d000d00;
+
+  @media(max-width:900px) {
+  width: 100%;
+  }
+  height:57vh;
+  width:100%;
+
+  will-change: transform;
+
+  p {
+    
+
+  }
+  h2 {
+    opacity:${({skillsStatus})=> skillsStatus === 'center'? 1 :0};
+    color:${({theme})=>theme.card.text};
+    font-size:1.2em;
+    transition: opacity .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  }
+
+  /* &::before{
+    position:absolute;
+    content:'';
+    min-height:${({ShuffleStatus})=>ShuffleStatus==='shuffleIn'?'50%':'100%'};
+    width:1px;
+    top: 50%;
+    transform: translateY(-50%) skew(20deg);
+    left: 50%;
+    background-color: white;
+  } */
+
+`)({
+// Container Animations
+  shuffleIn: {
+    delay:300,
+    delayChildren:600,
+    y: "0%",
+    opacity: 1
+  },
+  shuffleOut: {
+    delay:300,
+    y: ({index}) => "-" + index * 100 + "%",
+    opacity: 1,
+    transition: {
+      ease: [0.01, 0.64, 0.79, 0.96],
+      duration: 600
+    }
+  }
+})
+
+const SubContainer = posed(styled.div`
+ border-top-left-radius:${({side})=>side==='left'?'82px':'0px'};
+    border-top-right-radius:${({side})=>side==='left'?'0px':'82px'};
+    border-bottom-left-radius:${({side})=>side==='left'?'82px':'0px'};
+    border-bottom-right-radius:${({side})=>side==='left'?'0px':'82px'};
+    border: 1px solid;
+    /* border-color:${({side})=>side==='left'?'#90d8ce transparent #90d8ce #90d8ce ':'#90d8ce #90d8ce #90d8ce transparent'}; */
+border:none;
+  display: flex;
+  flex-direction: row;
+  width:100%;
+  overflow:hidden;
+  transform:${({side})=>side==='left'?'translateX(0px)':'translateX(1px)'};
+
+  a {
+    text-decoration: none;
+    justify-self:center;
+    color: ${({theme})=>theme.global.color};
+    font-size: 1.5em;
+    @media(max-width:800px){
+      font-size: 3.5vw;
+    }
+    max-width: 3em;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+`)({
+  // SubContainer Animations
+  hide: {
+    opacity: 0,
+    maxWidth:0,
+    transition: { duration: 30 }
+  },
+  show: {
+    opacity:1,
+    transition:{
+      opacity:{delay:200}
+    },
+    maxWidth:"100%"
+  },neutral: {
+    opacity: 0,
+    maxWidth:0,
+  }
+})
+
+const Container_Skills = posed(styled.div`
+
+grid-template-columns: 1fr 1fr 1fr;
+  
+  width:80%;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  height: 100%;
+  padding: 1em 0 1em;
+  grid-row-gap: 1em;
+`)({
+  // Container_Skills Animations
+  hide: {
+    opacity: 0
+  },
+  show: {
+    opacity: 1
+  }
+})
+
+const Container_Info = posed(styled.div`
+      display:grid;
+      grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+
+        a{
+          transition:all .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          cursor:pointer;
+          &:hover{
+            transform:scale(1.2);
+          }
+        }
+`)({
+
+})
+
+
+const Box = posed(styled.div`
+display: flex;
+  flex-basis:${({shiftDistance})=>shiftDistance};
+  
+  /* opacity:${({active})=>active?1:0}; */
+`)({
+  // Box Animation
+  show:{
+    minWidth:"100%"
+  },
+  hide:{
+    flexBasis:"0%",
+    minWidth:"0%"
+  },
+  neutral:{
+    minWidth:"50%",
+    flexBasis:"50%",
+    delay:300
+  }
+})
+
+const Img = posed(styled.img`
+  min-width: 0;
+  max-width: 9vh;
+`)({
+
+})
+
+const Button = posed(styled.button`
+  &:focus{
+    border:none;
+    outline:none;
+  }
+  
+  border-top-left-radius: ${({ side }) => (side === "left" ? "82px" : "0px")};
+  border-bottom-left-radius: ${({ side }) => (side === "left" ? "82px" : "0x")};
+  border-bottom-right-radius: ${({ side }) => (side === "left" ? "0px" : "82px")};
+  border-top-right-radius: ${({ side }) => (side === "left" ? "0px" : "82px")};
+
+  @media(max-width:900px){
+    background-color:${({status,theme})=>status==='show'?theme.card.modileButton+" !important":"none"};
+  }
+
+  /* border:${({status})=>status==='show'?'1px red solid':'none'}; */
+  border:none;
+  border-width: ${({ side }) => (side === "left" ? "1px 1px 1px 0px" : "1px 0px 1px 1px")};
+
+flex-basis:20%;
+  cursor:pointer;
+  order: ${({ side }) => (side === "left" ? "" : "-1")};
+  width: 5em;
+  color: ${({theme})=>theme.global.color};
+  font-size: 1em;
+  background: transparent;
+  margin-left: ${({ side }) => (side === "left" ? "auto" : "")};
+  min-height: 14em;
+  white-space:nowrap;
+  pointer-events:${({ShuffleStatus})=>ShuffleStatus === 'shuffleOut'?'none':'auto'};
+
+
+  /* 
+    @media (max-width:900px){
+       display:none;
+        } */
+`)({
+  // Button Animation
+  show: {
+    opacity:1
+  },
+  hide: {
+    opacity:0
+  },
+  neutral:{
+    opacity:1
+  },
+  shuffleOut:{
+    maxWidth:0
+  },
+  shuffleIn:{
+    maxWidth:"100%"
+  }
+})
+
+const Line = posed(styled.a`
+z-index:999;
+    position:absolute;
+    content:'';
+    min-height:${({ShuffleStatus})=>ShuffleStatus==='shuffleIn'?'50%':'100%'};
+    width:1px;
+    top: 50%;
+    transform: translateY(-50%) skew(20deg);
+    left: 50%;
+    background-color:${({theme})=>theme.card.lines};
+
+    @media(max-width:800px){
+      opacity:${({status})=> status === 'hide' || status === 'show'?0:1}!important;
+    };
+    }
+
+`)({
+  // Line Animation
+  show:{
+    opacity:1,
+    y:"-50%",
+    x:({side})=>side==="left"?"25vw":"-25vw",
+    skew:"0deg"
+  },
+  hide:{
+    x:({side})=>side==="left"?"25vw":"-25vw",
+    skew:"0deg",
+opacity:1,
+minHeight: "30%"
+  },
+  neutral:{
+    x:"0",
+y:"-50%",
+skew:({ShuffleStatus})=>{
+  if(ShuffleStatus==='shuffleOut'){
+    return '20deg'
+  }
+  return '30deg'
+}
+  },
+  shuffleOut:{
+    skew:"20deg",
+    minHeight: "100%"
+  },shuffleIn:{
+    skew:"30deg",
+    minHeight: "30%"
+  }
+})
+
+const Header = posed(styled.h2`
+    position:absolute;
+    opacity:1 !important;
+`)({
+  // Header Animation
+  shuffleIn:{
+    left:"40%"
+  },
+  shuffleOut:{
+    y: ({index}) => "-" + index * 80 + "%",
+    left:({index})=>{
+       return 40+"vw"
+    }
+  }
+})
+
+const Paragraph = posed(styled.p`
+padding-right:'0px';
+`)({
+  shuffleIn:{
+    opacity:1
+  },
+  shuffleOut:{
+    opacity:0
+  }
+})
+
+
+
+// Component Inital State !!!!!!!
+    // 2 Boxs for each row has three states left right and center 
+
+
+const initalState = {
+  skillsStatus: "center"
+};
+
+// Main Component Export !!!!!!!!!
+
+export default class PortCard extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = initalState;
+  }
+
+  componentDidMount() {}
+
+  reset(){
+    this.setState({
+      skillsStatus:'center'
+    })
+  }
+
+
+  toggle(side) {
+    
+      if(side === this.state.skillsStatus){
+        side = 'center'
+      }
+
+    this.setState({
+      skillsStatus: side
+    });
+  }
+
+  render() {
+    const { cardData,ShuffleStatus,index } = this.props;
+    const { skillsStatus } = this.state;
+
+        if(ShuffleStatus === 'shuffleOut' && skillsStatus!=="center"){
+          this.reset()
+        }
+        
+    return (
+      <Container
+      ShuffleStatus={ShuffleStatus}
+      skillsStatus={skillsStatus}
+        index={index}
+      >
+        <Header index={index}  >{cardData.name}</Header>
+        <DisplayBox
+        ShuffleStatus={ShuffleStatus}
+          skillsStatus={skillsStatus}
+          side={"left"}
+          {...this.props}
+          toggle={this.toggle.bind(this)}
+          name="Details"
+        />
+        <DisplayBox
+        ShuffleStatus={ShuffleStatus}
+          skillsStatus={skillsStatus}
+          side={"right"}
+          {...this.props}
+          toggle={this.toggle.bind(this)}
+          name="Stack"
+          right
+        />
+      </Container>
+    );
+  }
+}
+
+const DisplayBox = ({
+  cardData,
+  skillsData,
+  skillsStatus,
+  ShuffleStatus,
+  toggle,
+  side,
+  name
+}) => {
+
+  // Is Side Active
+
+  const status = ()=> {
+    
+    if(skillsStatus === "center"){
+      return "neutral"
+    }
+    if(skillsStatus === side){
+      return "show"
+    }
+    else{
+      return "hide"
+    }
+  }
+
+  return (
+    <Box  pose={status()} >
+      <SubContainer side={side} pose={status()}>
+        {side === "left" ? (
+          <Info cardData={cardData} />
+        ) : (
+          <Skills cardData={cardData.skills} skillsData={skillsData} />
+        )}
+        </SubContainer>
+        <Line status={status()}  ShuffleStatus={ShuffleStatus} side={side} />
+      <Button
+      ShuffleStatus={ShuffleStatus}
+        onClick={() => toggle(side)}
+        status={status()}
+        side={side}
+        >
+        <Paragraph  >{name}</Paragraph>
+      </Button>
+    </Box>
+  );
+};
+
+const Info = ({ cardData }) => {
+  
+  return (
+    <Container_Info  >
+      <a href={cardData.gitLink}>Github</a>
+      <p  style={{gridRow:"1 / 3",gridColumn:"2/3"}} >{cardData.discription}</p>
+      <a href={cardData.pageLink}>Visit</a>
+    </Container_Info>
+  );
+};
+
+const Skills = ({ skillsData, cardData }) => {
+  return (
+    <Container_Skills>
+      {/* <WebsitePreview img={cardData.previewImg} />{" "} */}
+      {skillsData.map((el, i) => {
+        let url = null;
+        let val;
+
+        cardData.map(cardskill => {
+          if (cardskill === el.name) {
+            url = el.img;
+            val = <Img key={i} src={url} alt="" />;
+          }
+        });
+
+        return val;
+      })}
+    </Container_Skills>
+  );
+};
