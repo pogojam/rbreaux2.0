@@ -14148,7 +14148,8 @@ __webpack_require__.r(__webpack_exports__);
 var _static_data_json__WEBPACK_IMPORTED_MODULE_10___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./static/data.json */ "./src/static/data.json", 1);
 /* harmony import */ var react_pose__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-pose */ "./node_modules/react-pose/dist/react-pose.es.js");
 /* harmony import */ var _blocks_section__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./blocks/section */ "./src/blocks/section.js");
-/* harmony import */ var _static_theme__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./static/theme */ "./src/static/theme.js");
+/* harmony import */ var _blocks_projectView_Sectionview__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./blocks/projectView/Sectionview */ "./src/blocks/projectView/Sectionview.js");
+/* harmony import */ var _static_theme__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./static/theme */ "./src/static/theme.js");
 
 
 
@@ -14168,6 +14169,7 @@ function _templateObject() {
 
   return data;
 }
+
 
 
 
@@ -14217,8 +14219,9 @@ function (_Component) {
 
       var activeSection = this.state.activeSection;
       var isEntered = activeSection !== 'all';
+      console.log(activeSection);
       return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(styled_components__WEBPACK_IMPORTED_MODULE_9__["ThemeProvider"], {
-        theme: _static_theme__WEBPACK_IMPORTED_MODULE_13__["default"],
+        theme: _static_theme__WEBPACK_IMPORTED_MODULE_14__["default"],
         __source: {
           fileName: _jsxFileName,
           lineNumber: 56
@@ -14231,48 +14234,240 @@ function (_Component) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_pose__WEBPACK_IMPORTED_MODULE_11__["PoseGroup"], {
-        component: react__WEBPACK_IMPORTED_MODULE_8__["Fragment"],
         __source: {
           fileName: _jsxFileName,
           lineNumber: 58
         },
         __self: this
-      }, _static_data_json__WEBPACK_IMPORTED_MODULE_10__.sections.map(function (val, i) {
+      }, _static_data_json__WEBPACK_IMPORTED_MODULE_10__.sections.filter(function (val) {
         if (activeSection === 'all') {
-          return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_blocks_section__WEBPACK_IMPORTED_MODULE_12__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-            className: "section",
-            activeSection: activeSection,
-            handleSectionChange: _this2.handleSectionChange,
-            index: val.side,
-            key: i
-          }, val, {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 62
-            },
-            __self: this
-          }));
-        } else {
-          return activeSection === val.side && react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_blocks_section__WEBPACK_IMPORTED_MODULE_12__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-            side: val.side,
-            activeSection: activeSection,
-            handleSectionChange: _this2.handleSectionChange,
-            index: i,
-            key: i
-          }, val, {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 65
-            },
-            __self: this
-          }));
+          return true;
         }
+
+        if (activeSection === val.side) {
+          return true;
+        }
+      }).map(function (val, i) {
+        return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_blocks_projectView_Sectionview__WEBPACK_IMPORTED_MODULE_13__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+          activeSection: activeSection,
+          index: val.index
+        }, val, _this2.props, {
+          handleSectionChange: _this2.handleSectionChange,
+          key: val.side,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 66
+          },
+          __self: this
+        }));
       }))));
     }
   }]);
 
   return App;
-}(react__WEBPACK_IMPORTED_MODULE_8__["Component"]); //
+}(react__WEBPACK_IMPORTED_MODULE_8__["Component"]);
+
+
+{
+  /* <Section  className='section' activeSection={activeSection} handleSectionChange={this.handleSectionChange} key={val.name}   index={i}  {...val} /> */
+}
+
+/***/ }),
+
+/***/ "./src/blocks/projectView/Sectionview.js":
+/*!***********************************************!*\
+  !*** ./src/blocks/projectView/Sectionview.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Sectionview; });
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var react_pose__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-pose */ "./node_modules/react-pose/dist/react-pose.es.js");
+/* harmony import */ var _elements_view_view__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../elements/view/view */ "./src/elements/view/view.js");
+
+
+
+
+
+
+
+var _jsxFileName = "/Users/Sugarbook/Documents/Web-Projects/node/rbreaux2.0/src/blocks/projectView/Sectionview.js";
+
+function _templateObject4() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n    width:100vw;\n    height:100%;\n    display:flex;\n    top: 0;\n    left: 0;\n    position:absolute;\n    \n"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n\nposition: relative;\ntop: 50vh;\ntext-align: center;\ncolor:white;  \nwidth: calc(100vw/3);\n\n\n&:after{\n  transition: min-width .9s cubic-bezier(0.075, 0.82, 0.165, 1);\n    content: '';\n    position: absolute;\n    left: 50%;\n    top:130%;\n    transform: translateX(-50%);\n    background-color: white;\n    min-width: 0%;\n    height: 1px;\n\n  &:before{\n    \n  }\n\n  }\n\n\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n    position: absolute;\n    right: 0;\n    opacity:", ";\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n\nbackground-image:url(", ");\nbackground-size: auto 100%;\nbackground-repeat: no-repeat;\n\nheight:100%;\n\nposition:absolute;\ntop:0;\nleft:0;\ntransform-origin: center!important;\n\noverflow:hidden;\n\n&:before{\n  content: \"\";\n  display:block;\n  position:absolute;\n  top:0;\n\n  width: 100%;\n  height: 100%;\n  background:", ";\n}\n\nwill-change: width scale ;\n\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+
+
+
+var Container = Object(react_pose__WEBPACK_IMPORTED_MODULE_9__["default"])(styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject(), function (_ref) {
+  var splashImg = _ref.splashImg;
+  return splashImg;
+}, function (_ref2) {
+  var overlay = _ref2.overlay;
+  return overlay;
+}))({
+  enter: {
+    x: function x(_ref3) {
+      var index = _ref3.index,
+          isActive = _ref3.isActive;
+
+      if (isActive) {
+        return "0%";
+      } else {
+        return index * 100 + '%';
+      }
+    },
+    scale: 1,
+    opacity: 1,
+    transition: {
+      scale: {
+        delay: 300
+      },
+      x: {},
+      width: function width(_ref4) {
+        var isActive = _ref4.isActive;
+        return isActive ? {
+          delay: 300
+        } : {
+          delay: 0
+        };
+      }
+    },
+    width: function width(_ref5) {
+      var isActive = _ref5.isActive;
+
+      if (isActive) {
+        return "100%";
+      } else {
+        return "calc(100vw/3)";
+      }
+    }
+  },
+  exit: {
+    opacity: 0
+  }
+}); //sdf
+
+var Icon = Object(react_pose__WEBPACK_IMPORTED_MODULE_9__["default"])(styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].img(_templateObject2(), function (_ref6) {
+  var isActive = _ref6.isActive;
+  return isActive ? 1 : 0;
+}))({});
+var Title = Object(react_pose__WEBPACK_IMPORTED_MODULE_9__["default"])(styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].h1(_templateObject3()))({// Animationss
+});
+var SecondaryContainer = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject4());
+
+var Sectionview =
+/*#__PURE__*/
+function (_Component) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__["default"])(Sectionview, _Component);
+
+  function Sectionview() {
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, Sectionview);
+
+    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(Sectionview).apply(this, arguments));
+  }
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(Sectionview, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          handleSectionChange = _this$props.handleSectionChange,
+          side = _this$props.side,
+          activeSection = _this$props.activeSection,
+          name = _this$props.name;
+      var posedStatus = activeSection === side;
+      var isActive = activeSection === side;
+      console.log(posedStatus);
+      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Container, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+        isActive: isActive,
+        posedStatus: posedStatus
+      }, this.props, {
+        onClick: function onClick() {
+          return handleSectionChange(side);
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 129
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(SecondaryContainer, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 130
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Title, {
+        left: true,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 132
+        },
+        __self: this
+      }, isActive ? 'Home' : name), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_elements_view_view__WEBPACK_IMPORTED_MODULE_10__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+        isActive: isActive,
+        className: 'animated fadeIn'
+      }, this.props, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 133
+        },
+        __self: this
+      }))));
+    }
+  }]);
+
+  return Sectionview;
+}(react__WEBPACK_IMPORTED_MODULE_7__["Component"]); //sdfds
 
 
 
@@ -15137,6 +15332,16 @@ __webpack_require__.r(__webpack_exports__);
 
 var _jsxFileName = "/Users/Sugarbook/Documents/Web-Projects/node/rbreaux2.0/src/blocks/section.js";
 
+function _templateObject4() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n    width:100vh;\n    display:none;\n"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject3() {
   var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n    position: absolute;\n    right: 0;\n    opacity:", ";\n"]);
 
@@ -15158,7 +15363,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n/* Mobile */\n\n@media (max-width:800px){\n  background-size:100% !important;\n\n  background-position:", ";\n}\n\n/* Desktop */\n\n\n\ncursor: pointer;\nbackground-image:url(", ");\nbackground-size: auto 100%;\nbackground-repeat: no-repeat;\n\n/* background-attachment: fixed; */\n\nflex-grow:1;\n\nwill-change:auto;\ntransition: flex-grow .8s cubic-bezier(0.075, 0.82, 0.165, 1);\noverflow:none;\nposition:relative;\nflex-grow:1;\n\noverflow:hidden;\n\n&:hover{\n  flex-grow:1.3;\n  \n  h1:after{\n    min-width: 80%;\n  }\n\n}\n\n&:before{\n  content: \"\";\n  display:block;\n  position:absolute;\n  top:0;\n\n  width: 100%;\n  height: 100%;\n  background:", ";\n}\n\n\n\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n/* Mobile */\n\n@media (max-width:800px){\n  background-size:100% !important;\n/* \n  background-position:", "; */\n}\n\n/* Desktop */\n\n\n\ncursor: pointer;\nbackground-image:url(", ");\nbackground-size: auto 100%;\nbackground-repeat: no-repeat;\n\n\nwidth:calc(100vw/3);\n\n\n/* background-attachment: fixed; */\n\nwill-change:auto;\noverflow:none;\nposition:relative;\n\n\noverflow:hidden;\n\n&:hover{\n  /* flex-grow:1.3;\n  \n  h1:after{\n    min-width: 80%;\n  } */\n\n}\n\n&:before{\n  content: \"\";\n  display:block;\n  position:absolute;\n  top:0;\n\n  width: 100%;\n  height: 100%;\n  background:", ";\n}\n\n\n\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -15195,32 +15400,34 @@ var Container = Object(react_pose__WEBPACK_IMPORTED_MODULE_9__["default"])(style
   var overlay = _ref3.overlay;
   return overlay;
 }))({
-  // Animations
-  sectionIn: {},
   exit: {
-    staggerChildren: 100,
-    maxWidth: 0,
     transition: {
-      type: 'tween',
-      ease: 'linear'
-    }
+      scale: {
+        duration: 3000
+      }
+    },
+    scale: .7,
+    opacity: 0
   },
   enter: {
-    maxWidth: '100%',
+    delay: 300,
+    scale: 1,
     opacity: 1,
-    x: 0,
     transition: {
-      type: 'tween',
-      ease: 'linear'
+      scale: {
+        delay: 300
+      }
     }
   }
-});
+}); //sds
+
 var Title = Object(react_pose__WEBPACK_IMPORTED_MODULE_9__["default"])(styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].h1(_templateObject2()))({// Animations
 });
 var Icon = Object(react_pose__WEBPACK_IMPORTED_MODULE_9__["default"])(styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].img(_templateObject3(), function (_ref4) {
   var isActive = _ref4.isActive;
   return isActive ? 1 : 0;
 }))({});
+var SecondaryContainer = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject4());
 
 var Section =
 /*#__PURE__*/
@@ -15247,14 +15454,7 @@ function (_Component) {
           handleSectionChange = _this$props.handleSectionChange,
           side = _this$props.side;
       var isActive = activeSection === side;
-      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_7__["Fragment"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 160
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Container, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-        className: "section",
+      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Container, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
         onClick: function onClick() {
           return handleSectionChange(side);
         },
@@ -15265,34 +15465,40 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 161
+          lineNumber: 158
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Icon, {
+      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(SecondaryContainer, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 159
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Icon, {
         isActive: isActive,
         src: "https://res.cloudinary.com/dxjse9tsv/image/upload/v1552591999/Personal-active-icon.png",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 163
+          lineNumber: 161
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Title, {
         left: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 164
+          lineNumber: 162
         },
         __self: this
-      }, isActive ? 'Home' : name)), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_elements_view_view__WEBPACK_IMPORTED_MODULE_10__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+      }, isActive ? 'Home' : name), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_elements_view_view__WEBPACK_IMPORTED_MODULE_10__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
         isActive: isActive,
         className: 'animated fadeIn'
       }, this.props, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 166
+          lineNumber: 163
         },
         __self: this
-      })));
+      }))));
     }
   }]);
 
@@ -15856,7 +16062,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/Sugarbook/Documents/Web-Projects/node/rbreaux2.0/src/elements/view/view.js";
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\nflex-basis:70%;\nposition:relative;\noverflow-y:hidden;\nmargin-right:0;\n@media(min-width:900px){\n  max-width:", ";\n  min-height:100%;\n  max-height:100vh;\n}\n@media(max-width:900px){\n  max-height:", ";\n}\n\ntransition: all .4s linear .4;\n\noverflow-x:hidden;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\nflex-basis:70%;\nposition:relative;\noverflow-y:hidden;\nmargin-right:0;\nbackground-color: #ffffff87;\n@media(min-width:900px){\n  opacity:", ";\n  max-width:100%;\n  min-height:100%;\n  max-height:100vh;\n\n}\n@media(max-width:900px){\n  max-height:", ";\n}\n\ntransition: opacity .4s linear .4;\n\noverflow-x:hidden;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -15871,17 +16077,13 @@ function _templateObject() {
 
 var Container = Object(react_pose__WEBPACK_IMPORTED_MODULE_9__["default"])(styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject(), function (_ref) {
   var isActive = _ref.isActive;
-  return isActive ? '100%' : '0%';
+  return isActive ? '1' : '0';
 }, function (_ref2) {
   var isActive = _ref2.isActive;
   return isActive ? '100%' : '0px';
 }))({
   exit: {},
-  enter: {
-    transition: {
-      type: 'tween'
-    }
-  }
+  enter: {}
 });
 
 var View =
@@ -15908,26 +16110,26 @@ function (_Component) {
       }, this.props, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 43
         },
         __self: this
       }), side === 'left' && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(___WEBPACK_IMPORTED_MODULE_10__["PersonalView"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 44
         },
         __self: this
       }), side === 'center' && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(___WEBPACK_IMPORTED_MODULE_10__["ClientView"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 45
         },
         __self: this
       }), side === 'right' && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(___WEBPACK_IMPORTED_MODULE_10__["ProjectlView"], {
         refViewContainer: this.viewContainer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 46
         },
         __self: this
       }));
@@ -15948,7 +16150,7 @@ function (_Component) {
 /*! exports provided: sections, default */
 /***/ (function(module) {
 
-module.exports = {"sections":[{"name":"personal tidbits","splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1552457427/ryansWebsite/IMG_5740.jpg","overlay":"rgba(0,255,255, 0.5)","side":"left"},{"name":"client info","splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1552524212/StockSnap_C088941D0B.jpg","overlay":"rgba(240,4,4, 0.4)","side":"center"},{"name":"projects","splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1552517899/StockSnap_TJ20HKB9BY.jpg","overlay":"rgba(0, 0, 0, 0.41)","side":"right"}]};
+module.exports = {"sections":[{"name":"personal tidbits","splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1552457427/ryansWebsite/IMG_5740.jpg","overlay":"rgba(0,255,255, 0.5)","side":"left","index":0},{"name":"client info","splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1554149264/ryansWebsite/StockSnap_C088941D0B.jpg","overlay":"rgba(240,4,4, 0.4)","side":"center","index":1},{"name":"projects","splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1554149237/ryansWebsite/StockSnap_TJ20HKB9BY.jpg","overlay":"rgba(0, 0, 0, 0.41)","side":"right","index":2}]};
 
 /***/ }),
 
@@ -15993,7 +16195,7 @@ var Theme = {
     text: ThemeColor
   },
   container: {
-    mainBG: "#F4F4F9"
+    mainBG: "black"
   },
   section: {
     color: "blue"

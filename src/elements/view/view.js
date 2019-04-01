@@ -8,16 +8,19 @@ flex-basis:70%;
 position:relative;
 overflow-y:hidden;
 margin-right:0;
+background-color: #ffffff87;
 @media(min-width:900px){
-  max-width:${({isActive})=>isActive?'100%':'0%'};
+  opacity:${({isActive})=>isActive?'1':'0'};
+  max-width:100%;
   min-height:100%;
   max-height:100vh;
+
 }
 @media(max-width:900px){
   max-height:${({isActive})=>isActive?'100%':'0px'};
 }
 
-transition: all .4s linear .4;
+transition: opacity .4s linear .4;
 
 overflow-x:hidden;
 `)({
@@ -26,9 +29,7 @@ overflow-x:hidden;
     },
     enter:{
 
-      transition:{
-        type:'tween'
-      }
+    
     }
 })
 export default class View extends Component {

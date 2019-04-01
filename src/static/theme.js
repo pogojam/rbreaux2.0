@@ -20,7 +20,7 @@ const Theme = {
     text: ThemeColor
   },
   container: {
-    mainBG:"#F4F4F9"
+    mainBG:"black"
   },
   section: {
     color: "blue"

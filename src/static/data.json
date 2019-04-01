@@ -4,17 +4,20 @@
             "name":"personal tidbits",
             "splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1552457427/ryansWebsite/IMG_5740.jpg",
             "overlay":"rgba(0,255,255, 0.5)",
-            "side":"left"
+            "side":"left",
+            "index":0
         },{
             "name":"client info",
-            "splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1552524212/StockSnap_C088941D0B.jpg",
+            "splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1554149264/ryansWebsite/StockSnap_C088941D0B.jpg",
             "overlay":"rgba(240,4,4, 0.4)",
-            "side":"center"
+            "side":"center",
+            "index":1
         },{
             "name":"projects",
-            "splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1552517899/StockSnap_TJ20HKB9BY.jpg",
+            "splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1554149237/ryansWebsite/StockSnap_TJ20HKB9BY.jpg",
             "overlay":"rgba(0, 0, 0, 0.41)",
-            "side":"right"
+            "side":"right",
+            "index":2
         }
     ]
 }

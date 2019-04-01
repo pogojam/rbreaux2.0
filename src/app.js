@@ -6,6 +6,7 @@ import posed,{PoseGroup} from 'react-pose';
 
 
 import Section from './blocks/section'
+import Test from './blocks/projectView/Sectionview'
 import Theme from './static/theme'
 
 const Container = posed(styled.div`
@@ -23,8 +24,6 @@ background-color:${({theme})=>theme.container.mainBG};
   // Animations
 
 })
-
-
 
 
 
@@ -50,22 +49,21 @@ handleSectionChange(sec){
 const {activeSection} = this.state
 const isEntered = activeSection !=='all'
 
-
+    console.log(activeSection);
+    
 
     return (
       <ThemeProvider theme={Theme}>
       <Container >
-      <PoseGroup component={Fragment}  >
+      <PoseGroup   >
        {
-         data.sections.map((val,i)=>{
-         if(activeSection === 'all'){
-          return <Section  className='section' activeSection={activeSection} handleSectionChange={this.handleSectionChange} index={val.side}  key={i}  {...val} />
+        data.sections.filter((val)=>{
+          if(activeSection === 'all'){
+          return true
+         }if(activeSection === val.side ){
+            return true
          }
-         else{
-          return activeSection === val.side && <Section  side={val.side} activeSection={activeSection} handleSectionChange={this.handleSectionChange} index={i} key={i}  {...val} />
-         }
-       })
-
+        }).map((val,i)=><Test activeSection={activeSection} index={val.index} {...val} {...this.props}  handleSectionChange={this.handleSectionChange}  key={val.side}/>)
        }
 
       </PoseGroup>
@@ -75,4 +73,7 @@ const isEntered = activeSection !=='all'
     )
   }
 }
-//
+
+
+
+{/* <Section  className='section' activeSection={activeSection} handleSectionChange={this.handleSectionChange} key={val.name}   index={i}  {...val} /> */}

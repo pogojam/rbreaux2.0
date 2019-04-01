@@ -9,7 +9,7 @@ const Container = posed(styled.div`
 
 @media (max-width:800px){
   background-size:100% !important;
-
+/* 
   background-position:${({side})=> {switch(side){
     case 'left':
     return 'top'
@@ -22,7 +22,7 @@ const Container = posed(styled.div`
     break;
   }}
 
-};
+}; */
 }
 
 /* Desktop */
@@ -34,24 +34,25 @@ background-image:url(${({splashImg})=>splashImg});
 background-size: auto 100%;
 background-repeat: no-repeat;
 
+
+width:calc(100vw/3);
+
+
 /* background-attachment: fixed; */
 
-flex-grow:1;
-
 will-change:auto;
-transition: flex-grow .8s cubic-bezier(0.075, 0.82, 0.165, 1);
 overflow:none;
 position:relative;
-flex-grow:1;
+
 
 overflow:hidden;
 
 &:hover{
-  flex-grow:1.3;
+  /* flex-grow:1.3;
   
   h1:after{
     min-width: 80%;
-  }
+  } */
 
 }
 
@@ -69,32 +70,23 @@ overflow:hidden;
 
 
 `)({
-  // Animations
-  
-  sectionIn:{
-    
-  },
   exit:{
-
-    staggerChildren: 100,
-    maxWidth:0,
     transition:{
-      type:'tween',
-      ease:'linear'
-    }
+      scale:{duration:3000}
+    },
+    scale:.7,
+    opacity:0
   },
   enter:{
-    maxWidth:'100%',
+    delay:300,
+    scale:1,
     opacity:1,
-    x:0,
     transition:{
-      type:'tween',
-      ease:'linear'
+      scale:{delay:300}
     }
   }
 })
-
-
+//sds
 
 
 const Title = posed(styled.h1`
@@ -139,6 +131,10 @@ const Icon = posed(styled.img`
 })
 
 
+const SecondaryContainer = styled.div`
+    width:100vh;
+    display:none;
+`
 
 
 export default class Section extends Component {
@@ -156,15 +152,17 @@ componentDidEnter(){
       const isActive = activeSection === side
 
 
+      
+
     return (
-      <Fragment>
-      <Container className='section'  onClick={()=> handleSectionChange(side)}  isActive={isActive} {...this.props}  ref={(e)=> this.container = e }  >
+      <Container  onClick={()=> handleSectionChange(side)}  isActive={isActive} {...this.props}  ref={(e)=> this.container = e }  >
+        <SecondaryContainer>
         {/* <Icon src='https://res.cloudinary.com/dxjse9tsv/image/upload/v1552591999/Personal-active-icon.png' /> */}
         <Icon isActive={isActive} src="https://res.cloudinary.com/dxjse9tsv/image/upload/v1552591999/Personal-active-icon.png" />
       <Title left >{isActive?'Home':name}</Title>
-      </Container>
      <View isActive={isActive} className={'animated fadeIn'} {...this.props} />
-      </Fragment>
+        </SecondaryContainer>
+      </Container>
     )
   }
 }
