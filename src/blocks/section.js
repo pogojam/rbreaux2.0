@@ -160,7 +160,7 @@ componentDidEnter(){
         {/* <Icon src='https://res.cloudinary.com/dxjse9tsv/image/upload/v1552591999/Personal-active-icon.png' /> */}
         <Icon isActive={isActive} src="https://res.cloudinary.com/dxjse9tsv/image/upload/v1552591999/Personal-active-icon.png" />
       <Title left >{isActive?'Home':name}</Title>
-     <View isActive={isActive} className={'animated fadeIn'} {...this.props} />
+     <View isActive={isActive} {...this.props} />
         </SecondaryContainer>
       </Container>
     )

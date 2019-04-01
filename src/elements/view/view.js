@@ -10,7 +10,7 @@ overflow-y:hidden;
 margin-right:0;
 background-color: #ffffff87;
 @media(min-width:900px){
-  opacity:${({isActive})=>isActive?'1':'0'};
+  opacity:${({isActive})=>isActive?'0':'0'};
   max-width:100%;
   min-height:100%;
   max-height:100vh;

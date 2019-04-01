@@ -15490,8 +15490,7 @@ function (_Component) {
         },
         __self: this
       }, isActive ? 'Home' : name), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_elements_view_view__WEBPACK_IMPORTED_MODULE_10__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-        isActive: isActive,
-        className: 'animated fadeIn'
+        isActive: isActive
       }, this.props, {
         __source: {
           fileName: _jsxFileName,
@@ -16077,7 +16076,7 @@ function _templateObject() {
 
 var Container = Object(react_pose__WEBPACK_IMPORTED_MODULE_9__["default"])(styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject(), function (_ref) {
   var isActive = _ref.isActive;
-  return isActive ? '1' : '0';
+  return isActive ? '0' : '0';
 }, function (_ref2) {
   var isActive = _ref2.isActive;
   return isActive ? '100%' : '0px';
