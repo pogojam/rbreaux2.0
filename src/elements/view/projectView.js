@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import posed from 'react-pose'
-import styled from "styled-components";
+import styled,{css} from "styled-components";
 import PortfolioCard from '../../blocks/projectView/card';
 import PortNav from '../../blocks/projectView/portNav'
 import data from '../../static/section.json'
-import SectionHeader from '../SectionHeader'
+import Header from '../SectionHeader'
+import { CSSTransitionGroup } from 'react-transition-group'
 
 
 // Animations
@@ -20,23 +21,62 @@ const Animations = {
  
 // Styled Compnents
 
+const subHeaderShuffleOut = css`
+        transform:translateX(-30px);
+        opacity:0;
+`
+const subHeaderShuffleIn = css`
+        opacity:1;
+        transform:translateX(0px);
+`
+
+const SectionSubHeader = styled(Header)`
+
+@media(max-width:900px){
+    top:0;
+}
+
+
+    left: 9vw;
+    top: 58vh;
+    max-width:250px;
+
+${({ShuffleStatus})=>{
+        if(ShuffleStatus==='shuffleIn'){
+            return subHeaderShuffleOut
+        }else{
+            return subHeaderShuffleIn
+        }
+    }}
+
+    transition:transform .5s cubic-bezier(0.445, 0.05, 0.55, 0.95),opacity .5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+`
+
 const StyledPort = styled.div`
-     justify-items: center;
-     grid-template-rows: .3fr 1fr 1fr 1fr;
+    position: relative;
+    justify-items: center;
+    grid-template-rows: .3fr 1fr 1fr 1fr;
     display: grid;
-    height: 100%;
+    height: 100vh;
     width: 100%;
-    /* grid-gap: 2em; */
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    padding: 2em;
+    padding-top: 10em;
 `
 
 const Container = posed(styled.div`
-transition:opacity .6s linear;
         opacity:1;
 
         align-items: center;
 `)({
 
 })
+
+    const PortfolioSections = ['sites','opensource','productivity']
+    const PortfolioTitles = ['Web Sites','Open Source','Productivity']
 
 class ProjectView extends Component {
     constructor(props) {
@@ -45,6 +85,7 @@ class ProjectView extends Component {
       this.handleNextPage=this.handleNextPage.bind(this)
       this.state = {
          ShuffleStatus:'shuffleOut',
+         activePortSection:0,
          itemPos:{
              start:0,
              end:3
@@ -53,32 +94,40 @@ class ProjectView extends Component {
     }
     
    
-    handleNextPage(direction){
+    handleNextPage(page){
+        
+        let section = this.state.activePortSection
 
-        const max = data.sites.length - 1
-
-        let start = this.state.itemPos.start
-        let end = this.state.itemPos.end
-
-        if(direction === 'next' && end <= max){
-                start = start + 3
-                end = end +3
-        }else if (start === 0 ){
-            start = max - 2
-                end = max + 1
-        }else{
-            start= start - 3
-            end = end - 3
+        console.log(!page,section<PortfolioSections.length-1,section>0);
+        
+        if(page && section<PortfolioSections.length-1){
+            section = section+1
+            console.log(section);
+         return   this.setState({
+                activePortSection:section
+        })
+        }
+        if(!page && section<=PortfolioSections.length-1 && section>0){
+                section = section -1
+                console.log('section');
+                
+              return  this.setState({
+            activePortSection:section
+        })
+        }
+        if(!page && section===0){
+            section = PortfolioSections.length-1
+            return  this.setState({
+            activePortSection:section
+        })  
+        }
+        else{
+            section = 0
+           return this.setState({
+            activePortSection:section
+        })
         }
 
-            this.setState({
-                itemPos:{
-                    start:start,
-                    end:end
-                }
-            })
-            
-            
     }
     
     handleShuffle(){
@@ -93,7 +142,7 @@ class ProjectView extends Component {
             this.props.refViewContainer.style.overflowY = 'auto'
         }else{
             this.props.refViewContainer.scroll({
-                top: 0, 
+                top: 0,
                 behavior: 'smooth'
               });
 
@@ -103,15 +152,17 @@ class ProjectView extends Component {
 
     
     render() {
-        const {ShuffleStatus,itemPos} = this.state
-        const shownSites = data.sites.slice(itemPos.start,itemPos.end)
+        const {ShuffleStatus,itemPos,activePortSection} = this.state
+        const {isActive} = this.props
+        const shownProjects = data[PortfolioSections[activePortSection]]
 
         return (
             <Container  pose={ShuffleStatus} >
-            {  <StyledPort  >
-                <SectionHeader main="Projects/OpenSource" sub="A Portfolio" />
+                <Header main={'Projects/Works'} sub="Originals" ></Header>
+            <SectionSubHeader ShuffleStatus={ShuffleStatus}  main={PortfolioTitles[activePortSection]} sub="A Portfolio" />
+            { isActive && <StyledPort className='portBox' >
                 {
-                shownSites.map((el,i)=>{
+                shownProjects.map((el,i)=>{
                     return <PortfolioCard ShuffleStatus={ShuffleStatus} key={i} index={i}   skillsData={data.skills} cardData={el} />
                     })
                 }
@@ -121,7 +172,6 @@ class ProjectView extends Component {
         );
     }
 }
-
 
 
 export default ProjectView;

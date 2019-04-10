@@ -1,13 +1,18 @@
 import React, { Component,Fragment } from 'react'
 import styled,{ThemeProvider} from 'styled-components'
 import data from './static/data.json'
-import posed,{PoseGroup} from 'react-pose';
+import posed from 'react-pose'
+import { CSSTransitionGroup } from 'react-transition-group'
 
 
 
 import Section from './blocks/section'
-import Test from './blocks/projectView/Sectionview'
+import SectionView from './blocks/projectView/Sectionview'
 import Theme from './static/theme'
+
+
+
+
 
 const Container = posed(styled.div`
 display:flex;
@@ -24,6 +29,7 @@ background-color:${({theme})=>theme.container.mainBG};
   // Animations
 
 })
+
 
 
 
@@ -48,14 +54,17 @@ handleSectionChange(sec){
   render() {
 const {activeSection} = this.state
 const isEntered = activeSection !=='all'
-
-    console.log(activeSection);
     
 
     return (
       <ThemeProvider theme={Theme}>
       <Container >
-      <PoseGroup   >
+      <CSSTransitionGroup
+
+        transitionName="section"
+          transitionEnterTimeout={1500}
+          transitionLeaveTimeout={1100}>
+         
        {
         data.sections.filter((val)=>{
           if(activeSection === 'all'){
@@ -63,10 +72,10 @@ const isEntered = activeSection !=='all'
          }if(activeSection === val.side ){
             return true
          }
-        }).map((val,i)=><Test activeSection={activeSection} index={val.index} {...val} {...this.props}  handleSectionChange={this.handleSectionChange}  key={val.side}/>)
+        }).map((val,i)=><SectionView activeSection={activeSection} index={val.index} {...val} {...this.props}  handleSectionChange={this.handleSectionChange}  key={val.side}/>)
        }
 
-      </PoseGroup>
+      </CSSTransitionGroup>
 
       </Container>
       </ThemeProvider>
@@ -76,4 +85,4 @@ const isEntered = activeSection !=='all'
 
 
 
-{/* <Section  className='section' activeSection={activeSection} handleSectionChange={this.handleSectionChange} key={val.name}   index={i}  {...val} /> */}
+{/* ds<Section  className='section' activeSection={activeSection} handleSectionChange={this.handleSectionChange} key={val.name}   index={i}  {...val} /> */}

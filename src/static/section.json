@@ -91,20 +91,29 @@
       "skills": ["react", "node", "meteor", "graphql", "react", "mongoDB"]
     },
     {
-      "name": "Slipgen",
-      "previewImg": "https://res.cloudinary.com/dxjse9tsv/image/upload/v1548394165/screencapture-slipgen-herokuapp-2019-01-24-22_26_55.png",
-      "gitLink": "https://github.com/pogojam/SlipGen",
-      "pageLink": "https://slipgen.herokuapp.com",
-      "discription": "Tool used to generate welcome slips for front desk agents. Slipgen excepts an xml document with guests names and generates a printable welcome slips with the companies logo.",
-      "url": "",
-      "skills": ["react", "node"]
+      "name": "AZButler",
+      "discription": "A single page website for Arizona Butler Services.",
+      "url": "www.azbutler.com",
+      "gitLink": "https://github.com/pogojam/AZButler",
+      "skills": ["node", "react", "express"]
     },
     {
       "name": "Thegirlimetathifi",
       "discription": "",
       "url": "www.theguyimetathifi.com",
       "skills": ["react", "node"]
-    },
+    }
+  ],
+  "opensource":[
+    {
+      "name": "FolderImporter",
+      "discription": "Automatically generate imports for new .js files created in your folders",
+      "url": "https://github.com/pogojam/folderImporter",
+      "gitLink": "https://github.com/pogojam/folderImporter",
+      "skills": ["node"]
+    }
+  ],
+  "productivity":[
     {
       "name": "CraigslistBot",
       "discription": "This scrapper is build primarily as a tool to automate the buying and selling of products using craigslist. One can simply enter the name of a product and out comes an average selling price on the market a recommendation on a sell and buy price. CraigScraper will monitor Craigslist for any new entries and send an alert if any items match the recommended buy price.",
@@ -113,17 +122,13 @@
       "skills": ["node", "react", "express"]
     },
     {
-        "name": "AZButler",
-        "discription": "A single page website for Arizona Butler Services.",
-        "url": "www.azbutler.com",
-        "gitLink": "https://github.com/pogojam/AZButler",
-        "skills": ["node", "react", "express"]
-      },{
-        "name": "FolderImporter",
-        "discription": "Automatically generate imports for new .js files created in your folders",
-        "url": "https://github.com/pogojam/folderImporter",
-        "gitLink": "https://github.com/pogojam/folderImporter",
-        "skills": ["node"]
-      }
+      "name": "Slipgen",
+      "previewImg": "https://res.cloudinary.com/dxjse9tsv/image/upload/v1548394165/screencapture-slipgen-herokuapp-2019-01-24-22_26_55.png",
+      "gitLink": "https://github.com/pogojam/SlipGen",
+      "pageLink": "https://slipgen.herokuapp.com",
+      "discription": "Tool used to generate welcome slips for front desk agents. Slipgen excepts an xml document with guests names and generates a printable welcome slips with the companies logo.",
+      "url": "",
+      "skills": ["react", "node"]
+    }
   ]
 }

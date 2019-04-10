@@ -1,22 +1,25 @@
 {
     "sections":[
         {
-            "name":"personal tidbits",
-            "splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1552457427/ryansWebsite/IMG_5740.jpg",
-            "overlay":"rgba(0,255,255, 0.5)",
+            "name":"personal",
+            "splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1554457187/Selfi_B_W_Center.jpg",
+            "overlay":"rgb(0, 0, 0)",
             "side":"left",
+            "icon":"mountains",
             "index":0
         },{
-            "name":"client info",
-            "splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1554149264/ryansWebsite/StockSnap_C088941D0B.jpg",
-            "overlay":"rgba(240,4,4, 0.4)",
+            "name":"client",
+            "splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1545683959/autumn-autumn-colours-bright-756903.jpg",
+            "overlay":"rgba(240,4,4)",
             "side":"center",
+            "icon":"suitcase",
             "index":1
         },{
             "name":"projects",
-            "splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1554149237/ryansWebsite/StockSnap_TJ20HKB9BY.jpg",
-            "overlay":"rgba(0, 0, 0, 0.41)",
+            "splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1554668355/branches-bright-Web.jpg",
+            "overlay":"rgba(0, 0, 0)",
             "side":"right",
+            "icon":"gear",
             "index":2
         }
     ]

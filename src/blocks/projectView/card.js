@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import posed from "react-pose";
-
+import Line from './line'
 
 const Container = posed(styled.div`
 
@@ -17,29 +17,16 @@ flex-direction: row;
 
   will-change: transform;
 
-  p {
-    
-
-  }
   h2 {
+
     opacity:${({skillsStatus})=> skillsStatus === 'center'? 1 :0};
     color:${({theme})=>theme.card.text};
     font-size:1.2em;
-    transition: opacity .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-
+    transition: all .3s cubic-bezier(0.25, 0.46, 0.45, 0.94) ;
+    top:${({ShuffleStatus})=>{
+       return ShuffleStatus === 'shuffleOut'?'22vh':'0'
+    }}
   }
-
-  /* &::before{
-    position:absolute;
-    content:'';
-    min-height:${({ShuffleStatus})=>ShuffleStatus==='shuffleIn'?'50%':'100%'};
-    width:1px;
-    top: 50%;
-    transform: translateY(-50%) skew(20deg);
-    left: 50%;
-    background-color: white;
-  } */
-
 `)({
 // Container Animations
   shuffleIn: {
@@ -204,6 +191,11 @@ flex-basis:20%;
   pointer-events:${({ShuffleStatus})=>ShuffleStatus === 'shuffleOut'?'none':'auto'};
 
 
+  &:hover{
+    transition:.3s cubic-bezier(0.445, 0.05, 0.55, 0.95) ;
+    transform:scale(1.2);
+  }
+
   /* 
     @media (max-width:900px){
        display:none;
@@ -227,68 +219,24 @@ flex-basis:20%;
   }
 })
 
-const Line = posed(styled.a`
-z-index:999;
-    position:absolute;
-    content:'';
-    min-height:${({ShuffleStatus})=>ShuffleStatus==='shuffleIn'?'50%':'100%'};
-    width:1px;
-    top: 50%;
-    transform: translateY(-50%) skew(20deg);
-    left: 50%;
-    background-color:${({theme})=>theme.card.lines};
 
-    @media(max-width:800px){
-      opacity:${({status})=> status === 'hide' || status === 'show'?0:1}!important;
-    };
-    }
-
-`)({
-  // Line Animation
-  show:{
-    opacity:1,
-    y:"-50%",
-    x:({side})=>side==="left"?"25vw":"-25vw",
-    skew:"0deg"
-  },
-  hide:{
-    x:({side})=>side==="left"?"25vw":"-25vw",
-    skew:"0deg",
-opacity:1,
-minHeight: "30%"
-  },
-  neutral:{
-    x:"0",
-y:"-50%",
-skew:({ShuffleStatus})=>{
-  if(ShuffleStatus==='shuffleOut'){
-    return '20deg'
-  }
-  return '30deg'
-}
-  },
-  shuffleOut:{
-    skew:"20deg",
-    minHeight: "100%"
-  },shuffleIn:{
-    skew:"30deg",
-    minHeight: "30%"
-  }
-})
 
 const Header = posed(styled.h2`
+
+@media(max-width:900px){
+    left:50vw;
+}
+    left:40vw;
     position:absolute;
     opacity:1 !important;
+    border:1px ${({ShuffleStatus})=>ShuffleStatus==='shuffleIn'?'solid':'none'} rgb(0, 0, 0);
+    border-width: 0px 0px 1px 0px;
 `)({
   // Header Animation
   shuffleIn:{
-    left:"40%"
   },
   shuffleOut:{
-    y: ({index}) => "-" + index * 80 + "%",
-    left:({index})=>{
-       return 40+"vw"
-    }
+    y: ({index}) => "-" + index * 80 + "%"
   }
 })
 
@@ -356,7 +304,7 @@ export default class PortCard extends Component {
       skillsStatus={skillsStatus}
         index={index}
       >
-        <Header index={index}  >{cardData.name}</Header>
+        <Header ShuffleStatus={ShuffleStatus} {...this.props} index={index}  >{cardData.name}</Header>
         <DisplayBox
         ShuffleStatus={ShuffleStatus}
           skillsStatus={skillsStatus}
@@ -440,7 +388,6 @@ const Info = ({ cardData }) => {
 const Skills = ({ skillsData, cardData }) => {
   return (
     <Container_Skills>
-      {/* <WebsitePreview img={cardData.previewImg} />{" "} */}
       {skillsData.map((el, i) => {
         let url = null;
         let val;

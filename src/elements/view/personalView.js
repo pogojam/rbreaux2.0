@@ -1,14 +1,15 @@
-import React, { Component } from 'react'
+import React, { Component,Fragment } from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div`
         display:flex;
         text-align:center;
-        height:100%;
+        height:100vh;
         flex-direction: column;
         align-items: center;
   justify-content: center;
-
+  animation-delay: 3.2s;
+  /* animation-duration:.5s; */
 `
 const SubContainer = styled.div`
         max-width:50%;
@@ -26,7 +27,7 @@ const ParagraphContainer = styled.div`
             content:'';
             width:30em;
             height:1px;
-            background-color:black;
+            background-color:${({theme})=>theme.card.text};
         }
 
         &:before{
@@ -41,7 +42,8 @@ const ParagraphContainer = styled.div`
 export default class PersonalView extends Component {
   render() {
     return (
-      <Container>
+      <Fragment>
+      <Container className='animated fadeIn ' >
           <SubContainer>
                 <h2>The Whole Story</h2>
             <ParagraphContainer>
@@ -49,6 +51,10 @@ export default class PersonalView extends Component {
             </ParagraphContainer>
           </SubContainer>
       </Container>
+      <Container>
+
+      </Container>
+      </Fragment>
     )
   }
 }

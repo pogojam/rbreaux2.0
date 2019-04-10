@@ -37,6 +37,7 @@ background-repeat: no-repeat;
 
 width:calc(100vw/3);
 
+flex-basis:30%;
 
 /* background-attachment: fixed; */
 
@@ -70,23 +71,9 @@ overflow:hidden;
 
 
 `)({
-  exit:{
-    transition:{
-      scale:{duration:3000}
-    },
-    scale:.7,
-    opacity:0
-  },
-  enter:{
-    delay:300,
-    scale:1,
-    opacity:1,
-    transition:{
-      scale:{delay:300}
-    }
-  }
+  
 })
-//sds
+
 
 
 const Title = posed(styled.h1`

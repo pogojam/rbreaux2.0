@@ -1,139 +1,158 @@
 import React, { Component } from 'react'
-import styled,{ThemeProvider} from 'styled-components'
+import styled,{ThemeProvider,keyframes,css} from 'styled-components'
 import posed,{PoseGroup} from 'react-pose';
-import View from '../../elements/view/view'
+import View from '../../elements/view/view';
+import Title from './title'
+import SVG from './SVG'
 
-const Container = posed(styled.div`
+
+const animateSectionActive = css`
+    transform:translateX(0%); 
+    width:100%;
+`
+const animateSectionNetural = css`
+transition:transform .6s cubic-bezier(0.455, 0.03, 0.515, 0.955) .7s ,width .3s cubic-bezier(0.455, 0.03, 0.515, 0.955) .3s;
+`
+
+const Background = styled.div`
+z-index: -1;
+position:absolute;
+height:100%;
+width:100vw;
 
 background-image:url(${({splashImg})=>splashImg});
 background-size: auto 100%;
 background-repeat: no-repeat;
 
-height:100%;
+transition:transform 3s linear;
+will-change:transform ;
+`
 
+
+const Container = posed(styled.div`
+
+transform:translateX(${({index})=>index*100+"%"});
+width:calc(100vw/3);
+transition:transform .6s cubic-bezier(0.455, 0.03, 0.515, 0.955) .3s ,width .3s cubic-bezier(0.455, 0.03, 0.515, 0.955) .7s;
+
+${({isActive,activeSection,index})=>{
+  if(isActive){
+     return animateSectionActive
+  }else{
+    return animateSectionNetural
+  }
+}}
+
+
+
+
+transform-origin: ${({index})=>index*100+50+"%"} 50%;
+
+will-change: transform, width, opacity;
+
+
+height:100%;
 position:absolute;
 top:0;
 left:0;
-transform-origin: center!important;
 
 overflow:hidden;
+
+
+
+&.section-enter{
+  transform: translateX(${({index})=>index*100+"%"});
+  opacity:.01;
+}
+&.section-enter.section-enter-active{
+  transform:translateX(${({index})=>index*100+"%"});
+  opacity:1;
+  transition:transform .8s cubic-bezier(0.455, 0.03, 0.515, 0.955) 1s , opacity .8s linear 1s;
+
+}
+
+&.section-leave{
+    transform:scale(.5) translateX(${({index})=>index*100+"%"});
+    opacity:0;
+    transition:transform .8s cubic-bezier(0.455, 0.03, 0.515, 0.955) , opacity .8s linear;
+}
+
+&:hover  {
+  &::before{
+    opacity:${({isActive})=>isActive?"":".4"};
+  }
+  ${Background}{
+    transform:scale(1.1);
+  }
+    
+  }
+  
+}
+
 
 &:before{
   content: "";
   display:block;
   position:absolute;
   top:0;
-
   width: 100%;
   height: 100%;
   background:${({overlay})=>overlay};
+
+  opacity:${({isActive})=>{
+    if(isActive){
+      return ".3"
+    }else{
+      return ".65"
+    }
+  }};
+  transition:opacity 1s ;
 }
 
-will-change: width scale ;
-
 `)({
     
-  enter:{
-    x:({index,isActive})=>{
-        if(isActive){
-            return "0%"
-        }
-        else{
-            return index*100+'%'
-        }
-    },
-    scale:1,
-    opacity:1,
-    transition:{
-      scale:{delay:300},
-      x:{
-
-      },
-      width:({isActive})=>isActive?{delay:300}:{delay:0}
-    },
-    width:({isActive})=>{
-        if(isActive){
-            return "100%"
-        }else{
-            return "calc(100vw/3)"
-        }
-    }
-  },
-  exit:{
-    opacity:0
-  }
-})
-//sdf
-
-const Icon = posed(styled.img`
-    position: absolute;
-    right: 0;
-    opacity:${({isActive})=>isActive?1:0};
-`)({
 
 })
-const Title = posed(styled.h1`
 
-position: relative;
-top: 50vh;
-text-align: center;
-color:white;  
-width: calc(100vw/3);
-
-
-&:after{
-  transition: min-width .9s cubic-bezier(0.075, 0.82, 0.165, 1);
-    content: '';
-    position: absolute;
-    left: 50%;
-    top:130%;
-    transform: translateX(-50%);
-    background-color: white;
-    min-width: 0%;
-    height: 1px;
-
-  &:before{
-    
-  }
-
-  }
-
-
-`)({
-  // Animationss
-
-
-})
 
 const SecondaryContainer = styled.div`
+
+@media(max-width:900px){
+      flex-direction: column;
+    }
+
+    @media(min-width:900px){
+
+      height:100%;
+    }
+
     width:100vw;
-    height:100%;
     display:flex;
     top: 0;
     left: 0;
     position:absolute;
-    
+
 `
 
 
 
 export default class Sectionview extends Component {
     render() {
-        const {handleSectionChange,side,activeSection,name} = this.props
-        const posedStatus = activeSection === side  
+        const {icon,side,activeSection,name} = this.props
         const isActive = activeSection === side
 
-        console.log(posedStatus);
 
     return (
-      <Container isActive={isActive} posedStatus={posedStatus}  {...this.props} onClick={()=> handleSectionChange(side)} >
+      <Container isActive={isActive} activeSection={activeSection}  {...this.props}  >
           <SecondaryContainer>
+        <Background isActive={isActive} {...this.props}/>
         {/* <Icon isActive={isActive} src="https://res.cloudinary.com/dxjse9tsv/image/upload/v1552591999/Personal-active-icon.png" /> */}
-      <Title left >{isActive?'Home':name}</Title>
-     <View isActive={isActive} className={'animated fadeIn'} {...this.props} />
+      <Title {...this.props} left name={name} isActive={isActive} >
+        <SVG type={icon} isActive={isActive} />
+      </Title>
+     <View isActive={isActive}  {...this.props} />
           </SecondaryContainer>
 </Container>
     )
   }
 }
-//sdfds
