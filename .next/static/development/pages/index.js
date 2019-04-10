@@ -18248,13 +18248,7 @@ function (_Component) {
           lineNumber: 50
         },
         __self: this
-      }, "short list of the most helpful Sketch plugins we could find, just for all of you. This one\u2019s about quality, not quantity, folks. Check out the links below and grab them all for free")))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(Container, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 54
-        },
-        __self: this
-      }));
+      }, "Curious  and humble , full stack developer and entrepreneur. Big on design and lightning fast code. Found my love for JS developing on Node , leveraging the power of Non-Blocking I/O and npm\u2019s rich package eco system. Out of necessity I first started  learning web development  in college when I started my first business selling clothing online through an e-commerce website.Since I have had to learn more advanced techniques building tools for lead generation and business productivity. ")))));
     }
   }]);
 

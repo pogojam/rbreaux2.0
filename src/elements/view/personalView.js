@@ -47,13 +47,13 @@ export default class PersonalView extends Component {
           <SubContainer>
                 <h2>The Whole Story</h2>
             <ParagraphContainer>
-                <p>short list of the most helpful Sketch plugins we could find, just for all of you. This one’s about quality, not quantity, folks. Check out the links below and grab them all for free</p>
+                <p>Curious  and humble , full stack developer and entrepreneur. Big on design and lightning fast code. Found my love for JS developing on Node , leveraging the power of Non-Blocking I/O and npm’s rich package eco system. Out of necessity I first started  learning web development  in college when I started my first business selling clothing online through an e-commerce website.Since I have had to learn more advanced techniques building tools for lead generation and business productivity. </p>
             </ParagraphContainer>
           </SubContainer>
       </Container>
-      <Container>
+      {/* <Container>
 
-      </Container>
+      </Container> */}
       </Fragment>
     )
   }
