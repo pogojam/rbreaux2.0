@@ -1,12 +1,8 @@
-import React, { Component,Fragment } from 'react'
+import React, { Component } from 'react'
 import styled,{ThemeProvider} from 'styled-components'
 import data from './static/data.json'
-import posed from 'react-pose'
 import { CSSTransitionGroup } from 'react-transition-group'
 
-
-
-import Section from './blocks/section'
 import SectionView from './blocks/projectView/Sectionview'
 import Theme from './static/theme'
 
@@ -14,7 +10,7 @@ import Theme from './static/theme'
 
 
 
-const Container = posed(styled.div`
+const Container = styled.div`
 display:flex;
 min-width:100vw;
 min-height:100vh;
@@ -25,10 +21,7 @@ background-color:${({theme})=>theme.container.mainBG};
   flex-direction: column;
 }
 
-`)({
-  // Animations
-
-})
+`
 
 
 
@@ -53,18 +46,14 @@ handleSectionChange(sec){
 
   render() {
 const {activeSection} = this.state
-const isEntered = activeSection !=='all'
-    
 
     return (
       <ThemeProvider theme={Theme}>
       <Container >
       <CSSTransitionGroup
-
         transitionName="section"
           transitionEnterTimeout={1500}
           transitionLeaveTimeout={1100}>
-         
        {
         data.sections.filter((val)=>{
           if(activeSection === 'all'){
@@ -76,13 +65,9 @@ const isEntered = activeSection !=='all'
        }
 
       </CSSTransitionGroup>
-
       </Container>
       </ThemeProvider>
     )
   }
 }
 
-
-
-{/* ds<Section  className='section' activeSection={activeSection} handleSectionChange={this.handleSectionChange} key={val.name}   index={i}  {...val} /> */}

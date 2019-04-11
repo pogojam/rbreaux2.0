@@ -4,6 +4,9 @@ import posed from 'react-pose'
 
 
 const Header = styled.h2`
+
+
+
 position:relative;
 color: ${({theme})=>theme.card.text};
 width:250px;
@@ -31,6 +34,9 @@ margin-bottom:0px;
 `
 
 const HeaderContainer = posed(styled.div`
+
+
+
     text-align:right;
     justify-self: end;
     padding-right: 1.5em;

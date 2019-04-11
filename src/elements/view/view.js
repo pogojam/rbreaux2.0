@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled,{css} from 'styled-components'
-import posed from 'react-pose'
+
 import {PersonalView,ClientView,ProjectlView} from './'
 
 const activeView = css`
@@ -12,7 +12,7 @@ opacity:0;
 transition:opacity 1s;
 `
 
-const Container = posed(styled.div`
+const Container =styled.div`
 
 ${({isActive})=>{
   if(isActive){
@@ -24,12 +24,27 @@ ${({isActive})=>{
   
 }}
 
+&::before{
+  content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 
+  background-image:url(${({splashImg})=>splashImg});
+background-size: 100vh 100vw;
+background-attachment: fixed;
+background-size: cover;
 
+transform:${({scale})=>scale?'scale(1.1)':'scale(1)'};
+transition:transform 3s linear;
+will-change:transform;
+filter: blur(10px);
+}
 
 position:relative;
 margin-right:0;
-background-color:white;
 color:${({theme})=>theme.card.color};
 
 @media(min-width:900px){
@@ -41,24 +56,15 @@ color:${({theme})=>theme.card.color};
 }
 
 overflow-x:hidden;
-`)({
-    exit:{
-      
-    },
-    enter:{
+`
 
-    
-    }
-})
 export default class View extends Component {
     
   render() {
-
     const {side} = this.props
-
     
     return (
-      <Container ref={(e)=>this.viewContainer = e } {...this.props}  >
+      <Container   ref={(e)=>this.viewContainer = e } {...this.props}  >
         {side === 'left' && <PersonalView {...this.props} />}
         {side === 'center' && <ClientView {...this.props} />}
         {side === 'right' && <ProjectlView {...this.props} refViewContainer={this.viewContainer} />}

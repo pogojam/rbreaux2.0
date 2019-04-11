@@ -599,13 +599,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var _static_data_json__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./static/data.json */ "./src/static/data.json");
 var _static_data_json__WEBPACK_IMPORTED_MODULE_10___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./static/data.json */ "./src/static/data.json", 1);
-/* harmony import */ var react_pose__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-pose */ "react-pose");
-/* harmony import */ var react_pose__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react_pose__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var react_transition_group__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-transition-group */ "react-transition-group");
-/* harmony import */ var react_transition_group__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(react_transition_group__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var _blocks_section__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./blocks/section */ "./src/blocks/section.js");
-/* harmony import */ var _blocks_projectView_Sectionview__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./blocks/projectView/Sectionview */ "./src/blocks/projectView/Sectionview.js");
-/* harmony import */ var _static_theme__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./static/theme */ "./src/static/theme.js");
+/* harmony import */ var react_transition_group__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-transition-group */ "react-transition-group");
+/* harmony import */ var react_transition_group__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react_transition_group__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _blocks_projectView_Sectionview__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./blocks/projectView/Sectionview */ "./src/blocks/projectView/Sectionview.js");
+/* harmony import */ var _static_theme__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./static/theme */ "./src/static/theme.js");
 
 
 
@@ -632,12 +629,9 @@ function _templateObject() {
 
 
 
-
-
-var Container = react_pose__WEBPACK_IMPORTED_MODULE_11___default()(styled_components__WEBPACK_IMPORTED_MODULE_9___default.a.div(_templateObject(), function (_ref) {
+var Container = styled_components__WEBPACK_IMPORTED_MODULE_9___default.a.div(_templateObject(), function (_ref) {
   var theme = _ref.theme;
   return theme.container.mainBG;
-}))({// Animations
 });
 
 var App =
@@ -675,27 +669,26 @@ function (_Component) {
       var _this2 = this;
 
       var activeSection = this.state.activeSection;
-      var isEntered = activeSection !== 'all';
       return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(styled_components__WEBPACK_IMPORTED_MODULE_9__["ThemeProvider"], {
-        theme: _static_theme__WEBPACK_IMPORTED_MODULE_15__["default"],
+        theme: _static_theme__WEBPACK_IMPORTED_MODULE_13__["default"],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 60
+          lineNumber: 51
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(Container, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 52
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_transition_group__WEBPACK_IMPORTED_MODULE_12__["CSSTransitionGroup"], {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react_transition_group__WEBPACK_IMPORTED_MODULE_11__["CSSTransitionGroup"], {
         transitionName: "section",
         transitionEnterTimeout: 1500,
         transitionLeaveTimeout: 1100,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 62
+          lineNumber: 53
         },
         __self: this
       }, _static_data_json__WEBPACK_IMPORTED_MODULE_10__.sections.filter(function (val) {
@@ -707,7 +700,7 @@ function (_Component) {
           return true;
         }
       }).map(function (val, i) {
-        return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_blocks_projectView_Sectionview__WEBPACK_IMPORTED_MODULE_14__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+        return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_blocks_projectView_Sectionview__WEBPACK_IMPORTED_MODULE_12__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
           activeSection: activeSection,
           index: val.index
         }, val, _this2.props, {
@@ -715,7 +708,7 @@ function (_Component) {
           key: val.side,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 75
+            lineNumber: 64
           },
           __self: this
         }));
@@ -727,9 +720,6 @@ function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_8__["Component"]);
 
 
-{
-  /* ds<Section  className='section' activeSection={activeSection} handleSectionChange={this.handleSectionChange} key={val.name}   index={i}  {...val} /> */
-}
 
 /***/ }),
 
@@ -1568,11 +1558,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var react_pose__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-pose */ "react-pose");
-/* harmony import */ var react_pose__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react_pose__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _elements_view_view__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../elements/view/view */ "./src/elements/view/view.js");
-/* harmony import */ var _title__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./title */ "./src/blocks/projectView/title.js");
-/* harmony import */ var _SVG__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./SVG */ "./src/blocks/projectView/SVG.js");
+/* harmony import */ var _elements_view_view__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../elements/view/view */ "./src/elements/view/view.js");
+/* harmony import */ var _title__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./title */ "./src/blocks/projectView/title.js");
+/* harmony import */ var _SVG__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./SVG */ "./src/blocks/projectView/SVG.js");
 
 
 
@@ -1593,7 +1581,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n\ntransform:translateX(", ");\nwidth:calc(100vw/3);\ntransition:transform .6s cubic-bezier(0.455, 0.03, 0.515, 0.955) .3s ,width .3s cubic-bezier(0.455, 0.03, 0.515, 0.955) .7s;\n\n", "\n\n\n\n\ntransform-origin: ", " 50%;\n\nwill-change: transform, width, opacity;\n\n\nheight:100%;\nposition:absolute;\ntop:0;\nleft:0;\n\noverflow:hidden;\n\n\n\n&.section-enter{\n  transform: translateX(", ");\n  opacity:.01;\n}\n&.section-enter.section-enter-active{\n  transform:translateX(", ");\n  opacity:1;\n  transition:transform .8s cubic-bezier(0.455, 0.03, 0.515, 0.955) 1s , opacity .8s linear 1s;\n\n}\n\n&.section-leave{\n    transform:scale(.5) translateX(", ");\n    opacity:0;\n    transition:transform .8s cubic-bezier(0.455, 0.03, 0.515, 0.955) , opacity .8s linear;\n}\n\n&:hover  {\n  &::before{\n    opacity:", ";\n  }\n  ", "{\n    transform:scale(1.1);\n  }\n    \n  }\n  \n}\n\n\n&:before{\n  content: \"\";\n  display:block;\n  position:absolute;\n  top:0;\n  width: 100%;\n  height: 100%;\n  background:", ";\n\n  opacity:", ";\n  transition:opacity 1s ;\n}\n\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n\nwidth:calc(100vw/3);\nheight:100%;\nposition:absolute;\ntop:0;\nleft:0;\noverflow:hidden;\ntransform:translateX(", ");\ntransform-origin: ", " 50%;\ntransition:transform .6s cubic-bezier(0.455, 0.03, 0.515, 0.955) .3s ,width .3s cubic-bezier(0.455, 0.03, 0.515, 0.955) .7s;\nwill-change: transform,width,opacity;\n\n", "\n\n&.section-enter{\n  transform: translateX(", ");\n  opacity:.01;\n}\n&.section-enter.section-enter-active{\n  transform:translateX(", ");\n  opacity:1;\n  transition:transform .8s cubic-bezier(0.455, 0.03, 0.515, 0.955) 1s , opacity .8s linear 1s;\n\n}\n\n&.section-leave{\n    transform:scale(.5) translateX(", ");\n    opacity:0;\n    transition:transform .8s cubic-bezier(0.455, 0.03, 0.515, 0.955) , opacity .8s linear;\n}\n\n&:hover  {\n  &::before{\n    opacity:", ";\n  }\n  }\n\n\n&:before{\n  content: \"\";\n  display:block;\n  position:absolute;\n  top:0;\n  width: 100%;\n  height: 100%;\n  background:", ";\n  opacity:", ";\n  transition:opacity 1s ;\n}\n\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -1603,7 +1591,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\nz-index: -1;\nposition:absolute;\nheight:100%;\nwidth:100vw;\n\nbackground-image:url(", ");\nbackground-size: auto 100%;\nbackground-repeat: no-repeat;\n\ntransition:transform 3s linear;\nwill-change:transform ;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\nz-index: -1;\nposition:absolute;\nheight:100%;\nwidth:100vw;\n\nbackground-image:url(", ");\nbackground-size: auto 100%;\nbackground-repeat: no-repeat;\ntransform:", ";\ntransition:transform 3s linear;\nwill-change:transform;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -1637,32 +1625,29 @@ function _templateObject() {
 
 
 
-
 var animateSectionActive = Object(styled_components__WEBPACK_IMPORTED_MODULE_8__["css"])(_templateObject());
 var animateSectionNetural = Object(styled_components__WEBPACK_IMPORTED_MODULE_8__["css"])(_templateObject2());
 var Background = styled_components__WEBPACK_IMPORTED_MODULE_8___default.a.div(_templateObject3(), function (_ref) {
   var splashImg = _ref.splashImg;
   return splashImg;
+}, function (_ref2) {
+  var scale = _ref2.scale;
+  return scale ? 'scale(1.1)' : 'scale(1)';
 });
-var Container = react_pose__WEBPACK_IMPORTED_MODULE_9___default()(styled_components__WEBPACK_IMPORTED_MODULE_8___default.a.div(_templateObject4(), function (_ref2) {
-  var index = _ref2.index;
+var Container = styled_components__WEBPACK_IMPORTED_MODULE_8___default.a.div(_templateObject4(), function (_ref3) {
+  var index = _ref3.index;
   return index * 100 + "%";
-}, function (_ref3) {
-  var isActive = _ref3.isActive,
-      activeSection = _ref3.activeSection,
-      index = _ref3.index;
+}, function (_ref4) {
+  var index = _ref4.index;
+  return index * 100 + 50 + "%";
+}, function (_ref5) {
+  var isActive = _ref5.isActive;
 
   if (isActive) {
     return animateSectionActive;
   } else {
     return animateSectionNetural;
   }
-}, function (_ref4) {
-  var index = _ref4.index;
-  return index * 100 + 50 + "%";
-}, function (_ref5) {
-  var index = _ref5.index;
-  return index * 100 + "%";
 }, function (_ref6) {
   var index = _ref6.index;
   return index * 100 + "%";
@@ -1670,20 +1655,18 @@ var Container = react_pose__WEBPACK_IMPORTED_MODULE_9___default()(styled_compone
   var index = _ref7.index;
   return index * 100 + "%";
 }, function (_ref8) {
-  var isActive = _ref8.isActive;
+  var index = _ref8.index;
+  return index * 100 + "%";
+}, function (_ref9) {
+  var isActive = _ref9.isActive;
   return isActive ? "" : ".4";
-}, Background, function (_ref9) {
-  var overlay = _ref9.overlay;
-  return overlay;
 }, function (_ref10) {
-  var isActive = _ref10.isActive;
-
-  if (isActive) {
-    return ".3";
-  } else {
-    return ".65";
-  }
-}))({});
+  var overlay = _ref10.overlay;
+  return overlay;
+}, function (_ref11) {
+  var isActive = _ref11.isActive;
+  return isActive ? '0' : '.65';
+});
 var SecondaryContainer = styled_components__WEBPACK_IMPORTED_MODULE_8___default.a.div(_templateObject5());
 
 var Sectionview =
@@ -1691,15 +1674,44 @@ var Sectionview =
 function (_Component) {
   Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__["default"])(Sectionview, _Component);
 
-  function Sectionview() {
+  function Sectionview(props) {
+    var _this;
+
     Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, Sectionview);
 
-    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(Sectionview).apply(this, arguments));
+    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(Sectionview).call(this, props));
+    _this.state = {
+      scale: false
+    };
+    return _this;
   }
 
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(Sectionview, [{
+    key: "handleHover",
+    value: function handleHover(state) {
+      var background = this.background;
+      var viewBackground = this.view.viewContainer;
+
+      if (state === 'enter') {
+        // background.style.transform = 'scale(1.1)'
+        // viewBackground.style.transform = 'scale(1.1)'
+        this.setState({
+          scale: true
+        });
+      } else {
+        // background.style.transform = 'scale(1)'
+        // viewBackground.style.transform = 'scale(1)'
+        this.setState({
+          scale: false
+        });
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
+      var _this2 = this;
+
+      var scale = this.state.scale;
       var _this$props = this.props,
           icon = _this$props.icon,
           side = _this$props.side,
@@ -1707,51 +1719,63 @@ function (_Component) {
           name = _this$props.name;
       var isActive = activeSection === side;
       return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Container, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+        onMouseEnter: function onMouseEnter() {
+          return _this2.handleHover('enter');
+        },
+        onMouseLeave: function onMouseLeave() {
+          return _this2.handleHover('exit');
+        },
         isActive: isActive,
         activeSection: activeSection
       }, this.props, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 146
+          lineNumber: 158
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(SecondaryContainer, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 147
+          lineNumber: 159
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Background, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Background, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, this.state, {
+        ref: function ref(e) {
+          return _this2.background = e;
+        },
         isActive: isActive
       }, this.props, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 148
+          lineNumber: 160
         },
         __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_title__WEBPACK_IMPORTED_MODULE_11__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, this.props, {
+      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_title__WEBPACK_IMPORTED_MODULE_10__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, this.props, {
         left: true,
         name: name,
         isActive: isActive,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 150
+          lineNumber: 162
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_SVG__WEBPACK_IMPORTED_MODULE_12__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_SVG__WEBPACK_IMPORTED_MODULE_11__["default"], {
         type: icon,
         isActive: isActive,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 151
+          lineNumber: 163
         },
         __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_elements_view_view__WEBPACK_IMPORTED_MODULE_10__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_elements_view_view__WEBPACK_IMPORTED_MODULE_9__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, this.state, {
+        ref: function ref(e) {
+          return _this2.view = e;
+        },
         isActive: isActive
       }, this.props, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 153
+          lineNumber: 165
         },
         __self: this
       }))));
@@ -2788,196 +2812,6 @@ function (_Component) {
 
 /***/ }),
 
-/***/ "./src/blocks/section.js":
-/*!*******************************!*\
-  !*** ./src/blocks/section.js ***!
-  \*******************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Section; });
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var react_pose__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-pose */ "react-pose");
-/* harmony import */ var react_pose__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react_pose__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _elements_view_view__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../elements/view/view */ "./src/elements/view/view.js");
-/* harmony import */ var animejs__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! animejs */ "animejs");
-/* harmony import */ var animejs__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(animejs__WEBPACK_IMPORTED_MODULE_11__);
-
-
-
-
-
-
-
-var _jsxFileName = "/Users/Sugarbook/Documents/Web-Projects/node/rbreaux2.0/src/blocks/section.js";
-
-function _templateObject4() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n    width:100vh;\n    display:none;\n"]);
-
-  _templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject3() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n    position: absolute;\n    right: 0;\n    opacity:", ";\n"]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n\nposition: relative;\n    top: 50vh;\ntext-align: center;\ncolor:white;  \n\n\n&:after{\n  transition: min-width .9s cubic-bezier(0.075, 0.82, 0.165, 1);\n    content: '';\n    position: absolute;\n    left: 50%;\n    top:130%;\n    transform: translateX(-50%);\n    background-color: white;\n    min-width: 0%;\n    height: 1px;\n\n  &:before{\n    \n  }\n\n  }\n\n\n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n/* Mobile */\n\n@media (max-width:800px){\n  background-size:100% !important;\n/* \n  background-position:", "; */\n}\n\n/* Desktop */\n\n\n\ncursor: pointer;\nbackground-image:url(", ");\nbackground-size: auto 100%;\nbackground-repeat: no-repeat;\n\n\nwidth:calc(100vw/3);\n\nflex-basis:30%;\n\n/* background-attachment: fixed; */\n\nwill-change:auto;\noverflow:none;\nposition:relative;\n\n\noverflow:hidden;\n\n&:hover{\n  /* flex-grow:1.3;\n  \n  h1:after{\n    min-width: 80%;\n  } */\n\n}\n\n&:before{\n  content: \"\";\n  display:block;\n  position:absolute;\n  top:0;\n\n  width: 100%;\n  height: 100%;\n  background:", ";\n}\n\n\n\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-
-
-
-
-
-var Container = react_pose__WEBPACK_IMPORTED_MODULE_9___default()(styled_components__WEBPACK_IMPORTED_MODULE_8___default.a.div(_templateObject(), function (_ref) {
-  var side = _ref.side;
-
-  switch (side) {
-    case 'left':
-      return 'top';
-      break;
-
-    case 'center':
-      return '';
-      break;
-
-    case 'bottom':
-      return '';
-      break;
-  }
-}, function (_ref2) {
-  var splashImg = _ref2.splashImg;
-  return splashImg;
-}, function (_ref3) {
-  var overlay = _ref3.overlay;
-  return overlay;
-}))({});
-var Title = react_pose__WEBPACK_IMPORTED_MODULE_9___default()(styled_components__WEBPACK_IMPORTED_MODULE_8___default.a.h1(_templateObject2()))({// Animations
-});
-var Icon = react_pose__WEBPACK_IMPORTED_MODULE_9___default()(styled_components__WEBPACK_IMPORTED_MODULE_8___default.a.img(_templateObject3(), function (_ref4) {
-  var isActive = _ref4.isActive;
-  return isActive ? 1 : 0;
-}))({});
-var SecondaryContainer = styled_components__WEBPACK_IMPORTED_MODULE_8___default.a.div(_templateObject4());
-
-var Section =
-/*#__PURE__*/
-function (_Component) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__["default"])(Section, _Component);
-
-  function Section() {
-    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, Section);
-
-    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(Section).apply(this, arguments));
-  }
-
-  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(Section, [{
-    key: "componentDidEnter",
-    value: function componentDidEnter() {}
-  }, {
-    key: "render",
-    value: function render() {
-      var _this = this;
-
-      var _this$props = this.props,
-          name = _this$props.name,
-          activeSection = _this$props.activeSection,
-          handleSectionChange = _this$props.handleSectionChange,
-          side = _this$props.side;
-      var isActive = activeSection === side;
-      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Container, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-        onClick: function onClick() {
-          return handleSectionChange(side);
-        },
-        isActive: isActive
-      }, this.props, {
-        ref: function ref(e) {
-          return _this.container = e;
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 145
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(SecondaryContainer, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 146
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Icon, {
-        isActive: isActive,
-        src: "https://res.cloudinary.com/dxjse9tsv/image/upload/v1552591999/Personal-active-icon.png",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 148
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Title, {
-        left: true,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 149
-        },
-        __self: this
-      }, isActive ? 'Home' : name), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_elements_view_view__WEBPACK_IMPORTED_MODULE_10__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-        isActive: isActive
-      }, this.props, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 150
-        },
-        __self: this
-      }))));
-    }
-  }]);
-
-  return Section;
-}(react__WEBPACK_IMPORTED_MODULE_7__["Component"]);
-
-
-
-/***/ }),
-
 /***/ "./src/elements/SectionHeader.js":
 /*!***************************************!*\
   !*** ./src/elements/SectionHeader.js ***!
@@ -3019,7 +2853,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    text-align:right;\n    justify-self: end;\n    padding-right: 1.5em;\n    margin-top: .5em;\n    position: absolute;\n    right: 0;\n    top:0;\n\n\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n\n\n\n    text-align:right;\n    justify-self: end;\n    padding-right: 1.5em;\n    margin-top: .5em;\n    position: absolute;\n    right: 0;\n    top:0;\n\n\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -3029,7 +2863,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\nposition:relative;\ncolor: ", ";\nwidth:250px;\nmargin-bottom:0px;\n\n&:after{\n    content: '';\n    height: 1px;\n    background: black;\n    width: 144px;\n    position: absolute;\n    bottom: 0;\n    right: 0;\n\n\n}\n\n/* &:after{\n    content:'';\n    height:1px;\n    width:3em;\n    \n} */\n\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n\n\n\nposition:relative;\ncolor: ", ";\nwidth:250px;\nmargin-bottom:0px;\n\n&:after{\n    content: '';\n    height: 1px;\n    background: black;\n    width: 144px;\n    position: absolute;\n    bottom: 0;\n    right: 0;\n\n\n}\n\n/* &:after{\n    content:'';\n    height:1px;\n    width:3em;\n    \n} */\n\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -3070,19 +2904,19 @@ function (_Component) {
         className: className,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57
+          lineNumber: 63
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(Header, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 58
+          lineNumber: 64
         },
         __self: this
       }, main), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(SubHeader, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 59
+          lineNumber: 65
         },
         __self: this
       }, sub));
@@ -3489,7 +3323,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n\n@media(max-width:900px){\n    top:0;\n}\n\n\n    left: 9vw;\n    top: 58vh;\n    max-width:250px;\n\n", "\n\n    transition:transform .5s cubic-bezier(0.445, 0.05, 0.55, 0.95),opacity .5s cubic-bezier(0.445, 0.05, 0.55, 0.95);\n\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n\n@media(max-width:900px){\n    top:0;\n    \n}\n\n\n    left: 9vw;\n    top: 58vh;\n    max-width:250px;\n\n", "\n\n    transition:transform .5s cubic-bezier(0.445, 0.05, 0.55, 0.95),opacity .5s cubic-bezier(0.445, 0.05, 0.55, 0.95);\n\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -3650,7 +3484,7 @@ function (_Component) {
         pose: ShuffleStatus,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 160
+          lineNumber: 161
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_SectionHeader__WEBPACK_IMPORTED_MODULE_13__["default"], {
@@ -3658,7 +3492,7 @@ function (_Component) {
         sub: "Originals",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 161
+          lineNumber: 162
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(SectionSubHeader, {
@@ -3667,14 +3501,14 @@ function (_Component) {
         sub: "A Portfolio",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 162
+          lineNumber: 163
         },
         __self: this
       }), isActive && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(StyledPort, {
         className: "portBox",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 163
+          lineNumber: 164
         },
         __self: this
       }, shownProjects.map(function (el, i) {
@@ -3686,7 +3520,7 @@ function (_Component) {
           cardData: el,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 166
+            lineNumber: 167
           },
           __self: this
         });
@@ -3696,7 +3530,7 @@ function (_Component) {
         handleShuffle: this.handleShuffle,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 169
+          lineNumber: 170
         },
         __self: this
       })));
@@ -3731,9 +3565,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var react_pose__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-pose */ "react-pose");
-/* harmony import */ var react_pose__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react_pose__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./ */ "./src/elements/view/index.js");
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ */ "./src/elements/view/index.js");
 
 
 
@@ -3744,7 +3576,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/Sugarbook/Documents/Web-Projects/node/rbreaux2.0/src/elements/view/view.js";
 
 function _templateObject3() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n\n", "\n\n\n\n\nposition:relative;\nmargin-right:0;\nbackground-color:white;\ncolor:", ";\n\n@media(min-width:900px){\n  flex-basis:70%;\n}\n\n@media(max-width:900px){\n      height:100%;\n}\n\noverflow-x:hidden;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n\n", "\n\n&::before{\n  content:'';\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n\n  background-image:url(", ");\nbackground-size: 100vh 100vw;\nbackground-attachment: fixed;\nbackground-size: cover;\n\ntransform:", ";\ntransition:transform 3s linear;\nwill-change:transform;\nfilter: blur(10px);\n}\n\nposition:relative;\nmargin-right:0;\ncolor:", ";\n\n@media(min-width:900px){\n  flex-basis:70%;\n}\n\n@media(max-width:900px){\n      height:100%;\n}\n\noverflow-x:hidden;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -3776,10 +3608,9 @@ function _templateObject() {
 
 
 
-
 var activeView = Object(styled_components__WEBPACK_IMPORTED_MODULE_8__["css"])(_templateObject());
 var unactiveView = Object(styled_components__WEBPACK_IMPORTED_MODULE_8__["css"])(_templateObject2());
-var Container = react_pose__WEBPACK_IMPORTED_MODULE_9___default()(styled_components__WEBPACK_IMPORTED_MODULE_8___default.a.div(_templateObject3(), function (_ref) {
+var Container = styled_components__WEBPACK_IMPORTED_MODULE_8___default.a.div(_templateObject3(), function (_ref) {
   var isActive = _ref.isActive;
 
   if (isActive) {
@@ -3788,11 +3619,14 @@ var Container = react_pose__WEBPACK_IMPORTED_MODULE_9___default()(styled_compone
     return unactiveView;
   }
 }, function (_ref2) {
-  var theme = _ref2.theme;
+  var splashImg = _ref2.splashImg;
+  return splashImg;
+}, function (_ref3) {
+  var scale = _ref3.scale;
+  return scale ? 'scale(1.1)' : 'scale(1)';
+}, function (_ref4) {
+  var theme = _ref4.theme;
   return theme.card.color;
-}))({
-  exit: {},
-  enter: {}
 });
 
 var View =
@@ -3819,26 +3653,26 @@ function (_Component) {
       }, this.props, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 67
         },
         __self: this
-      }), side === 'left' && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(___WEBPACK_IMPORTED_MODULE_10__["PersonalView"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, this.props, {
+      }), side === 'left' && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(___WEBPACK_IMPORTED_MODULE_9__["PersonalView"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, this.props, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 62
+          lineNumber: 68
         },
         __self: this
-      })), side === 'center' && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(___WEBPACK_IMPORTED_MODULE_10__["ClientView"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, this.props, {
+      })), side === 'center' && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(___WEBPACK_IMPORTED_MODULE_9__["ClientView"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, this.props, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 69
         },
         __self: this
-      })), side === 'right' && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(___WEBPACK_IMPORTED_MODULE_10__["ProjectlView"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, this.props, {
+      })), side === 'right' && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(___WEBPACK_IMPORTED_MODULE_9__["ProjectlView"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, this.props, {
         refViewContainer: this.viewContainer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64
+          lineNumber: 70
         },
         __self: this
       })));
@@ -3934,17 +3768,6 @@ var Theme = {
 
 module.exports = __webpack_require__(/*! /Users/Sugarbook/Documents/Web-Projects/node/rbreaux2.0/pages/index.js */"./pages/index.js");
 
-
-/***/ }),
-
-/***/ "animejs":
-/*!**************************!*\
-  !*** external "animejs" ***!
-  \**************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("animejs");
 
 /***/ }),
 

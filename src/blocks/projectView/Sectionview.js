@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import styled,{ThemeProvider,keyframes,css} from 'styled-components'
-import posed,{PoseGroup} from 'react-pose';
+import styled,{css} from 'styled-components'
 import View from '../../elements/view/view';
 import Title from './title'
 import SVG from './SVG'
@@ -14,6 +13,7 @@ const animateSectionNetural = css`
 transition:transform .6s cubic-bezier(0.455, 0.03, 0.515, 0.955) .7s ,width .3s cubic-bezier(0.455, 0.03, 0.515, 0.955) .3s;
 `
 
+
 const Background = styled.div`
 z-index: -1;
 position:absolute;
@@ -23,42 +23,32 @@ width:100vw;
 background-image:url(${({splashImg})=>splashImg});
 background-size: auto 100%;
 background-repeat: no-repeat;
-
+transform:${({scale})=>scale?'scale(1.1)':'scale(1)'};
 transition:transform 3s linear;
-will-change:transform ;
+will-change:transform;
 `
 
 
-const Container = posed(styled.div`
+const Container = styled.div`
 
-transform:translateX(${({index})=>index*100+"%"});
 width:calc(100vw/3);
+height:100%;
+position:absolute;
+top:0;
+left:0;
+overflow:hidden;
+transform:translateX(${({index})=>index*100+"%"});
+transform-origin: ${({index})=>index*100+50+"%"} 50%;
 transition:transform .6s cubic-bezier(0.455, 0.03, 0.515, 0.955) .3s ,width .3s cubic-bezier(0.455, 0.03, 0.515, 0.955) .7s;
+will-change: transform,width,opacity;
 
-${({isActive,activeSection,index})=>{
+${({isActive})=>{
   if(isActive){
      return animateSectionActive
   }else{
     return animateSectionNetural
   }
 }}
-
-
-
-
-transform-origin: ${({index})=>index*100+50+"%"} 50%;
-
-will-change: transform, width, opacity;
-
-
-height:100%;
-position:absolute;
-top:0;
-left:0;
-
-overflow:hidden;
-
-
 
 &.section-enter{
   transform: translateX(${({index})=>index*100+"%"});
@@ -81,13 +71,7 @@ overflow:hidden;
   &::before{
     opacity:${({isActive})=>isActive?"":".4"};
   }
-  ${Background}{
-    transform:scale(1.1);
   }
-    
-  }
-  
-}
 
 
 &:before{
@@ -98,21 +82,11 @@ overflow:hidden;
   width: 100%;
   height: 100%;
   background:${({overlay})=>overlay};
-
-  opacity:${({isActive})=>{
-    if(isActive){
-      return ".3"
-    }else{
-      return ".65"
-    }
-  }};
+  opacity:${({isActive})=>isActive?'0':'.65'};
   transition:opacity 1s ;
 }
 
-`)({
-    
-
-})
+`
 
 
 const SecondaryContainer = styled.div`
@@ -137,20 +111,58 @@ const SecondaryContainer = styled.div`
 
 
 export default class Sectionview extends Component {
+
+  constructor(props) {
+    super(props)
+  
+    this.state = {
+       scale:false
+    }
+  }
+  
+
+    handleHover(state){
+          const background = this.background
+          const viewBackground = this.view.viewContainer
+
+        if(state==='enter'){
+          // background.style.transform = 'scale(1.1)'
+          // viewBackground.style.transform = 'scale(1.1)'
+          
+          this.setState({
+            scale:true
+          })
+
+        }
+        else{
+          // background.style.transform = 'scale(1)'
+          // viewBackground.style.transform = 'scale(1)'
+
+          this.setState({
+            scale:false
+          })
+
+        }
+          
+          
+      }
+
+
     render() {
+        const {scale} = this.state
         const {icon,side,activeSection,name} = this.props
         const isActive = activeSection === side
 
 
     return (
-      <Container isActive={isActive} activeSection={activeSection}  {...this.props}  >
+      <Container  onMouseEnter={()=>this.handleHover('enter')} onMouseLeave={()=>this.handleHover('exit')} isActive={isActive} activeSection={activeSection}  {...this.props}  >
           <SecondaryContainer>
-        <Background isActive={isActive} {...this.props}/>
+        <Background {...this.state} ref={(e)=> this.background = e } isActive={isActive} {...this.props}/>
         {/* <Icon isActive={isActive} src="https://res.cloudinary.com/dxjse9tsv/image/upload/v1552591999/Personal-active-icon.png" /> */}
       <Title {...this.props} left name={name} isActive={isActive} >
         <SVG type={icon} isActive={isActive} />
       </Title>
-     <View isActive={isActive}  {...this.props} />
+     <View {...this.state} ref={(e)=>this.view = e } isActive={isActive}  {...this.props} />
           </SecondaryContainer>
 </Container>
     )

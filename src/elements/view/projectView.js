@@ -34,6 +34,7 @@ const SectionSubHeader = styled(Header)`
 
 @media(max-width:900px){
     top:0;
+    
 }
 
 
