@@ -14160,7 +14160,7 @@ var _static_data_json__WEBPACK_IMPORTED_MODULE_10___namespace = /*#__PURE__*/__w
 var _jsxFileName = "/Users/Sugarbook/Documents/Web-Projects/node/rbreaux2.0/src/app.js";
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_7__["default"])(["\ndisplay:flex;\nmin-width:100vw;\nmin-height:100vh;\n\nbackground-color:", ";\n\n@media (max-width:800px){\n  flex-direction: column;\n}\n\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_7__["default"])(["\ndisplay:flex;\nmin-width:100vw;\nmin-height:100%;\n\nbackground-color:", ";\n\n@media (max-width:800px){\n  flex-direction: column;\n}\n\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -14709,7 +14709,8 @@ var SuitcaseSVG = function SuitcaseSVG(_ref5) {
 };
 
 var MonitorSVG = function MonitorSVG(_ref6) {
-  var className = _ref6.className;
+  var className = _ref6.className,
+      color = _ref6.color;
   return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("svg", {
     className: className,
     width: "176px",
@@ -14735,7 +14736,7 @@ var MonitorSVG = function MonitorSVG(_ref6) {
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("g", {
     id: "Monitor",
-    stroke: "#979797",
+    stroke: color,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 58
@@ -14798,7 +14799,8 @@ var MonitorSVG = function MonitorSVG(_ref6) {
 };
 
 var IphoneSVG = function IphoneSVG(_ref7) {
-  var className = _ref7.className;
+  var className = _ref7.className,
+      color = _ref7.color;
   return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("svg", {
     className: className,
     width: "50px",
@@ -14837,7 +14839,7 @@ var IphoneSVG = function IphoneSVG(_ref7) {
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("rect", {
     id: "Rectangle",
-    stroke: "#979797",
+    stroke: color,
     strokeWidth: "2",
     x: "1",
     y: "1",
@@ -14851,7 +14853,8 @@ var IphoneSVG = function IphoneSVG(_ref7) {
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("circle", {
     id: "Oval",
-    stroke: "#979797",
+    fillOpacity: ".0",
+    stroke: color,
     fill: "#D8D8D8",
     cx: "25.5",
     cy: "86.5",
@@ -14863,7 +14866,7 @@ var IphoneSVG = function IphoneSVG(_ref7) {
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("rect", {
     id: "Rectangle",
-    stroke: "#979797",
+    stroke: color,
     x: "0.5",
     y: "12.5",
     width: "49",
@@ -14875,6 +14878,7 @@ var IphoneSVG = function IphoneSVG(_ref7) {
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("rect", {
     id: "Rectangle",
+    fillOpacity: ".0",
     fill: "#D8D8D8",
     x: "12",
     y: "6",
@@ -14890,7 +14894,8 @@ var IphoneSVG = function IphoneSVG(_ref7) {
 };
 
 var RobotSVG = function RobotSVG(_ref8) {
-  var className = _ref8.className;
+  var className = _ref8.className,
+      color = _ref8.color;
   return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("svg", {
     className: className,
     width: "75px",
@@ -14917,7 +14922,7 @@ var RobotSVG = function RobotSVG(_ref8) {
   }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("g", {
     id: "RobotArm",
     transform: "translate(0.000000, 1.000000)",
-    stroke: "#979797",
+    stroke: color,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 84
@@ -14979,7 +14984,7 @@ var RobotSVG = function RobotSVG(_ref8) {
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("circle", {
     id: "Oval",
-    fill: "#D8D8D8",
+    fill: "black",
     cx: "25",
     cy: "36",
     r: "7",
@@ -14990,7 +14995,7 @@ var RobotSVG = function RobotSVG(_ref8) {
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("circle", {
     id: "Oval-Copy",
-    fill: "#D8D8D8",
+    fill: "black",
     cx: "49",
     cy: "5",
     r: "5",
@@ -15001,7 +15006,7 @@ var RobotSVG = function RobotSVG(_ref8) {
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("ellipse", {
     id: "Oval-Copy-2",
-    fill: "#D8D8D8",
+    fill: "black",
     cx: "64.5",
     cy: "23.5280091",
     rx: "3.5",
@@ -15014,7 +15019,7 @@ var RobotSVG = function RobotSVG(_ref8) {
   }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("g", {
     id: "claw",
     transform: "translate(55.000000, 27.000000)",
-    fill: "#D8D8D8",
+    fill: "black",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 93
@@ -15124,6 +15129,7 @@ function (_Component) {
         },
         __self: this
       }), type === 'iphone' && react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(StyledIphone, {
+        color: "black",
         className: "animated fadeIn delay-4s",
         __source: {
           fileName: _jsxFileName,
@@ -15131,6 +15137,7 @@ function (_Component) {
         },
         __self: this
       }), type === 'monitor' && react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(StyledMonitor, {
+        color: "black",
         className: "animated fadeIn delay-4s",
         __source: {
           fileName: _jsxFileName,
@@ -15138,6 +15145,7 @@ function (_Component) {
         },
         __self: this
       }), type === 'robot' && react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(StyledRobot, {
+        color: "black",
         className: "animated fadeIn delay-4s",
         __source: {
           fileName: _jsxFileName,
@@ -16394,7 +16402,7 @@ var BackArrow = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_t
 });
 var Container = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject3(), function (_ref7) {
   var isActive = _ref7.isActive;
-  return isActive ? 'translateX(-50%)' : 'translateX(0%)';
+  return isActive ? 'translateX(-70%)' : 'translateX(0%)';
 }, function (_ref8) {
   var shade = _ref8.shade;
   shade;
@@ -16638,7 +16646,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/Sugarbook/Documents/Web-Projects/node/rbreaux2.0/src/elements/view/clientView.js";
 
 function _templateObject5() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n      flex-basis: 100%;\n      height:10vh;\n      border:none;\n      \n    :focus{\n      outline:none;\n    }\n\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n      flex-basis: 100%;\n      height:10vh;\n      border:none;\n      background:none;\n      \n    :focus{\n      outline:none;\n    }\n\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -16668,7 +16676,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n        display:flex;\n        text-align:center;\n        height:100vh;\n        flex-direction: column;\n        justify-content: center;\n        padding: 3em;\n        box-sizing: border-box;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n        display:flex;\n        text-align:center;\n        height:100vh;\n        flex-direction: column;\n        justify-content: center;\n        padding: 3em;\n        padding-left:5em;\n        padding-right:5em;\n        box-sizing: border-box;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -16714,7 +16722,7 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(Container, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 74
+          lineNumber: 77
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_SectionHeader__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -16723,58 +16731,58 @@ function (_Component) {
         sub: "Contractor",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 75
+          lineNumber: 78
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(SvgContainer, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 76
+          lineNumber: 79
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_blocks_projectView_SVG__WEBPACK_IMPORTED_MODULE_9__["default"], {
         type: "monitor",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 77
+          lineNumber: 80
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_blocks_projectView_SVG__WEBPACK_IMPORTED_MODULE_9__["default"], {
         type: "iphone",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 78
+          lineNumber: 81
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_blocks_projectView_SVG__WEBPACK_IMPORTED_MODULE_9__["default"], {
         type: "robot",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 79
+          lineNumber: 82
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(ButtonsContainer, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 81
+          lineNumber: 84
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(Button, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 82
+          lineNumber: 85
         },
         __self: this
       }, "Desktop"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(Button, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 85
+          lineNumber: 88
         },
         __self: this
       }, "Mobile"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(Button, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 88
+          lineNumber: 91
         },
         __self: this
       }, "Bot")));

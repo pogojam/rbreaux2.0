@@ -53,9 +53,9 @@ const SuitcaseSVG = ({className,suitcase})=><svg className={className} width="10
     </g>
 </svg>
 
-const MonitorSVG = ({className})=><svg className={className} width="176px" height="131px" viewBox="0 0 176 131" version="1.1" xmlns="http://www.w3.org/2000/svg">
+const MonitorSVG = ({className,color})=><svg className={className} width="176px" height="131px" viewBox="0 0 176 131" version="1.1" xmlns="http://www.w3.org/2000/svg">
     <g id="Symbols" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-        <g id="Monitor" stroke="#979797">
+        <g id="Monitor" stroke={color}>
             <g>
                 <path d="M173.5,100 L2.5,100" id="Line-Copy-2" strokeLinecap="square"></path>
                 <rect id="Rectangle" strokeWidth="2" x="1" y="1" width="174" height="110" rx="10"></rect>
@@ -66,31 +66,31 @@ const MonitorSVG = ({className})=><svg className={className} width="176px" heigh
     </g>
 </svg>
 
-const IphoneSVG = ({className})=><svg className={className} width="50px" height="94px" viewBox="0 0 50 94" version="1.1" xmlns="http://www.w3.org/2000/svg" >
+const IphoneSVG = ({className,color})=><svg className={className} width="50px" height="94px" viewBox="0 0 50 94" version="1.1" xmlns="http://www.w3.org/2000/svg" >
     <g id="Symbols" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
         <g id="Phone">
             <g>
-                <rect id="Rectangle" stroke="#979797" strokeWidth="2" x="1" y="1" width="48" height="92" rx="13"></rect>
-                <circle id="Oval" stroke="#979797" fill="#D8D8D8" cx="25.5" cy="86.5" r="3.5"></circle>
-                <rect id="Rectangle" stroke="#979797" x="0.5" y="12.5" width="49" height="66"></rect>
-                <rect id="Rectangle" fill="#D8D8D8" x="12" y="6" width="27" height="3" rx="1.5"></rect>
+                <rect id="Rectangle" stroke={color} strokeWidth="2" x="1" y="1" width="48" height="92" rx="13"></rect>
+                <circle id="Oval" fillOpacity=".0" stroke={color} fill="#D8D8D8" cx="25.5" cy="86.5" r="3.5"></circle>
+                <rect id="Rectangle" stroke={color} x="0.5" y="12.5" width="49" height="66"></rect>
+                <rect id="Rectangle" fillOpacity=".0" fill="#D8D8D8" x="12" y="6" width="27" height="3" rx="1.5"></rect>
             </g>
         </g>
     </g>
 </svg>
 
-const RobotSVG =({className})=><svg className={className} width="75px" height="83px" viewBox="0 0 75 83" version="1.1" xmlns="http://www.w3.org/2000/svg" >
+const RobotSVG =({className,color})=><svg className={className} width="75px" height="83px" viewBox="0 0 75 83" version="1.1" xmlns="http://www.w3.org/2000/svg" >
     <g id="Symbols" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-        <g id="RobotArm" transform="translate(0.000000, 1.000000)" stroke="#979797">
+        <g id="RobotArm" transform="translate(0.000000, 1.000000)" stroke={color}>
             <g id="Group">
                 <rect id="Rectangle" x="0.5" y="76.5" width="46" height="5" rx="2"></rect>
                 <rect id="Rectangle" x="21.5" y="40.5" width="6" height="36"></rect>
                 <rect id="Rectangle-Copy-2" transform="translate(35.147775, 21.733014) rotate(38.000000) translate(-35.147775, -21.733014) " x="32.1477749" y="3.73301411" width="6" height="36"></rect>
                 <rect id="Rectangle-Copy-3" transform="translate(57.028009, 14.427141) rotate(140.000000) translate(-57.028009, -14.427141) " x="54.8793605" y="0.927140737" width="4.2972973" height="27"></rect>
-                <circle id="Oval" fill="#D8D8D8" cx="25" cy="36" r="7"></circle>
-                <circle id="Oval-Copy" fill="#D8D8D8" cx="49" cy="5" r="5"></circle>
-                <ellipse id="Oval-Copy-2" fill="#D8D8D8" cx="64.5" cy="23.5280091" rx="3.5" ry="3.52800911"></ellipse>
-                <g id="claw" transform="translate(55.000000, 27.000000)" fill="#D8D8D8">
+                <circle  id="Oval" fill="black" cx="25" cy="36" r="7"></circle>
+                <circle id="Oval-Copy" fill="black" cx="49" cy="5" r="5"></circle>
+                <ellipse id="Oval-Copy-2" fill="black" cx="64.5" cy="23.5280091" rx="3.5" ry="3.52800911"></ellipse>
+                <g id="claw" transform="translate(55.000000, 27.000000)" fill="black">
                     <rect id="Rectangle" x="0.5" y="0.5" width="19" height="2"></rect>
                     <rect id="Rectangle-Copy-5" x="0.5" y="3.5" width="3" height="2"></rect>
                     <rect id="Rectangle-Copy-6" x="16.5" y="3.5" width="3" height="2"></rect>
@@ -220,9 +220,9 @@ export default class SVG extends Component {
             {type ==='gear'&&<StyledGear gear='#000000' />}
             {type ==='mountains'&&<StyledMountain  mountain1={MountainCOLOR}  mountain2={MountainCOLOR}  mountain3={MountainCOLOR} clouds={'#000000'} />}
             {type ==='suitcase'&&<SuitcaseSVG suitcase='#000000'  />}
-            {type === 'iphone'&& <StyledIphone className='animated fadeIn delay-4s' />}
-            {type === 'monitor'&& <StyledMonitor className='animated fadeIn delay-4s' />}
-            {type === 'robot'&& <StyledRobot className='animated fadeIn delay-4s' />}
+            {type === 'iphone'&& <StyledIphone color='black' className='animated fadeIn delay-4s' />}
+            {type === 'monitor'&& <StyledMonitor color='black' className='animated fadeIn delay-4s' />}
+            {type === 'robot'&& <StyledRobot color='black' className='animated fadeIn delay-4s' />}
             {type === 'git'&& <GitSVG className='animated fadeIn delay-3s' />}
             {type === 'linked'&& <LinkedInSVG className='animated fadeIn delay-3s' />}
         </Container>        

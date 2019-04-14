@@ -19,6 +19,8 @@ const Container = styled.div`
         flex-direction: column;
         justify-content: center;
         padding: 3em;
+        padding-left:5em;
+        padding-right:5em;
         box-sizing: border-box;
 `
 
@@ -57,6 +59,7 @@ const Button = styled.button`
       flex-basis: 100%;
       height:10vh;
       border:none;
+      background:none;
       
     :focus{
       outline:none;

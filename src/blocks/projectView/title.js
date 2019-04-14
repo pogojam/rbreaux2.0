@@ -50,7 +50,7 @@ border: solid 1px ${({shade})=>shade};
 
 const Container = styled.div`
 
-transform:${({isActive})=>isActive?'translateX(-50%)':'translateX(0%)'};
+transform:${({isActive})=>isActive?'translateX(-70%)':'translateX(0%)'};
 
 cursor: pointer;
 z-index:1;

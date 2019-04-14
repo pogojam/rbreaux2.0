@@ -13,7 +13,7 @@ import Theme from './static/theme'
 const Container = styled.div`
 display:flex;
 min-width:100vw;
-min-height:100vh;
+min-height:100%;
 
 background-color:${({theme})=>theme.container.mainBG};
 
