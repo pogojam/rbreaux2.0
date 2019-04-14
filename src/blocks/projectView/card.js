@@ -72,6 +72,7 @@ border:none;
     &:hover {
       transform: scale(1.1);
     }
+    will-change: transform;
   }
 `)({
   // SubContainer Animations
@@ -226,7 +227,7 @@ const Header = posed(styled.h2`
 @media(max-width:900px){
     left:50vw;
 }
-    left:40vw;
+    left: 53vw;
     position:absolute;
     opacity:1 !important;
     border:1px ${({ShuffleStatus})=>ShuffleStatus==='shuffleIn'?'solid':'none'} rgb(0, 0, 0);

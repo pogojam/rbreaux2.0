@@ -14093,18 +14093,26 @@ var Home = function Home() {
       lineNumber: 11
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
-    href: "https://fonts.googleapis.com/css?family=Poiret+One",
-    rel: "stylesheet",
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
+    name: "viewport",
+    content: "width=device-width",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
     },
     __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
+    href: "https://fonts.googleapis.com/css?family=Poiret+One",
+    rel: "stylesheet",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_src_app__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 15
     },
     __self: this
   }));
@@ -14289,7 +14297,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/Sugarbook/Documents/Web-Projects/node/rbreaux2.0/src/blocks/projectView/SVG.js";
 
 function _templateObject10() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n\nopacity:", ";\n\n\nheight:", ";\n\ntransition:opacity .5s cubic-bezier(0.455, 0.03, 0.515, 0.955) , height .5s cubic-bezier(0.455, 0.03, 0.515, 0.955) ;\n\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n\nopacity:", ";\n\n\nheight:", ";\n\ntransition:opacity .5s cubic-bezier(0.455, 0.03, 0.515, 0.955) , height .5s cubic-bezier(0.455, 0.03, 0.515, 0.955) ;\nwill-change:opacity;\n"]);
 
   _templateObject10 = function _templateObject10() {
     return data;
@@ -14329,7 +14337,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n\n.gear1{\n    transform-origin: 25px 55px;\n    animation:", " 3.5s infinite linear;\n}\n\n.gear2{\n    transform-origin: 78px 46px;\n    animation:", " 4s infinite linear ;\n}\n\n.gear3{\n    transform-origin: 53px 29px;\n    animation:", " 5s infinite linear backwards;\n}\n\n\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n\n.gear1{\n    transform-origin: 25px 55px;\n    animation:", " 3.5s infinite linear;\n    will-change: transform;\n}\n\n.gear2{\n    transform-origin: 78px 46px;\n    animation:", " 4s infinite linear ;\n    will-change: transform;\n}\n\n.gear3{\n    transform-origin: 53px 29px;\n    animation:", " 5s infinite linear backwards;\n    will-change: transform;\n}\n\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -14391,8 +14399,72 @@ function _templateObject() {
 
 
 
-var MountainSVG = function MountainSVG(_ref) {
+var GitSVG = function GitSVG(_ref) {
   var className = _ref.className;
+  return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("svg", {
+    className: className,
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "49",
+    height: "49",
+    viewBox: "0 0 438.549 438.549",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 4
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("path", {
+    d: "M409.132 114.573c-19.608-33.596-46.205-60.194-79.798-79.8-33.598-19.607-70.277-29.408-110.063-29.408-39.781 0-76.472 9.804-110.063 29.408-33.596 19.605-60.192 46.204-79.8 79.8C9.803 148.168 0 184.854 0 224.63c0 47.78 13.94 90.745 41.827 128.906 27.884 38.164 63.906 64.572 108.063 79.227 5.14.954 8.945.283 11.419-1.996 2.475-2.282 3.711-5.14 3.711-8.562 0-.571-.049-5.708-.144-15.417a2549.81 2549.81 0 0 1-.144-25.406l-6.567 1.136c-4.187.767-9.469 1.092-15.846 1-6.374-.089-12.991-.757-19.842-1.999-6.854-1.231-13.229-4.086-19.13-8.559-5.898-4.473-10.085-10.328-12.56-17.556l-2.855-6.57c-1.903-4.374-4.899-9.233-8.992-14.559-4.093-5.331-8.232-8.945-12.419-10.848l-1.999-1.431c-1.332-.951-2.568-2.098-3.711-3.429-1.142-1.331-1.997-2.663-2.568-3.997-.572-1.335-.098-2.43 1.427-3.289 1.525-.859 4.281-1.276 8.28-1.276l5.708.853c3.807.763 8.516 3.042 14.133 6.851 5.614 3.806 10.229 8.754 13.846 14.842 4.38 7.806 9.657 13.754 15.846 17.847 6.184 4.093 12.419 6.136 18.699 6.136 6.28 0 11.704-.476 16.274-1.423 4.565-.952 8.848-2.383 12.847-4.285 1.713-12.758 6.377-22.559 13.988-29.41-10.848-1.14-20.601-2.857-29.264-5.14-8.658-2.286-17.605-5.996-26.835-11.14-9.235-5.137-16.896-11.516-22.985-19.126-6.09-7.614-11.088-17.61-14.987-29.979-3.901-12.374-5.852-26.648-5.852-42.826 0-23.035 7.52-42.637 22.557-58.817-7.044-17.318-6.379-36.732 1.997-58.24 5.52-1.715 13.706-.428 24.554 3.853 10.85 4.283 18.794 7.952 23.84 10.994 5.046 3.041 9.089 5.618 12.135 7.708 17.705-4.947 35.976-7.421 54.818-7.421s37.117 2.474 54.823 7.421l10.849-6.849c7.419-4.57 16.18-8.758 26.262-12.565 10.088-3.805 17.802-4.853 23.134-3.138 8.562 21.509 9.325 40.922 2.279 58.24 15.036 16.18 22.559 35.787 22.559 58.817 0 16.178-1.958 30.497-5.853 42.966-3.9 12.471-8.941 22.457-15.125 29.979-6.191 7.521-13.901 13.85-23.131 18.986-9.232 5.14-18.182 8.85-26.84 11.136-8.662 2.286-18.415 4.004-29.263 5.146 9.894 8.562 14.842 22.077 14.842 40.539v60.237c0 3.422 1.19 6.279 3.572 8.562 2.379 2.279 6.136 2.95 11.276 1.995 44.163-14.653 80.185-41.062 108.068-79.226 27.88-38.161 41.825-81.126 41.825-128.906-.01-39.771-9.818-76.454-29.414-110.049z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: this
+  }));
+};
+
+var LinkedInSVG = function LinkedInSVG(_ref2) {
+  var className = _ref2.className;
+  return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("svg", {
+    className: className,
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "49",
+    height: "49",
+    viewBox: "0 0 49.652 49.652",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("path", {
+    d: "M29.35 21.298c-2.125 0-3.074 1.168-3.605 1.988v-1.704h-4.002c.052 1.128 0 12.041 0 12.041h4.002v-6.727c0-.359.023-.72.131-.977.29-.72.948-1.465 2.054-1.465 1.448 0 2.027 1.104 2.027 2.724v6.442h4.003v-6.905c-.002-3.696-1.977-5.417-4.61-5.417zm-3.608 2.03h-.025c.008-.014.02-.027.025-.041v.041zM15.523 21.582h4.002v12.041h-4.002z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("path", {
+    d: "M24.826 0C11.137 0 0 11.137 0 24.826c0 13.688 11.137 24.826 24.826 24.826 13.688 0 24.826-11.138 24.826-24.826C49.652 11.137 38.516 0 24.826 0zm13.165 36.055c0 1.056-.876 1.91-1.959 1.91H13.451c-1.08 0-1.957-.854-1.957-1.91V13.211c0-1.055.877-1.91 1.957-1.91h22.581c1.082 0 1.959.856 1.959 1.91v22.844z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("path", {
+    d: "M17.551 15.777c-1.368 0-2.264.898-2.264 2.08 0 1.155.869 2.08 2.211 2.08h.026c1.396 0 2.265-.925 2.265-2.08-.027-1.181-.868-2.08-2.238-2.08z",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: this
+  }));
+};
+
+var MountainSVG = function MountainSVG(_ref3) {
+  var className = _ref3.className,
+      mountain1 = _ref3.mountain1,
+      mountain2 = _ref3.mountain2,
+      mountain3 = _ref3.mountain3,
+      clouds = _ref3.clouds;
   return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("svg", {
     className: className,
     width: "100%",
@@ -14401,30 +14473,30 @@ var MountainSVG = function MountainSVG(_ref) {
     version: "1.1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 15
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 16
     },
     __self: this
   }, "MountainIcon"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("desc", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 17
     },
     __self: this
   }, "Created with Sketch."), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("g", {
     id: "r",
     stroke: "none",
-    "stroke-width": "1",
+    strokeWidth: "1",
     fill: "none",
-    "fill-rule": "evenodd",
+    fillRule: "evenodd",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 18
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("g", {
@@ -14432,7 +14504,7 @@ var MountainSVG = function MountainSVG(_ref) {
     transform: "translate(-174.000000, -542.000000)",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 19
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("g", {
@@ -14440,7 +14512,7 @@ var MountainSVG = function MountainSVG(_ref) {
     transform: "translate(174.000000, 543.000000)",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 20
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("g", {
@@ -14449,68 +14521,69 @@ var MountainSVG = function MountainSVG(_ref) {
     opacity: "0.83140346",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 21
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("polygon", {
     id: "Triangle",
-    fill: "#B9B9B9",
+    fill: mountain1,
     points: "46 13.8102979 92 56.8102979 0 56.8102979",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 22
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("polygon", {
     id: "Triangle",
-    fill: "#D8D8D8",
+    fill: mountain2,
     points: "69.5 9.59232693e-14 93 56.8102979 46 56.8102979",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 23
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("polygon", {
     id: "Triangle",
-    fill: "#E6E6E6",
+    fill: mountain3,
     points: "88 25.8102979 108 56.8102979 68 56.8102979",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 24
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("g", {
     id: "Clouds",
-    fill: "#D8D8D8",
+    fill: clouds,
     opacity: "0.440964472",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 26
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("path", {
-    class: "cloud1",
+    className: "cloud1",
     d: "M8.07334531,11.1053876 C8.02490079,10.7244853 8,10.3370621 8,9.9443518 C8,4.42150431 12.9248678,-0.0556481964 19,-0.0556481964 C24.3244645,-0.0556481964 28.7653648,3.38343184 29.7815415,7.95144703 C29.8791672,7.9467376 29.9758159,7.9443518 30.0714305,7.9443518 C36.0711433,7.9443518 41,12.900353 41,16.3317253 C41,19.7630977 36.1362718,22.5447746 30.1365591,22.5447746 C25.3875676,22.5447746 18.0465379,23.5824432 15.1922411,22.3133846 C13.7801106,22.7171483 12.1864883,22.9443518 10.5,22.9443518 C4.70101013,22.9443518 0,20.2580603 0,16.9443518 C0,14.1079302 3.44432515,11.7312031 8.07334531,11.1053876 Z",
     id: "Combined-Shape",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 27
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("path", {
-    class: "cloud2",
+    className: "cloud2",
     d: "M113.997163,8.70307545 C113.997249,8.36405502 114.015257,8.02206419 114.051957,7.67798823 C114.653125,2.04185897 120.879649,1.58736386 126.926225,2.21359526 C131.977084,2.73670222 135.30469,3.84843643 135.913267,7.48549464 C135.991107,7.49044888 136.068144,7.49685715 136.144346,7.50474923 C142.027502,8.11405546 146.339637,13.4988359 145.978936,16.8805134 C145.618235,20.262191 140.556589,22.509642 134.673434,21.9003358 C130.540467,21.4722929 124.319494,21.6424332 121.108948,20.6091159 C119.333742,21.097827 117.234932,21.2734491 115.019641,21.044016 C109.136486,20.4347097 104.659652,17.1993781 105.020353,13.8177006 C105.332349,10.8926452 109.161479,8.81619087 113.997163,8.70307545 Z",
     id: "Combined-Shape-Copy",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 28
     },
     __self: this
   }))))));
 };
 
-var GearSVG = function GearSVG(_ref2) {
-  var className = _ref2.className;
+var GearSVG = function GearSVG(_ref4) {
+  var className = _ref4.className,
+      gear = _ref4.gear;
   return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("svg", {
     className: className,
     width: "100%",
@@ -14520,34 +14593,34 @@ var GearSVG = function GearSVG(_ref2) {
     xmlns: "http://www.w3.org/2000/svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 35
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 36
     },
     __self: this
   }, "GearSVG"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("g", {
     id: "r",
     stroke: "none",
-    "stroke-width": "1",
+    strokeWidth: "1",
     fill: "none",
-    "fill-rule": "evenodd",
-    "fill-opacity": "0.401879371",
+    fillRule: "evenodd",
+    fillOpacity: "0.601879371",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 37
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("g", {
     id: "Desktop-HD",
     transform: "translate(-1180.000000, -564.000000)",
-    fill: "#FAFCFF",
+    fill: gear,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 38
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("g", {
@@ -14555,41 +14628,42 @@ var GearSVG = function GearSVG(_ref2) {
     transform: "translate(1180.000000, 564.000000)",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 39
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("path", {
-    class: "gear1",
+    className: "gear1",
     d: "M28.008238,34.7376372 C29.2714022,34.9552036 30.4960905,35.285238 31.6716213,35.7170587 L34.4387851,34.1565199 L37.874769,36.1402861 L37.9069539,39.3238348 C38.8767982,40.1341128 39.7726643,41.0299789 40.5829423,41.9998231 L43.7664909,42.032008 L45.7502572,45.467992 L44.1897184,48.2351558 C44.6215391,49.4106866 44.9515735,50.6353749 45.1691399,51.8985391 L47.9067771,53.5162338 L47.9067771,57.4837662 L45.1691399,59.1014609 C44.9515735,60.3646251 44.6215391,61.5893134 44.1897184,62.7648442 L45.7502572,65.532008 L43.7664909,68.967992 L40.5829423,69.0001769 C39.7726643,69.9700211 38.8767982,70.8658872 37.9069539,71.6761652 L37.874769,74.8597139 L34.4387851,76.8434801 L31.6716213,75.2829413 C30.4960905,75.714762 29.2714022,76.0447964 28.008238,76.2623628 L26.3905433,79 L22.4230108,79 L20.8053162,76.2623628 C19.542152,76.0447964 18.3174637,75.714762 17.1419329,75.2829413 L14.374769,76.8434801 L10.9387851,74.8597139 L10.9066002,71.6761652 C9.93675593,70.8658872 9.04088988,69.9700211 8.23061185,69.0001769 L5.0470632,68.967992 L3.06329697,65.532008 L4.62383574,62.7648442 C4.19201504,61.5893134 3.86198068,60.3646251 3.64441423,59.1014609 L0.906777075,57.4837662 L0.906777075,53.5162338 L3.64441423,51.8985391 C3.86198068,50.6353749 4.19201504,49.4106866 4.62383574,48.2351558 L3.06329697,45.467992 L5.0470632,42.032008 L8.23061185,41.9998231 C9.04088988,41.0299789 9.93675593,40.1341128 10.9066002,39.3238348 L10.9387851,36.1402861 L14.374769,34.1565199 L17.1419329,35.7170587 C18.3174637,35.285238 19.542152,34.9552036 20.8053162,34.7376372 L22.4230108,32 L26.3905433,32 L28.008238,34.7376372 Z M24.4067771,71.7068966 C33.3575989,71.7068966 40.6136736,64.4508218 40.6136736,55.5 C40.6136736,46.5491782 33.3575989,39.2931034 24.4067771,39.2931034 C15.4559553,39.2931034 8.19988052,46.5491782 8.19988052,55.5 C8.19988052,64.4508218 15.4559553,71.7068966 24.4067771,71.7068966 Z",
     id: "Combined-Shape",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 40
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("path", {
-    class: "gear2",
+    className: "gear2",
     d: "M90.5452405,30.856356 C91.4531799,31.6149141 92.291863,32.4535972 93.0504211,33.3615365 L96.0307645,33.3916671 L97.8879074,36.6083329 L96.4269775,39.1988693 C96.8312351,40.2993662 97.1402035,41.4458829 97.3438827,42.6284196 L99.9067771,44.1428571 L99.9067771,47.8571429 L97.3438827,49.3715804 C97.1402035,50.5541171 96.8312351,51.7006338 96.4269775,52.8011307 L97.8879074,55.3916671 L96.0307645,58.6083329 L93.0504211,58.6384635 C92.291863,59.5464028 91.4531799,60.3850859 90.5452405,61.143644 L90.51511,64.1239875 L87.2984442,65.9811303 L84.7079078,64.5202004 C83.6074109,64.9244581 82.4608942,65.2334264 81.2783575,65.4371056 L79.7639199,68 L76.0496342,68 L74.5351966,65.4371056 C73.3526599,65.2334264 72.2061433,64.9244581 71.1056463,64.5202004 L68.51511,65.9811303 L65.2984442,64.1239875 L65.2683136,61.143644 C64.3603743,60.3850859 63.5216912,59.5464028 62.763133,58.6384635 L59.7827896,58.6083329 L57.9256468,55.3916671 L59.3865767,52.8011307 C58.982319,51.7006338 58.6733507,50.5541171 58.4696714,49.3715804 L55.9067771,47.8571429 L55.9067771,44.1428571 L58.4696714,42.6284196 C58.6733507,41.4458829 58.982319,40.2993662 59.3865767,39.1988693 L57.9256468,36.6083329 L59.7827896,33.3916671 L62.763133,33.3615365 C63.5216912,32.4535972 64.3603743,31.6149141 65.2683136,30.856356 L65.2984442,27.8760125 L68.51511,26.0188697 L71.1056463,27.4797996 C72.2061433,27.0755419 73.3526599,26.7665736 74.5351966,26.5628944 L76.0496342,24 L79.7639199,24 L81.2783575,26.5628944 C82.4608942,26.7665736 83.6074109,27.0755419 84.7079078,27.4797996 L87.2984442,26.0188697 L90.51511,27.8760125 L90.5452405,30.856356 Z M77.9067771,61.1724138 C86.2862698,61.1724138 93.0791909,54.3794928 93.0791909,46 C93.0791909,37.6205072 86.2862698,30.8275862 77.9067771,30.8275862 C69.5272843,30.8275862 62.7343633,37.6205072 62.7343633,46 C62.7343633,54.3794928 69.5272843,61.1724138 77.9067771,61.1724138 Z",
     id: "Combined-Shape",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 41
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("path", {
-    class: "gear3",
+    className: "gear3",
     d: "M57.3511331,3.37836074 C58.9099315,3.646847 60.4212489,4.05412345 61.8719039,4.58700856 L65.2867019,2.66123732 L69.5268523,5.10928926 L69.5665698,9.03792377 C70.7633989,10.0378413 71.8689357,11.1433782 72.8688533,12.3402073 L76.7974878,12.3799248 L79.2455398,16.6200752 L77.3197685,20.0348731 C77.8526536,21.4855281 78.2599301,22.9968456 78.5284163,24.555644 L81.9067771,26.5519481 L81.9067771,31.4480519 L78.5284163,33.444356 C78.2599301,35.0031544 77.8526536,36.5144719 77.3197685,37.9651269 L79.2455398,41.3799248 L76.7974878,45.6200752 L72.8688533,45.6597927 C71.8689357,46.8566218 70.7633989,47.9621587 69.5665698,48.9620762 L69.5268523,52.8907107 L65.2867019,55.3387627 L61.8719039,53.4129914 C60.4212489,53.9458766 58.9099315,54.353153 57.3511331,54.6216393 L55.354829,58 L50.4587251,58 L48.4624211,54.6216393 C46.9036227,54.353153 45.3923052,53.9458766 43.9416502,53.4129914 L40.5268523,55.3387627 L36.2867019,52.8907107 L36.2469843,48.9620762 C35.0501552,47.9621587 33.9446184,46.8566218 32.9447008,45.6597927 L29.0160663,45.6200752 L26.5680144,41.3799248 L28.4937856,37.9651269 C27.9609005,36.5144719 27.5536241,35.0031544 27.2851378,33.444356 L23.9067771,31.4480519 L23.9067771,26.5519481 L27.2851378,24.555644 C27.5536241,22.9968456 27.9609005,21.4855281 28.4937856,20.0348731 L26.5680144,16.6200752 L29.0160663,12.3799248 L32.9447008,12.3402073 C33.9446184,11.1433782 35.0501552,10.0378413 36.2469843,9.03792377 L36.2867019,5.10928926 L40.5268523,2.66123732 L43.9416502,4.58700856 C45.3923052,4.05412345 46.9036227,3.646847 48.4624211,3.37836074 L50.4587251,0 L55.354829,0 L57.3511331,3.37836074 Z M52.9067771,49 C63.9524721,49 72.9067771,40.045695 72.9067771,29 C72.9067771,17.954305 63.9524721,9 52.9067771,9 C41.8610821,9 32.9067771,17.954305 32.9067771,29 C32.9067771,40.045695 41.8610821,49 52.9067771,49 Z",
     id: "Combined-Shape",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 42
     },
     __self: this
   })))));
 };
 
-var SuitcaseSVG = function SuitcaseSVG(_ref3) {
-  var className = _ref3.className;
+var SuitcaseSVG = function SuitcaseSVG(_ref5) {
+  var className = _ref5.className,
+      suitcase = _ref5.suitcase;
   return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("svg", {
     className: className,
     width: "100%",
@@ -14599,28 +14673,28 @@ var SuitcaseSVG = function SuitcaseSVG(_ref3) {
     xmlns: "http://www.w3.org/2000/svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 48
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("g", {
     id: "Splash",
     stroke: "none",
-    "stroke-width": "1",
+    strokeWidth: "1",
     fill: "none",
-    "fill-rule": "evenodd",
-    "fill-opacity": "0.606807255",
+    fillRule: "evenodd",
+    fillOpacity: "0.606807255",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 49
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("g", {
     id: "Desktop-HD",
     transform: "translate(-736.000000, -564.000000)",
-    fill: "#FFFFFF",
+    fill: suitcase,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 50
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("path", {
@@ -14628,14 +14702,14 @@ var SuitcaseSVG = function SuitcaseSVG(_ref3) {
     id: "Combined-Shape",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 51
     },
     __self: this
   }))));
 };
 
-var MonitorSVG = function MonitorSVG(_ref4) {
-  var className = _ref4.className;
+var MonitorSVG = function MonitorSVG(_ref6) {
+  var className = _ref6.className;
   return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("svg", {
     className: className,
     width: "176px",
@@ -14645,18 +14719,18 @@ var MonitorSVG = function MonitorSVG(_ref4) {
     xmlns: "http://www.w3.org/2000/svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 56
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("g", {
     id: "Symbols",
     stroke: "none",
-    "stroke-width": "1",
+    strokeWidth: "1",
     fill: "none",
-    "fill-rule": "evenodd",
+    fillRule: "evenodd",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 57
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("g", {
@@ -14664,27 +14738,27 @@ var MonitorSVG = function MonitorSVG(_ref4) {
     stroke: "#979797",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 58
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 59
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("path", {
     d: "M173.5,100 L2.5,100",
     id: "Line-Copy-2",
-    "stroke-linecap": "square",
+    strokeLinecap: "square",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 60
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("rect", {
     id: "Rectangle",
-    "stroke-width": "2",
+    strokeWidth: "2",
     x: "1",
     y: "1",
     width: "174",
@@ -14692,24 +14766,24 @@ var MonitorSVG = function MonitorSVG(_ref4) {
     rx: "10",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 61
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("rect", {
     id: "Rectangle",
-    "stroke-width": "2",
+    strokeWidth: "2",
     x: "86",
     y: "111",
     width: "4",
     height: "14",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 62
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("rect", {
     id: "Rectangle",
-    "stroke-width": "2",
+    strokeWidth: "2",
     x: "64",
     y: "125",
     width: "48",
@@ -14717,14 +14791,14 @@ var MonitorSVG = function MonitorSVG(_ref4) {
     rx: "2.5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 63
     },
     __self: this
   })))));
 };
 
-var IphoneSVG = function IphoneSVG(_ref5) {
-  var className = _ref5.className;
+var IphoneSVG = function IphoneSVG(_ref7) {
+  var className = _ref7.className;
   return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("svg", {
     className: className,
     width: "50px",
@@ -14734,37 +14808,37 @@ var IphoneSVG = function IphoneSVG(_ref5) {
     xmlns: "http://www.w3.org/2000/svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 69
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("g", {
     id: "Symbols",
     stroke: "none",
-    "stroke-width": "1",
+    strokeWidth: "1",
     fill: "none",
-    "fill-rule": "evenodd",
+    fillRule: "evenodd",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 70
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("g", {
     id: "Phone",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 71
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 72
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("rect", {
     id: "Rectangle",
     stroke: "#979797",
-    "stroke-width": "2",
+    strokeWidth: "2",
     x: "1",
     y: "1",
     width: "48",
@@ -14772,7 +14846,7 @@ var IphoneSVG = function IphoneSVG(_ref5) {
     rx: "13",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 73
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("circle", {
@@ -14784,7 +14858,7 @@ var IphoneSVG = function IphoneSVG(_ref5) {
     r: "3.5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 74
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("rect", {
@@ -14796,7 +14870,7 @@ var IphoneSVG = function IphoneSVG(_ref5) {
     height: "66",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 75
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("rect", {
@@ -14809,14 +14883,14 @@ var IphoneSVG = function IphoneSVG(_ref5) {
     rx: "1.5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 76
     },
     __self: this
   })))));
 };
 
-var RobotSVG = function RobotSVG(_ref6) {
-  var className = _ref6.className;
+var RobotSVG = function RobotSVG(_ref8) {
+  var className = _ref8.className;
   return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("svg", {
     className: className,
     width: "75px",
@@ -14826,18 +14900,18 @@ var RobotSVG = function RobotSVG(_ref6) {
     xmlns: "http://www.w3.org/2000/svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 82
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("g", {
     id: "Symbols",
     stroke: "none",
-    "stroke-width": "1",
+    strokeWidth: "1",
     fill: "none",
-    "fill-rule": "evenodd",
+    fillRule: "evenodd",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 83
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("g", {
@@ -14846,14 +14920,14 @@ var RobotSVG = function RobotSVG(_ref6) {
     stroke: "#979797",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 84
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("g", {
     id: "Group",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 85
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("rect", {
@@ -14865,7 +14939,7 @@ var RobotSVG = function RobotSVG(_ref6) {
     rx: "2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 86
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("rect", {
@@ -14876,7 +14950,7 @@ var RobotSVG = function RobotSVG(_ref6) {
     height: "36",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 87
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("rect", {
@@ -14888,7 +14962,7 @@ var RobotSVG = function RobotSVG(_ref6) {
     height: "36",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 88
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("rect", {
@@ -14900,7 +14974,7 @@ var RobotSVG = function RobotSVG(_ref6) {
     height: "27",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 89
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("circle", {
@@ -14911,7 +14985,7 @@ var RobotSVG = function RobotSVG(_ref6) {
     r: "7",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 90
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("circle", {
@@ -14922,7 +14996,7 @@ var RobotSVG = function RobotSVG(_ref6) {
     r: "5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82
+      lineNumber: 91
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("ellipse", {
@@ -14934,7 +15008,7 @@ var RobotSVG = function RobotSVG(_ref6) {
     ry: "3.52800911",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 92
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("g", {
@@ -14943,7 +15017,7 @@ var RobotSVG = function RobotSVG(_ref6) {
     fill: "#D8D8D8",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84
+      lineNumber: 93
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("rect", {
@@ -14954,7 +15028,7 @@ var RobotSVG = function RobotSVG(_ref6) {
     height: "2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85
+      lineNumber: 94
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("rect", {
@@ -14965,7 +15039,7 @@ var RobotSVG = function RobotSVG(_ref6) {
     height: "2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 95
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("rect", {
@@ -14976,7 +15050,7 @@ var RobotSVG = function RobotSVG(_ref6) {
     height: "2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87
+      lineNumber: 96
     },
     __self: this
   }))))));
@@ -14992,13 +15066,14 @@ var StyledGear = Object(styled_components__WEBPACK_IMPORTED_MODULE_7__["default"
 var StyledRobot = Object(styled_components__WEBPACK_IMPORTED_MODULE_7__["default"])(RobotSVG)(_templateObject7());
 var StyledIphone = Object(styled_components__WEBPACK_IMPORTED_MODULE_7__["default"])(IphoneSVG)(_templateObject8());
 var StyledMonitor = Object(styled_components__WEBPACK_IMPORTED_MODULE_7__["default"])(MonitorSVG)(_templateObject9());
-var Container = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject10(), function (_ref7) {
-  var isActive = _ref7.isActive;
+var Container = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject10(), function (_ref9) {
+  var isActive = _ref9.isActive;
   return isActive ? '0' : '1';
-}, function (_ref8) {
-  var isActive = _ref8.isActive;
+}, function (_ref10) {
+  var isActive = _ref10.isActive;
   return isActive ? '0px' : '60px';
 });
+var MountainCOLOR = "#000000";
 
 var SVG =
 /*#__PURE__*/
@@ -15021,46 +15096,66 @@ function (_Component) {
         isActive: isActive,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 205
+          lineNumber: 219
         },
         __self: this
       }, type === 'gear' && react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(StyledGear, {
+        gear: "#000000",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 206
+          lineNumber: 220
         },
         __self: this
       }), type === 'mountains' && react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(StyledMountain, {
+        mountain1: MountainCOLOR,
+        mountain2: MountainCOLOR,
+        mountain3: MountainCOLOR,
+        clouds: '#000000',
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 207
+          lineNumber: 221
         },
         __self: this
       }), type === 'suitcase' && react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(SuitcaseSVG, {
+        suitcase: "#000000",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 208
+          lineNumber: 222
         },
         __self: this
       }), type === 'iphone' && react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(StyledIphone, {
         className: "animated fadeIn delay-4s",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 209
+          lineNumber: 223
         },
         __self: this
       }), type === 'monitor' && react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(StyledMonitor, {
         className: "animated fadeIn delay-4s",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 210
+          lineNumber: 224
         },
         __self: this
       }), type === 'robot' && react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(StyledRobot, {
         className: "animated fadeIn delay-4s",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 211
+          lineNumber: 225
+        },
+        __self: this
+      }), type === 'git' && react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(GitSVG, {
+        className: "animated fadeIn delay-3s",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 226
+        },
+        __self: this
+      }), type === 'linked' && react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(LinkedInSVG, {
+        className: "animated fadeIn delay-3s",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 227
         },
         __self: this
       }));
@@ -15107,7 +15202,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/Sugarbook/Documents/Web-Projects/node/rbreaux2.0/src/blocks/projectView/Sectionview.js";
 
 function _templateObject5() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n\n@media(max-width:900px){\n      flex-direction: column;\n    }\n\n    @media(min-width:900px){\n\n      height:100%;\n    }\n\n    width:100vw;\n    display:flex;\n    top: 0;\n    left: 0;\n    position:absolute;\n\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n\n/* @media(max-width:900px){\n      flex-direction: column;\n    }\n\n    @media(min-width:900px){\n\n      height:100%;\n    } */\n\n    width:100%;\n    height:100%;\n    position:relative;\n    will-change:width;\n    display:flex;\n\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -15117,7 +15212,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n\nwidth:calc(100vw/3);\nheight:100%;\nposition:absolute;\ntop:0;\nleft:0;\noverflow:hidden;\ntransform:translateX(", ");\ntransform-origin: ", " 50%;\ntransition:transform .6s cubic-bezier(0.455, 0.03, 0.515, 0.955) .3s ,width .3s cubic-bezier(0.455, 0.03, 0.515, 0.955) .7s;\nwill-change: transform,width,opacity;\n\n", "\n\n&.section-enter{\n  transform: translateX(", ");\n  opacity:.01;\n}\n&.section-enter.section-enter-active{\n  transform:translateX(", ");\n  opacity:1;\n  transition:transform .8s cubic-bezier(0.455, 0.03, 0.515, 0.955) 1s , opacity .8s linear 1s;\n\n}\n\n&.section-leave{\n    transform:scale(.5) translateX(", ");\n    opacity:0;\n    transition:transform .8s cubic-bezier(0.455, 0.03, 0.515, 0.955) , opacity .8s linear;\n}\n\n&:hover  {\n  &::before{\n    opacity:", ";\n  }\n  }\n\n\n&:before{\n  content: \"\";\n  display:block;\n  position:absolute;\n  top:0;\n  width: 100%;\n  height: 100%;\n  background:", ";\n  opacity:", ";\n  transition:opacity 1s ;\n}\n\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\nz-index:1;\nwidth:calc(100vw/3);\nheight:100%;\nposition:absolute;\ntop:0;\nleft:0;\noverflow:hidden;\ntransform:translateX(", ");\ntransform-origin: ", " 50%;\ntransition:transform .6s cubic-bezier(0.455, 0.03, 0.515, 0.955) .5s ,width .3s cubic-bezier(0.455, 0.03, 0.515, 0.955) .9s;\n\n", "\nwill-change: transform,width,opacity;\n\n&.section-enter{\n  /* transform: translate3d(", ",0,0); */\n  z-index:0;\n  transform:scale(.5)translate3d(", ",0,0);\n  opacity:.01;\n  transition:transform .5s 1.5;\n}\n&.section-enter.section-enter-active{\n  transform:scale(1) translate3d(", ",0,0);\n  opacity:1;\n}\n\n&.section-leave{\n    transform:scale(.5) translate3d(", ",0,0);\n    opacity:.4;\n    z-index:0;\n    transition:transform .8s cubic-bezier(0.455, 0.03, 0.515, 0.955) , opacity .8s linear;\n}\n\n&:hover  {\n  &::after{\n    opacity:", ";\n  }\n  }\n\n  &::before{\n  /* content:'';\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n\nbackground-image:url(", ");\nbackground-size: 110vh 110vw;\nbackground-attachment: fixed;\nbackground-size: cover;\nfilter: blur(10px);\nopacity:", ";\ntransition:opacity .4s 1s;\nwill-change:opacity; */\n}\n\n\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -15127,7 +15222,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\nz-index: -1;\nposition:absolute;\nheight:100%;\nwidth:100vw;\n\nbackground-image:url(", ");\nbackground-size: auto 100%;\nbackground-repeat: no-repeat;\ntransform:", ";\ntransition:transform 3s linear;\nwill-change:transform;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\ntransition:transform .6s cubic-bezier(0.455, 0.03, 0.515, 0.955) .8s ,width .3s cubic-bezier(0.455, 0.03, 0.515, 0.955) .3s;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -15137,7 +15232,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\ntransition:transform .6s cubic-bezier(0.455, 0.03, 0.515, 0.955) .7s ,width .3s cubic-bezier(0.455, 0.03, 0.515, 0.955) .3s;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n    transform:translateX(0%); \n    z-index:2;\n    width:100%;\n    \n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -15147,7 +15242,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n    transform:translateX(0%); \n    width:100%;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\nz-index: -1;\nposition:absolute;\nheight:100%;\nwidth:100vw;\n\nbackground-image:url(", ");\nbackground-size:cover;\nbackground-repeat: no-repeat;\n\ntransform:translate3d(", "),0,0);\nfilter:", ";\ntransition: transform ", " , filter .6s;\nwill-change:transform filter;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -15161,47 +15256,57 @@ function _templateObject() {
 
 
 
-var animateSectionActive = Object(styled_components__WEBPACK_IMPORTED_MODULE_8__["css"])(_templateObject());
-var animateSectionNetural = Object(styled_components__WEBPACK_IMPORTED_MODULE_8__["css"])(_templateObject2());
-var Background = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject3(), function (_ref) {
+var Background = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject(), function (_ref) {
   var splashImg = _ref.splashImg;
   return splashImg;
 }, function (_ref2) {
-  var scale = _ref2.scale;
-  return scale ? 'scale(1.1)' : 'scale(1)';
-});
-var Container = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject4(), function (_ref3) {
-  var index = _ref3.index;
-  return index * 100 + "%";
+  var index = _ref2.index,
+      isActive = _ref2.isActive;
+  return isActive ? '0' : 'calc(100vw/3*-1*' + index;
+}, function (_ref3) {
+  var isActive = _ref3.isActive;
+  return isActive && ' blur(10px)';
 }, function (_ref4) {
-  var index = _ref4.index;
+  var isActive = _ref4.isActive;
+  return isActive ? '0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.5s' : '0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.8s';
+});
+var animateSectionActive = Object(styled_components__WEBPACK_IMPORTED_MODULE_8__["css"])(_templateObject2());
+var animateSectionNetural = Object(styled_components__WEBPACK_IMPORTED_MODULE_8__["css"])(_templateObject3());
+var Container = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject4(), function (_ref5) {
+  var index = _ref5.index;
+  return index * 100 + "%";
+}, function (_ref6) {
+  var index = _ref6.index;
   return index * 100 + 50 + "%";
-}, function (_ref5) {
-  var isActive = _ref5.isActive;
+}, function (_ref7) {
+  var isActive = _ref7.isActive;
 
   if (isActive) {
     return animateSectionActive;
   } else {
     return animateSectionNetural;
   }
-}, function (_ref6) {
-  var index = _ref6.index;
-  return index * 100 + "%";
-}, function (_ref7) {
-  var index = _ref7.index;
-  return index * 100 + "%";
 }, function (_ref8) {
   var index = _ref8.index;
   return index * 100 + "%";
 }, function (_ref9) {
-  var isActive = _ref9.isActive;
-  return isActive ? "" : ".4";
+  var index = _ref9.index;
+  return index * 100 + "%";
 }, function (_ref10) {
-  var overlay = _ref10.overlay;
-  return overlay;
+  var index = _ref10.index;
+  return index * 100 + "%";
 }, function (_ref11) {
-  var isActive = _ref11.isActive;
-  return isActive ? '0' : '.65';
+  var index = _ref11.index;
+  return index * 100 + "%";
+}, function (_ref12) {
+  var isActive = _ref12.isActive;
+  return isActive ? "" : ".65";
+}, function (_ref13) {
+  var splashImg = _ref13.splashImg;
+  return splashImg;
+}, function (_ref14) {
+  var isActive = _ref14.isActive;
+  return isActive ? '1' : '0';
 });
 var SecondaryContainer = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject5());
 
@@ -15227,27 +15332,12 @@ function (_Component) {
     value: function handleHover(state) {
       var background = this.background;
       var viewBackground = this.view.viewContainer;
-
-      if (state === 'enter') {
-        // background.style.transform = 'scale(1.1)'
-        // viewBackground.style.transform = 'scale(1.1)'
-        this.setState({
-          scale: true
-        });
-      } else {
-        // background.style.transform = 'scale(1)'
-        // viewBackground.style.transform = 'scale(1)'
-        this.setState({
-          scale: false
-        });
-      }
     }
   }, {
     key: "render",
     value: function render() {
       var _this2 = this;
 
-      var scale = this.state.scale;
       var _this$props = this.props,
           icon = _this$props.icon,
           side = _this$props.side,
@@ -15255,27 +15345,21 @@ function (_Component) {
           name = _this$props.name;
       var isActive = activeSection === side;
       return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Container, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-        onMouseEnter: function onMouseEnter() {
-          return _this2.handleHover('enter');
-        },
-        onMouseLeave: function onMouseLeave() {
-          return _this2.handleHover('exit');
-        },
         isActive: isActive,
         activeSection: activeSection
       }, this.props, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 158
+          lineNumber: 151
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(SecondaryContainer, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 159
+          lineNumber: 152
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Background, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, this.state, {
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Background, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
         ref: function ref(e) {
           return _this2.background = e;
         },
@@ -15283,7 +15367,7 @@ function (_Component) {
       }, this.props, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 160
+          lineNumber: 153
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_title__WEBPACK_IMPORTED_MODULE_10__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, this.props, {
@@ -15292,7 +15376,7 @@ function (_Component) {
         isActive: isActive,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 162
+          lineNumber: 154
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_SVG__WEBPACK_IMPORTED_MODULE_11__["default"], {
@@ -15300,10 +15384,10 @@ function (_Component) {
         isActive: isActive,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 163
+          lineNumber: 155
         },
         __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_elements_view_view__WEBPACK_IMPORTED_MODULE_9__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, this.state, {
+      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_elements_view_view__WEBPACK_IMPORTED_MODULE_9__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
         ref: function ref(e) {
           return _this2.view = e;
         },
@@ -15311,7 +15395,7 @@ function (_Component) {
       }, this.props, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 165
+          lineNumber: 157
         },
         __self: this
       }))));
@@ -15367,7 +15451,7 @@ function _templateObject9() {
 }
 
 function _templateObject8() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n\n@media(max-width:900px){\n    left:50vw;\n}\n    left:40vw;\n    position:absolute;\n    opacity:1 !important;\n    border:1px ", " rgb(0, 0, 0);\n    border-width: 0px 0px 1px 0px;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n\n@media(max-width:900px){\n    left:50vw;\n}\n    left: 53vw;\n    position:absolute;\n    opacity:1 !important;\n    border:1px ", " rgb(0, 0, 0);\n    border-width: 0px 0px 1px 0px;\n"]);
 
   _templateObject8 = function _templateObject8() {
     return data;
@@ -15427,7 +15511,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n border-top-left-radius:", ";\n    border-top-right-radius:", ";\n    border-bottom-left-radius:", ";\n    border-bottom-right-radius:", ";\n    border: 1px solid;\n    /* border-color:", "; */\nborder:none;\n  display: flex;\n  flex-direction: row;\n  width:100%;\n  overflow:hidden;\n  transform:", ";\n\n  a {\n    text-decoration: none;\n    justify-self:center;\n    color: ", ";\n    font-size: 1.5em;\n    @media(max-width:800px){\n      font-size: 3.5vw;\n    }\n    max-width: 3em;\n    &:hover {\n      transform: scale(1.1);\n    }\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n border-top-left-radius:", ";\n    border-top-right-radius:", ";\n    border-bottom-left-radius:", ";\n    border-bottom-right-radius:", ";\n    border: 1px solid;\n    /* border-color:", "; */\nborder:none;\n  display: flex;\n  flex-direction: row;\n  width:100%;\n  overflow:hidden;\n  transform:", ";\n\n  a {\n    text-decoration: none;\n    justify-self:center;\n    color: ", ";\n    font-size: 1.5em;\n    @media(max-width:800px){\n      font-size: 3.5vw;\n    }\n    max-width: 3em;\n    &:hover {\n      transform: scale(1.1);\n    }\n    will-change: transform;\n  }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -15690,7 +15774,7 @@ function (_Component) {
         index: index,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 302
+          lineNumber: 303
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Header, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
@@ -15699,7 +15783,7 @@ function (_Component) {
         index: index,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 307
+          lineNumber: 308
         },
         __self: this
       }), cardData.name), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(DisplayBox, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
@@ -15711,7 +15795,7 @@ function (_Component) {
         name: "Details",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 308
+          lineNumber: 309
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(DisplayBox, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
@@ -15724,7 +15808,7 @@ function (_Component) {
         right: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 316
+          lineNumber: 317
         },
         __self: this
       })));
@@ -15762,7 +15846,7 @@ var DisplayBox = function DisplayBox(_ref27) {
     pose: status(),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 356
+      lineNumber: 357
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(SubContainer, {
@@ -15770,14 +15854,14 @@ var DisplayBox = function DisplayBox(_ref27) {
     pose: status(),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 357
+      lineNumber: 358
     },
     __self: this
   }, side === "left" ? react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Info, {
     cardData: cardData,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 359
+      lineNumber: 360
     },
     __self: this
   }) : react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Skills, {
@@ -15785,7 +15869,7 @@ var DisplayBox = function DisplayBox(_ref27) {
     skillsData: skillsData,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 361
+      lineNumber: 362
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_line__WEBPACK_IMPORTED_MODULE_10__["default"], {
@@ -15794,7 +15878,7 @@ var DisplayBox = function DisplayBox(_ref27) {
     side: side,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 364
+      lineNumber: 365
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Button, {
@@ -15806,13 +15890,13 @@ var DisplayBox = function DisplayBox(_ref27) {
     side: side,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 365
+      lineNumber: 366
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Paragraph, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 371
+      lineNumber: 372
     },
     __self: this
   }, name)));
@@ -15823,14 +15907,14 @@ var Info = function Info(_ref28) {
   return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Container_Info, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 380
+      lineNumber: 381
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
     href: cardData.gitLink,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 381
+      lineNumber: 382
     },
     __self: this
   }, "Github"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
@@ -15840,14 +15924,14 @@ var Info = function Info(_ref28) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 382
+      lineNumber: 383
     },
     __self: this
   }, cardData.discription), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
     href: cardData.pageLink,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 383
+      lineNumber: 384
     },
     __self: this
   }, "Visit"));
@@ -15859,7 +15943,7 @@ var Skills = function Skills(_ref29) {
   return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Container_Skills, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 390
+      lineNumber: 391
     },
     __self: this
   }, skillsData.map(function (el, i) {
@@ -15874,7 +15958,7 @@ var Skills = function Skills(_ref29) {
           alt: "",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 398
+            lineNumber: 399
           },
           __self: this
         });
@@ -15956,7 +16040,7 @@ var Line = Object(react_pose__WEBPACK_IMPORTED_MODULE_4__["default"])(styled_com
   hide: {
     x: function x(_ref5) {
       var side = _ref5.side;
-      return side === "left" ? "25vw" : "-25vw";
+      return side === "left" ? "40vw" : "-40vw";
     },
     skew: "0deg",
     opacity: 1,
@@ -16020,7 +16104,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/Sugarbook/Documents/Web-Projects/node/rbreaux2.0/src/blocks/projectView/portNav.js";
 
 function _templateObject4() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n\n@media(max-width:900px){\n    width:100vw\n}\n\n        bottom: 0;\n        background-color: rgb(255, 255, 255);\n        display:flex;\n      min-height:10vh;\n        width:calc(100vw/3*2);\n        align-items: center;\n        justify-content:center;\n        position: fixed;\n        right: 0;\n\n        &.portNav-leave{\n                opacity:0;\n                transition:.3s linear;\n        }\n\n        \n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n\n@media(max-width:900px){\n    width:100vw\n}\n        bottom: 0;\n        display:flex;\n      min-height:10vh;\n        width:100%;\n        align-items: center;\n        justify-content:center;\n        position: fixed;\n        right: 0;\n        will-change: transform;\n        &.portNav-leave{\n                opacity:0;\n                transition:.3s linear;\n        }        \n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -16122,7 +16206,7 @@ var DotButton = function DotButton(_ref7) {
         index: i,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 150
+          lineNumber: 146
         },
         __self: this
       }));
@@ -16143,7 +16227,7 @@ var DotButton = function DotButton(_ref7) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 160
+      lineNumber: 156
     },
     __self: this
   }, makeDots());
@@ -16170,14 +16254,14 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Container, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, this.props, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 176
+          lineNumber: 172
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(DotButton, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, this.props, {
         dots: 3,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 177
+          lineNumber: 173
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Arrow, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
@@ -16186,7 +16270,7 @@ function (_Component) {
         onClick: handleShuffle,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 178
+          lineNumber: 174
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(DotButton, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, this.props, {
@@ -16194,7 +16278,7 @@ function (_Component) {
         right: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 179
+          lineNumber: 175
         },
         __self: this
       })));
@@ -16248,7 +16332,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n\n@media(max-width:900px){\n  width: ", ";\n  height: ", ";\n}\n\ncursor: pointer;\nposition: relative;\ntop:0;\ntext-align: center;\ncolor:white;  \nwidth: calc(100vw/3);\nheight: 100%;\ndisplay: flex;\n    flex-direction: column;\n    justify-content: center;\n    &:hover{\n  \n  ", "{\n    animation:", " 1.5s infinite;    \n  }\n}\n\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n\ntransform:", ";\n\ncursor: pointer;\nz-index:1;\ndisplay: flex;\ntop:0;\ntext-align: center;\ncolor:", ";  \n/* flex-basis:100%; */\nwidth:calc(100vw/3);\nheight: 100%;\nflex-direction: column;\njustify-content: center;\ntransition:transform 1.4s ;\nwill-change:transform ;\n\n&::before{\n\n  /* @media(max-width:900px){\n      opacity:.75;\n  } */\n\n  content: \"\";\n  display:block;\n  position:absolute;\n  top:0;\n  width: 100%;\n  height: 100%;\n  background:", ";\n  opacity:", ";\n  transition:", ";\n  will-change:opacity;\n  z-index: -1;\n}\n\n    &:hover{\n      \n  ", "{\n      transform:rotate(135deg) scale(1.1);\n  }\n}\n\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -16258,7 +16342,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\nopacity:0;\nborder: solid 1px white;\n  border-radius: 2px;\n  border-width: 0 3px 3px 0;\n  display: inline-block;\n  padding: 3px;\n  width: 1em;\n  height: 1em;\n  position: absolute;\n    left: 40px;\n    top: calc(50vh+50%);\n    transform:translateX(10px) rotate(135deg);\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n\n@media(max-width:900px){\nright:0;\n}\n\n\nborder: solid 1px ", ";\n  border-radius: 2px;\n  border-width: 0 6px 6px 0;\n  display: inline-block;\n  padding: 3px;\n  width: 1em;\n  height: 1em;\n  position: absolute;\n  top: calc(50vh+50%);\n  right: 50px;\n  transform: rotate(135deg);\n  opacity:", ";\n  transition:transform .4s,", ";\n  will-change:transform opacity;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -16268,7 +16352,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n    from{\n        transform:translateX(10px) rotate(135deg);\n        opacity:0;\n    }to{\n        transform:translateX(-10px) rotate(135deg);\n        opacity:.6;\n    }\n\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\ndisplay:flex;\nwidth:calc(100vw/3);\n\n@media(max-width:900px){\n  width: ", ";\n  height: ", ";\n};\n\nflex-basis:", ";\n\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -16278,16 +16362,52 @@ function _templateObject() {
 }
 
 
+ // const downAnimation = keyframes`
+//     from{
+//         transform:translateX(10px) rotate(135deg);
+//         opacity:0;
+//     }to{
+//         transform:translateX(-10px) rotate(135deg);
+//         opacity:.6;
+//     }
+// `
 
-var downAnimation = Object(styled_components__WEBPACK_IMPORTED_MODULE_8__["keyframes"])(_templateObject());
-var BackArrow = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject2());
-var Container = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject3(), function (_ref) {
+var MainContainer = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject(), function (_ref) {
   var isActive = _ref.isActive;
   return isActive ? '100%' : 'calc(100vw/3)';
 }, function (_ref2) {
   var isActive = _ref2.isActive;
   return isActive ? '100%' : '100vh';
-}, BackArrow, downAnimation);
+}, function (_ref3) {
+  var isActive = _ref3.isActive;
+  return isActive ? '20%' : '100%';
+});
+var BackArrow = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject2(), function (_ref4) {
+  var shade = _ref4.shade;
+  return shade;
+}, function (_ref5) {
+  var isActive = _ref5.isActive;
+  return isActive ? '1' : '0';
+}, function (_ref6) {
+  var isActive = _ref6.isActive;
+  return isActive ? 'opacity .4s 1.8s' : 'opacity .2s';
+});
+var Container = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject3(), function (_ref7) {
+  var isActive = _ref7.isActive;
+  return isActive ? 'translateX(-50%)' : 'translateX(0%)';
+}, function (_ref8) {
+  var shade = _ref8.shade;
+  shade;
+}, function (_ref9) {
+  var overlay = _ref9.overlay;
+  return overlay;
+}, function (_ref10) {
+  var isActive = _ref10.isActive;
+  return isActive ? '0' : '.75';
+}, function (_ref11) {
+  var isActive = _ref11.isActive;
+  return isActive ? 'opacity .1s' : 'opacity .5s 1.4s';
+}, BackArrow);
 var Header = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].h1(_templateObject4());
 
 var Title =
@@ -16315,22 +16435,23 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 88
+          lineNumber: 128
         },
         __self: this
       }), this.props.children, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Header, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, this.props, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 90
+          lineNumber: 130
         },
         __self: this
-      }), isActive ? 'Home' : name, isActive && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(BackArrow, {
+      }), isActive ? '' : name), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(BackArrow, {
+        isActive: isActive,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 92
+          lineNumber: 133
         },
         __self: this
-      })));
+      }));
     }
   }]);
 
@@ -16351,16 +16472,18 @@ function (_Component) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return SectionHeader; });
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var react_pose__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-pose */ "./node_modules/react-pose/dist/react-pose.es.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var react_pose__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-pose */ "./node_modules/react-pose/dist/react-pose.es.js");
+
 
 
 
@@ -16369,8 +16492,28 @@ __webpack_require__.r(__webpack_exports__);
 
 var _jsxFileName = "/Users/Sugarbook/Documents/Web-Projects/node/rbreaux2.0/src/elements/SectionHeader.js";
 
+function _templateObject5() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n        margin-top:0px;\n        font-size:1em;\n"]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n    z-index:1;\n    ", "\n    ", "\n    margin-top: .5em;\n    position: fixed;\n    top:0;\n    transition:all .3s;\n"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject3() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n        margin-top:0px;\n        font-size:1em;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n    font-size: 2.5em;\nposition:relative;\ncolor: ", ";\nwidth:250px;\nmargin-bottom:0px;\n\n&:after{\n    content: '';\n    height: 1px;\n    background: black;\n    width: 144px;\n    position: absolute;\n    bottom: 0;\n    left: 0;\n}\n\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -16380,7 +16523,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n\n\n\n    text-align:right;\n    justify-self: end;\n    padding-right: 1.5em;\n    margin-top: .5em;\n    position: absolute;\n    right: 0;\n    top:0;\n\n\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\njustify-self: end;\ntext-align:left;\nleft:0;\npadding-left: 1.5em;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -16390,7 +16533,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n\n\n\nposition:relative;\ncolor: ", ";\nwidth:250px;\nmargin-bottom:0px;\n\n&:after{\n    content: '';\n    height: 1px;\n    background: black;\n    width: 144px;\n    position: absolute;\n    bottom: 0;\n    right: 0;\n\n\n}\n\n/* &:after{\n    content:'';\n    height:1px;\n    width:3em;\n    \n} */\n\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\njustify-self: end;\ntext-align:right;\nright: 0;\npadding-right: 1.5em;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -16402,48 +16545,56 @@ function _templateObject() {
 
 
 
-var Header = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].h2(_templateObject(), function (_ref) {
+var headerRigthCSS = Object(styled_components__WEBPACK_IMPORTED_MODULE_8__["css"])(_templateObject());
+var headerLeftCSS = Object(styled_components__WEBPACK_IMPORTED_MODULE_8__["css"])(_templateObject2());
+var Header = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].h2(_templateObject3(), function (_ref) {
   var theme = _ref.theme;
   return theme.card.text;
 });
-var HeaderContainer = Object(react_pose__WEBPACK_IMPORTED_MODULE_8__["default"])(styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject2()))({});
-var SubHeader = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].h3(_templateObject3());
+var HeaderContainer = Object(react_pose__WEBPACK_IMPORTED_MODULE_9__["default"])(styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject4(), function (_ref2) {
+  var left = _ref2.left;
+  return left && headerLeftCSS;
+}, function (_ref3) {
+  var right = _ref3.right;
+  return right && headerRightCSS;
+}))({});
+var SubHeader = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].h3(_templateObject5());
 
 var SectionHeader =
 /*#__PURE__*/
 function (_Component) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(SectionHeader, _Component);
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__["default"])(SectionHeader, _Component);
 
   function SectionHeader() {
-    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, SectionHeader);
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, SectionHeader);
 
-    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(SectionHeader).apply(this, arguments));
+    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(SectionHeader).apply(this, arguments));
   }
 
-  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(SectionHeader, [{
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(SectionHeader, [{
     key: "render",
     value: function render() {
       var _this$props = this.props,
           main = _this$props.main,
           sub = _this$props.sub,
           className = _this$props.className;
-      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(HeaderContainer, {
+      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(HeaderContainer, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, this.props, {
         className: className,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 59
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(Header, {
+      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Header, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64
+          lineNumber: 60
         },
         __self: this
-      }, main), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(SubHeader, {
+      }, main), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(SubHeader, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 65
+          lineNumber: 61
         },
         __self: this
       }, sub));
@@ -16451,7 +16602,7 @@ function (_Component) {
   }]);
 
   return SectionHeader;
-}(react__WEBPACK_IMPORTED_MODULE_6__["Component"]);
+}(react__WEBPACK_IMPORTED_MODULE_7__["Component"]);
 
 
 
@@ -16567,6 +16718,7 @@ function (_Component) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_SectionHeader__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        left: true,
         main: "Web/Productivity Solutions",
         sub: "Contractor",
         __source: {
@@ -16680,6 +16832,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _SectionHeader__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../SectionHeader */ "./src/elements/SectionHeader.js");
+/* harmony import */ var _blocks_projectView_SVG__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../blocks/projectView/SVG */ "./src/blocks/projectView/SVG.js");
 
 
 
@@ -16688,8 +16842,18 @@ __webpack_require__.r(__webpack_exports__);
 
 var _jsxFileName = "/Users/Sugarbook/Documents/Web-Projects/node/rbreaux2.0/src/elements/view/personalView.js";
 
+function _templateObject4() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n        width: 30vw;\n    position: absolute;\n    bottom: 0;\n    display: flex;\n    justify-content: space-evenly;\n    left: 50%;\n    transform: translateX(-50%);\n\n"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject3() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    margin-top: 4em;\n    margin-bottom: 4em;\n\n        &:before,&::after{\n            display:inline-block;\n            left: 50%;\n            transform: translateX(-50%);\n            position:relative;\n            content:'';\n            width:30em;\n            height:1px;\n            background-color:", ";\n        }\n\n        &:before{\n            top: -20px\n        }\n        &:after{\n            top: 20px\n        }\n\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    margin-top: 4em;\n    margin-bottom: 4em;\n\n    border-top: 1px solid;\n    border-bottom: 1px solid;\n\n        &:before{\n            top: -20px;\n        }\n        &:after{\n            top: 20px;\n        }\n\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -16699,7 +16863,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n        max-width:50%;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n        max-width:50%;\n        position:realitive;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -16709,7 +16873,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n        display:flex;\n        text-align:center;\n        height:100vh;\n        flex-direction: column;\n        align-items: center;\n  justify-content: center;\n  animation-delay: 3.2s;\n  /* animation-duration:.5s; */\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n        display:flex;\n        text-align:center;\n        height:100vh; \n        flex-direction: column;\n        align-items: center;\n  justify-content: center;\n  animation-delay: 1.8s;\n  background-color: #fff7f794;\n  \n  @media(max-width:900px){\n    padding-top:10em;\n  left: 0;\n    background-color: #c5ffefa3;\n    position: absolute;\n  }\n\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -16720,12 +16884,12 @@ function _templateObject() {
 
 
 
+
+
 var Container = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject());
 var SubContainer = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject2());
-var ParagraphContainer = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject3(), function (_ref) {
-  var theme = _ref.theme;
-  return theme.card.text;
-});
+var ParagraphContainer = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject3());
+var SocialContainer = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject4());
 
 var PersonalView =
 /*#__PURE__*/
@@ -16744,41 +16908,86 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_6__["Fragment"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 60
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(Container, {
         className: "animated fadeIn ",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 61
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(SubContainer, {
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_SectionHeader__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        left: true,
+        main: 'Projects/Works',
+        sub: "Originals",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 62
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(SubContainer, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 63
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("h2", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
+          lineNumber: 64
         },
         __self: this
       }, "The Whole Story"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(ParagraphContainer, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 65
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 66
         },
         __self: this
-      }, "Curious  and humble , full stack developer and entrepreneur. Big on design and lightning fast code. Found my love for JS developing on Node , leveraging the power of Non-Blocking I/O and npm\u2019s rich package eco system. Out of necessity I first started  learning web development  in college when I started my first business selling clothing online through an e-commerce website.Since I have had to learn more advanced techniques building tools for lead generation and business productivity. ")))));
+      }, "Curious  and humble , full stack developer and entrepreneur. Big on design and lightning fast code. Found my love for JS developing on Node , leveraging the power of Non-Blocking I/O and npm\u2019s rich package eco system. Out of necessity I first started  learning web development  in college when I started my first business selling clothing online through an e-commerce website.Since I have had to learn more advanced techniques building tools for lead generation and business productivity. ")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(SocialContainer, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 68
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
+        href: "https://github.com/pogojam",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 69
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_blocks_projectView_SVG__WEBPACK_IMPORTED_MODULE_9__["default"], {
+        type: "git",
+        href: "www.google.com",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 70
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
+        href: "https://www.linkedin.com/in/ryan-breaux-4603396a/",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 72
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_blocks_projectView_SVG__WEBPACK_IMPORTED_MODULE_9__["default"], {
+        type: "linked",
+        href: "",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 73
+        },
+        __self: this
+      }))))));
     }
   }]);
 
@@ -16814,8 +17023,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _static_section_json__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../static/section.json */ "./src/static/section.json");
 var _static_section_json__WEBPACK_IMPORTED_MODULE_12___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../../static/section.json */ "./src/static/section.json", 1);
 /* harmony import */ var _SectionHeader__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../SectionHeader */ "./src/elements/SectionHeader.js");
-/* harmony import */ var react_transition_group__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react-transition-group */ "./node_modules/react-transition-group/index.js");
-/* harmony import */ var react_transition_group__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(react_transition_group__WEBPACK_IMPORTED_MODULE_14__);
 
 
 
@@ -16826,7 +17033,7 @@ var _static_section_json__WEBPACK_IMPORTED_MODULE_12___namespace = /*#__PURE__*/
 var _jsxFileName = "/Users/Sugarbook/Documents/Web-Projects/node/rbreaux2.0/src/elements/view/projectView.js";
 
 function _templateObject5() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n        opacity:1;\n\n        align-items: center;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n        opacity:1;\n        align-items: center;\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -16836,7 +17043,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n    position: relative;\n    justify-items: center;\n    grid-template-rows: .3fr 1fr 1fr 1fr;\n    display: grid;\n    height: 100vh;\n    width: 100%;\n    left: 0;\n    top: 0;\n    box-sizing: border-box;\n    padding: 2em;\n    padding-top: 10em;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n    position: absolute;\n    justify-items: center;\n    grid-template-rows: .3fr 1fr 1fr 1fr;\n    display: grid;\n    height: 100vh;\n    width: 100%;\n    left: 0;\n    top: 0;\n    box-sizing: border-box;\n    padding: 6em;\n    padding-top: 10em;\n    will-change: transform;\n\n@media(max-width:900px){\n    padding: 3em;\n    padding-top: 10em;\n    background-color: #dcffaf6e;\n    }\n\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -16846,7 +17053,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n\n@media(max-width:900px){\n    top:0;\n    \n}\n\n\n    left: 9vw;\n    top: 58vh;\n    max-width:250px;\n\n", "\n\n    transition:transform .5s cubic-bezier(0.445, 0.05, 0.55, 0.95),opacity .5s cubic-bezier(0.445, 0.05, 0.55, 0.95);\n\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n\n@media(max-width:900px){\n    top:0;\n    \n}\n    position:relative;\n    left: -8vw;\n    top: 41vh;\n    max-width:250px;\n    font-size: 1.8em;\n\n", "\n\n    transition:transform .5s cubic-bezier(0.445, 0.05, 0.55, 0.95),opacity .5s cubic-bezier(0.445, 0.05, 0.55, 0.95);\n\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -16881,7 +17088,6 @@ function _templateObject() {
 
 
 
-
  // Animations
 
 var Animations = {
@@ -16903,7 +17109,7 @@ var Animations = {
 };
 var subHeaderShuffleOut = Object(styled_components__WEBPACK_IMPORTED_MODULE_9__["css"])(_templateObject());
 var subHeaderShuffleIn = Object(styled_components__WEBPACK_IMPORTED_MODULE_9__["css"])(_templateObject2());
-var SectionSubHeader = Object(styled_components__WEBPACK_IMPORTED_MODULE_9__["default"])(_SectionHeader__WEBPACK_IMPORTED_MODULE_13__["default"])(_templateObject3(), function (_ref) {
+var SectionSubHeader = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].h3(_templateObject3(), function (_ref) {
   var ShuffleStatus = _ref.ShuffleStatus;
 
   if (ShuffleStatus === 'shuffleIn') {
@@ -16945,7 +17151,6 @@ function (_Component) {
     key: "handleNextPage",
     value: function handleNextPage(page) {
       var section = this.state.activePortSection;
-      console.log(!page, section < PortfolioSections.length - 1, section > 0);
 
       if (page && section < PortfolioSections.length - 1) {
         section = section + 1;
@@ -16985,18 +17190,20 @@ function (_Component) {
       });
 
       if (status === 'shuffleIn') {
-        this.props.refViewContainer.style.overflowY = 'auto';
+        this.port.style.overflowY = 'auto';
       } else {
-        this.props.refViewContainer.scroll({
+        this.port.scroll({
           top: 0,
           behavior: 'smooth'
         });
-        this.props.refViewContainer.style.overflowY = 'hidden';
+        this.port.style.overflowY = 'hidden';
       }
     }
   }, {
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       var _this$state = this.state,
           ShuffleStatus = _this$state.ShuffleStatus,
           itemPos = _this$state.itemPos,
@@ -17004,37 +17211,40 @@ function (_Component) {
       var isActive = this.props.isActive;
       var shownProjects = _static_section_json__WEBPACK_IMPORTED_MODULE_12__[PortfolioSections[activePortSection]];
       return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Container, {
+        className: "animated fadeIn delay-2s",
         pose: ShuffleStatus,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 161
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_SectionHeader__WEBPACK_IMPORTED_MODULE_13__["default"], {
-        main: 'Projects/Works',
-        sub: "Originals",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 162
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(SectionSubHeader, {
-        ShuffleStatus: ShuffleStatus,
-        main: PortfolioTitles[activePortSection],
-        sub: "A Portfolio",
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_SectionHeader__WEBPACK_IMPORTED_MODULE_13__["default"], {
+        left: true,
+        main: 'Projects/Works',
+        sub: "Originals",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 163
         },
         __self: this
       }), isActive && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(StyledPort, {
+        ref: function ref(e) {
+          return _this2.port = e;
+        },
         className: "portBox",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 164
+          lineNumber: 165
         },
         __self: this
-      }, shownProjects.map(function (el, i) {
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(SectionSubHeader, {
+        ShuffleStatus: ShuffleStatus,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 166
+        },
+        __self: this
+      }, PortfolioTitles[activePortSection]), shownProjects.map(function (el, i) {
         return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_blocks_projectView_card__WEBPACK_IMPORTED_MODULE_10__["default"], {
           ShuffleStatus: ShuffleStatus,
           key: i,
@@ -17043,20 +17253,20 @@ function (_Component) {
           cardData: el,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 167
+            lineNumber: 171
           },
           __self: this
         });
-      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_blocks_projectView_portNav__WEBPACK_IMPORTED_MODULE_11__["default"], {
+      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_blocks_projectView_portNav__WEBPACK_IMPORTED_MODULE_11__["default"], {
         ShuffleStatus: ShuffleStatus,
         handleNextPage: this.handleNextPage,
         handleShuffle: this.handleShuffle,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 170
+          lineNumber: 175
         },
         __self: this
-      })));
+      }));
     }
   }]);
 
@@ -17088,6 +17298,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var ___WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ */ "./src/elements/view/index.js");
+/* harmony import */ var react_transition_group__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-transition-group */ "./node_modules/react-transition-group/index.js");
+/* harmony import */ var react_transition_group__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react_transition_group__WEBPACK_IMPORTED_MODULE_10__);
 
 
 
@@ -17097,28 +17309,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var _jsxFileName = "/Users/Sugarbook/Documents/Web-Projects/node/rbreaux2.0/src/elements/view/view.js";
 
-function _templateObject3() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n\n", "\n\n&::before{\n  content:'';\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n\n  background-image:url(", ");\nbackground-size: 100vh 100vw;\nbackground-attachment: fixed;\nbackground-size: cover;\n\ntransform:", ";\ntransition:transform 3s linear;\nwill-change:transform;\nfilter: blur(10px);\n}\n\nposition:relative;\nmargin-right:0;\ncolor:", ";\n\n@media(min-width:900px){\n  flex-basis:70%;\n}\n\n@media(max-width:900px){\n      height:100%;\n}\n\noverflow-x:hidden;\n"]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\nopacity:0;\ntransition:opacity 1s;\n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\nopacity:1;\ntransition:opacity 1s 1s;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n\n&.view-enter{\n  opacity:0;\n  flex-basis:0;\n}\n\n&.view-leave{\n  flex-basis:0;\n  opacity:0;\n  transition:opacity .4s;\n}\n\nposition: absolute;\nwidth:100vw;\n\nleft: 0;\ntop: 0;\nheight: 100%;\ncolor:", ";\noverflow-x:hidden;\nbox-sizing: border-box;\nflex-basis:100%;\ntransition:opacity .4s .8s;\nwill-change:flex-basis,opacity;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -17130,24 +17322,9 @@ function _templateObject() {
 
 
 
-var activeView = Object(styled_components__WEBPACK_IMPORTED_MODULE_8__["css"])(_templateObject());
-var unactiveView = Object(styled_components__WEBPACK_IMPORTED_MODULE_8__["css"])(_templateObject2());
-var Container = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject3(), function (_ref) {
-  var isActive = _ref.isActive;
 
-  if (isActive) {
-    return activeView;
-  } else {
-    return unactiveView;
-  }
-}, function (_ref2) {
-  var splashImg = _ref2.splashImg;
-  return splashImg;
-}, function (_ref3) {
-  var scale = _ref3.scale;
-  return scale ? 'scale(1.1)' : 'scale(1)';
-}, function (_ref4) {
-  var theme = _ref4.theme;
+var Container = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject(), function (_ref) {
+  var theme = _ref.theme;
   return theme.card.color;
 });
 
@@ -17167,37 +17344,50 @@ function (_Component) {
     value: function render() {
       var _this = this;
 
-      var side = this.props.side;
-      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Container, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+      var _this$props = this.props,
+          side = _this$props.side,
+          isActive = _this$props.isActive;
+      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_transition_group__WEBPACK_IMPORTED_MODULE_10__["CSSTransitionGroup"], {
+        transitionName: "view",
+        transitionEnterTimeout: 500,
+        transitionLeaveTimeout: 1100,
+        component: react__WEBPACK_IMPORTED_MODULE_7__["Fragment"],
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 40
+        },
+        __self: this
+      }, isActive ? react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Container, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+        key: side,
         ref: function ref(e) {
           return _this.viewContainer = e;
         }
       }, this.props, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 67
+          lineNumber: 46
         },
         __self: this
       }), side === 'left' && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(___WEBPACK_IMPORTED_MODULE_9__["PersonalView"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, this.props, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68
+          lineNumber: 47
         },
         __self: this
       })), side === 'center' && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(___WEBPACK_IMPORTED_MODULE_9__["ClientView"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, this.props, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 69
+          lineNumber: 48
         },
         __self: this
       })), side === 'right' && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(___WEBPACK_IMPORTED_MODULE_9__["ProjectlView"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, this.props, {
         refViewContainer: this.viewContainer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 70
+          lineNumber: 49
         },
         __self: this
-      })));
+      }))) : null);
     }
   }]);
 
@@ -17215,7 +17405,7 @@ function (_Component) {
 /*! exports provided: sections, default */
 /***/ (function(module) {
 
-module.exports = {"sections":[{"name":"personal","splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1554457187/Selfi_B_W_Center.jpg","overlay":"rgb(0, 0, 0)","side":"left","icon":"mountains","index":0},{"name":"client","splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1545683959/autumn-autumn-colours-bright-756903.jpg","overlay":"rgba(240,4,4)","side":"center","icon":"suitcase","index":1},{"name":"projects","splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1554668355/branches-bright-Web.jpg","overlay":"rgba(0, 0, 0)","side":"right","icon":"gear","index":2}]};
+module.exports = {"sections":[{"name":"personal","splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1555035590/ryansWebsite/Selfi_B_W.jpg","overlay":"rgb(26, 222, 236)","side":"left","icon":"mountains","shade":"black","index":0},{"name":"client","splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1545683959/autumn-autumn-colours-bright-756903.jpg","overlay":"rgba(240,4,4)","side":"center","icon":"suitcase","shade":"black","index":1},{"name":"projects","splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1554668355/branches-bright-Web.jpg","overlay":" rgba(0, 255, 154, 0.84)","side":"right","icon":"gear","shade":"black","index":2}]};
 
 /***/ }),
 

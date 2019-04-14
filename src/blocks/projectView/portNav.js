@@ -114,23 +114,19 @@ const Container = posed(styled.div`
 @media(max-width:900px){
     width:100vw
 }
-
         bottom: 0;
-        background-color: rgb(255, 255, 255);
         display:flex;
       min-height:10vh;
-        width:calc(100vw/3*2);
+        width:100%;
         align-items: center;
         justify-content:center;
         position: fixed;
         right: 0;
-
+        will-change: transform;
         &.portNav-leave{
                 opacity:0;
                 transition:.3s linear;
-        }
-
-        
+        }        
 `)({
     
     shuffleOut:{

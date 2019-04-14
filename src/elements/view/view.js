@@ -1,74 +1,55 @@
-import React, { Component } from 'react'
+import React, { Component,Fragment } from 'react'
 import styled,{css} from 'styled-components'
-
 import {PersonalView,ClientView,ProjectlView} from './'
+import { CSSTransitionGroup } from 'react-transition-group'
 
-const activeView = css`
-opacity:1;
-transition:opacity 1s 1s;
-`
-const unactiveView = css`
-opacity:0;
-transition:opacity 1s;
-`
 
-const Container =styled.div`
+const Container = styled.div`
 
-${({isActive})=>{
-  if(isActive){
-    return activeView
-  }
-  else{
-    return unactiveView
-  }
-  
-}}
-
-&::before{
-  content:'';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-  background-image:url(${({splashImg})=>splashImg});
-background-size: 100vh 100vw;
-background-attachment: fixed;
-background-size: cover;
-
-transform:${({scale})=>scale?'scale(1.1)':'scale(1)'};
-transition:transform 3s linear;
-will-change:transform;
-filter: blur(10px);
+&.view-enter{
+  opacity:0;
+  flex-basis:0;
 }
 
-position:relative;
-margin-right:0;
+&.view-leave{
+  flex-basis:0;
+  opacity:0;
+  transition:opacity .4s;
+}
+
+position: absolute;
+width:100vw;
+
+left: 0;
+top: 0;
+height: 100%;
 color:${({theme})=>theme.card.color};
-
-@media(min-width:900px){
-  flex-basis:70%;
-}
-
-@media(max-width:900px){
-      height:100%;
-}
-
 overflow-x:hidden;
+box-sizing: border-box;
+flex-basis:100%;
+transition:opacity .4s .8s;
+will-change:flex-basis,opacity;
 `
 
 export default class View extends Component {
     
   render() {
-    const {side} = this.props
+    const {side,isActive} = this.props
     
     return (
-      <Container   ref={(e)=>this.viewContainer = e } {...this.props}  >
+      <CSSTransitionGroup
+      transitionName="view"
+          transitionEnterTimeout={500}
+          transitionLeaveTimeout={1100}
+          component={Fragment}
+      >{
+      isActive?<Container key={side} ref={(e)=>this.viewContainer = e } {...this.props}  >
         {side === 'left' && <PersonalView {...this.props} />}
         {side === 'center' && <ClientView {...this.props} />}
         {side === 'right' && <ProjectlView {...this.props} refViewContainer={this.viewContainer} />}
-      </Container>
+      </Container>:null
+      }
+      </CSSTransitionGroup>
     )
   }
 }

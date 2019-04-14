@@ -5,7 +5,6 @@ import PortfolioCard from '../../blocks/projectView/card';
 import PortNav from '../../blocks/projectView/portNav'
 import data from '../../static/section.json'
 import Header from '../SectionHeader'
-import { CSSTransitionGroup } from 'react-transition-group'
 
 
 // Animations
@@ -30,17 +29,17 @@ const subHeaderShuffleIn = css`
         transform:translateX(0px);
 `
 
-const SectionSubHeader = styled(Header)`
+const SectionSubHeader = styled.h3`
 
 @media(max-width:900px){
     top:0;
     
 }
-
-
-    left: 9vw;
-    top: 58vh;
+    position:relative;
+    left: -8vw;
+    top: 41vh;
     max-width:250px;
+    font-size: 1.8em;
 
 ${({ShuffleStatus})=>{
         if(ShuffleStatus==='shuffleIn'){
@@ -55,7 +54,7 @@ ${({ShuffleStatus})=>{
 `
 
 const StyledPort = styled.div`
-    position: relative;
+    position: absolute;
     justify-items: center;
     grid-template-rows: .3fr 1fr 1fr 1fr;
     display: grid;
@@ -64,17 +63,21 @@ const StyledPort = styled.div`
     left: 0;
     top: 0;
     box-sizing: border-box;
-    padding: 2em;
+    padding: 6em;
     padding-top: 10em;
-`
+    will-change: transform;
 
+@media(max-width:900px){
+    padding: 3em;
+    padding-top: 10em;
+    background-color: #dcffaf6e;
+    }
+
+`
 const Container = posed(styled.div`
         opacity:1;
-
         align-items: center;
-`)({
-
-})
+`)({})
 
     const PortfolioSections = ['sites','opensource','productivity']
     const PortfolioTitles = ['Web Sites','Open Source','Productivity']
@@ -94,12 +97,10 @@ class ProjectView extends Component {
       }
     }
     
-   
+
     handleNextPage(page){
         
         let section = this.state.activePortSection
-
-        console.log(!page,section<PortfolioSections.length-1,section>0);
         
         if(page && section<PortfolioSections.length-1){
             section = section+1
@@ -140,14 +141,14 @@ class ProjectView extends Component {
         })
 
         if(status === 'shuffleIn'){
-            this.props.refViewContainer.style.overflowY = 'auto'
+            this.port.style.overflowY = 'auto'
         }else{
-            this.props.refViewContainer.scroll({
+            this.port.scroll({
                 top: 0,
                 behavior: 'smooth'
               });
 
-            this.props.refViewContainer.style.overflowY = 'hidden'
+            this.port.style.overflowY = 'hidden'
         }
     }
 
@@ -158,17 +159,20 @@ class ProjectView extends Component {
         const shownProjects = data[PortfolioSections[activePortSection]]
 
         return (
-            <Container  pose={ShuffleStatus} >
-                <Header main={'Projects/Works'} sub="Originals" ></Header>
-            <SectionSubHeader ShuffleStatus={ShuffleStatus}  main={PortfolioTitles[activePortSection]} sub="A Portfolio" />
-            { isActive && <StyledPort className='portBox' >
+            <Container className='animated fadeIn delay-2s'  pose={ShuffleStatus} >
+                <Header left main={'Projects/Works'} sub="Originals" ></Header>
+            
+            { isActive && <StyledPort ref={(e)=>this.port = e} className='portBox' >
+            <SectionSubHeader ShuffleStatus={ShuffleStatus}  >
+            {PortfolioTitles[activePortSection]}
+                </SectionSubHeader>
                 {
                 shownProjects.map((el,i)=>{
                     return <PortfolioCard ShuffleStatus={ShuffleStatus} key={i} index={i}   skillsData={data.skills} cardData={el} />
                     })
                 }
-                <PortNav ShuffleStatus={ShuffleStatus} handleNextPage={this.handleNextPage} handleShuffle={this.handleShuffle} />
                 </StyledPort>}
+                <PortNav ShuffleStatus={ShuffleStatus} handleNextPage={this.handleNextPage} handleShuffle={this.handleShuffle} />
             </Container>
         );
     }

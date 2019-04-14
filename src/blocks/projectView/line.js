@@ -50,7 +50,7 @@ z-index:999;
     skew:"0deg"
   },
   hide:{
-    x:({side})=>side==="left"?"25vw":"-25vw",
+    x:({side})=>side==="left"?"40vw":"-40vw",
     skew:"0deg",
     opacity:1,
     minHeight: "30%"

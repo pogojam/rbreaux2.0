@@ -2,10 +2,11 @@
     "sections":[
         {
             "name":"personal",
-            "splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1554457187/Selfi_B_W_Center.jpg",
-            "overlay":"rgb(0, 0, 0)",
+            "splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1555035590/ryansWebsite/Selfi_B_W.jpg",
+            "overlay":"rgb(26, 222, 236)",
             "side":"left",
             "icon":"mountains",
+            "shade":"black",
             "index":0
         },{
             "name":"client",
@@ -13,13 +14,15 @@
             "overlay":"rgba(240,4,4)",
             "side":"center",
             "icon":"suitcase",
+            "shade":"black",
             "index":1
         },{
             "name":"projects",
             "splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1554668355/branches-bright-Web.jpg",
-            "overlay":"rgba(0, 0, 0)",
+            "overlay":" rgba(0, 255, 154, 0.84)",
             "side":"right",
             "icon":"gear",
+            "shade":"black",
             "index":2
         }
     ]

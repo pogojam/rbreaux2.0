@@ -9,6 +9,7 @@ return<div>
 <Head>
     <title>A Developer Named Ryan </title>
     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <meta name="viewport" content="width=device-width"></meta>
     <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet"/>
 </Head>
 <App/>
