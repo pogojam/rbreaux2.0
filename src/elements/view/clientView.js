@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import SectionHeader from '../SectionHeader'
 import styled,{keyframes} from 'styled-components'
 import SVG from '../../blocks/projectView/SVG'
+import data from '../../static/section.json'
 
 const enterAnimationLine = keyframes`
     from{
@@ -15,7 +16,7 @@ const enterAnimationLine = keyframes`
 const Container = styled.div`
         display:flex;
         text-align:center;
-        height:100vh;
+
         flex-direction: column;
         justify-content: center;
         padding: 3em;
@@ -24,13 +25,17 @@ const Container = styled.div`
         box-sizing: border-box;
 `
 
-const SvgContainer = styled.div`
+
+const SectionContainer = styled.div`
+display: flex;
+
     align-self: center;
     min-width: 100%;
-    display: flex;
-    justify-content: space-around;
     align-items: center;
-    height:27vh;
+    justify-content:center;
+    flex-direction:column;
+    height:100vh;
+    /* height:27vh; */
 `
 
 const ButtonsContainer = styled.div`
@@ -67,6 +72,24 @@ const Button = styled.button`
 
 `
 
+const ImgContainer = styled.div`
+          grid-template-columns: 1fr 1fr 1fr;
+    width: 48%;
+    display: grid;
+    justify-items: center;
+    background-color: #00000061;
+    border-radius:30px;
+    padding:3em;
+`
+const Img = styled.img`
+  width:40px;
+`
+
+
+const FrontEndSkills = ['css','react','git','node','webpack','apollo']
+const FrameWorks = ['meteor','gatsby','nextjs']
+const BackEndSkills = ['firebase','mongoDB','express']
+
 
 
 
@@ -76,22 +99,28 @@ export default class ClientView extends Component {
     return (
       <Container>
         <SectionHeader left main="Web/Productivity Solutions" sub="Contractor" />
-          <SvgContainer>
+          <SectionContainer>
               <SVG  type='monitor'/>
-              <SVG  type='iphone'/>
-              <SVG  type='robot'/>
-          </SvgContainer>
-          <ButtonsContainer>
-              <Button>
-                Desktop
-              </Button>
-              <Button>
-                Mobile
-              </Button>
-              <Button>
-                Bot
-              </Button>
-          </ButtonsContainer>
+          <h1>FrontEnd</h1>
+      <ImgContainer>
+        {data.skills.map((skill)=>{
+          if(FrontEndSkills.includes(skill.name)){
+            return <Img src={skill.img} alt=""/>
+          }
+        })}          
+      </ImgContainer>
+          </SectionContainer>
+          <SectionContainer>
+          <SVG type="cloud" />
+          <h1>BackEnd</h1>
+      <ImgContainer>
+        {data.skills.map((skill)=>{
+          if(BackEndSkills.includes(skill.name)){
+            return <Img src={skill.img} alt=""/>
+          }
+        })}          
+      </ImgContainer>
+          </SectionContainer>
       </Container>
     )
   }

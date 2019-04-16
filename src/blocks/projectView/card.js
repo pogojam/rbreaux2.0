@@ -1,7 +1,8 @@
-import React, { Component } from "react";
+import React, { Component,Fragment } from "react";
 import styled from "styled-components";
 import posed from "react-pose";
 import Line from './line'
+import { CSSTransitionGroup } from 'react-transition-group'
 
 const Container = posed(styled.div`
 
@@ -88,6 +89,7 @@ border:none;
     },
     maxWidth:"100%"
   },neutral: {
+    delay:1000,
     opacity: 0,
     maxWidth:0,
   }
@@ -111,6 +113,9 @@ grid-template-columns: 1fr 1fr 1fr;
   },
   show: {
     opacity: 1
+  },
+  neutral:{
+    opacity: 0
   }
 })
 
@@ -128,7 +133,15 @@ const Container_Info = posed(styled.div`
           }
         }
 `)({
-
+  show:{
+    opacity:1
+  },
+  hide:{
+    
+  },
+  neutral:{
+    opacity:0
+  }
 })
 
 
@@ -190,10 +203,10 @@ flex-basis:20%;
   min-height: 14em;
   white-space:nowrap;
   pointer-events:${({ShuffleStatus})=>ShuffleStatus === 'shuffleOut'?'none':'auto'};
-
+  transition:transform .3s cubic-bezier(0.445, 0.05, 0.55, 0.95) ;
 
   &:hover{
-    transition:.3s cubic-bezier(0.445, 0.05, 0.55, 0.95) ;
+    
     transform:scale(1.2);
   }
 
@@ -227,11 +240,30 @@ const Header = posed(styled.h2`
 @media(max-width:900px){
     left:50vw;
 }
+font-size: 1.4em;
+    font-weight: 900;
     left: 53vw;
     position:absolute;
     opacity:1 !important;
     border:1px ${({ShuffleStatus})=>ShuffleStatus==='shuffleIn'?'solid':'none'} rgb(0, 0, 0);
     border-width: 0px 0px 1px 0px;
+    will-change:opacity;
+    transition:opacity .3s,transform .3s ;
+
+    &.header-enter{
+        opacity:0;
+        transition:opacity .3s .4s;
+    }
+    &.header-enter.header-enter-active{
+        opacity:1;
+    }
+    &.header-leave{
+        opacity:0;
+    }
+    &.header-leave.header-leave-active{
+        
+    }
+
 `)({
   // Header Animation
   shuffleIn:{
@@ -305,7 +337,14 @@ export default class PortCard extends Component {
       skillsStatus={skillsStatus}
         index={index}
       >
-        <Header ShuffleStatus={ShuffleStatus} {...this.props} index={index}  >{cardData.name}</Header>
+      <CSSTransitionGroup 
+                component={Fragment}
+                transitionName='header'
+                transitionEnterTimeout={500}
+                transitionLeaveTimeout={500}
+            >
+        <Header ShuffleStatus={ShuffleStatus} key={name} {...this.props} index={index}  >{cardData.name}</Header>
+      </CSSTransitionGroup>
         <DisplayBox
         ShuffleStatus={ShuffleStatus}
           skillsStatus={skillsStatus}

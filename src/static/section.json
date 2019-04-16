@@ -78,6 +78,16 @@
       "name": "express",
       "img": "https://res.cloudinary.com/dxjse9tsv/image/upload/v1551337498/expressjs-logo.png.png",
       "level": "60"
+    },
+    {
+      "name":"git",
+      "img":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1555309238/Stack_Icons/Git-Icon-1788C.png",
+      "level":"60"
+    },
+    {
+      "name":"webpack",
+      "img":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1555311857/Stack_Icons/icon-square-big.png",
+      "level":"20"
     }
   ],
   "sites": [

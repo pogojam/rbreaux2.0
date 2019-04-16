@@ -12,6 +12,9 @@ return<div>
     <meta name="viewport" content="width=device-width"></meta>
     <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet"/>
 </Head>
+<div id='loadingscreen'>
+<div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+</div>
 <App/>
  </div>   
 }

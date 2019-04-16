@@ -114,6 +114,7 @@ const Container = posed(styled.div`
 @media(max-width:900px){
     width:100vw
 }
+        background-color: #ffffff3b;
         bottom: 0;
         display:flex;
       min-height:10vh;
@@ -143,7 +144,7 @@ const DotButton =({dots,handleNextPage,right})=>{
         let dotArray = []
 
         for(let i=0;i<dots;i++){
-            dotArray.push(<Dot index={i} />)
+            dotArray.push(<Dot key={i} index={i} />)
         }
         if(!right){
             dotArray.reverse()

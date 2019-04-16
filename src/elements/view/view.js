@@ -7,12 +7,10 @@ import { CSSTransitionGroup } from 'react-transition-group'
 const Container = styled.div`
 
 &.view-enter{
-  opacity:0;
   flex-basis:0;
 }
 
 &.view-leave{
-  flex-basis:0;
   opacity:0;
   transition:opacity .4s;
 }
@@ -28,7 +26,7 @@ overflow-x:hidden;
 box-sizing: border-box;
 flex-basis:100%;
 transition:opacity .4s .8s;
-will-change:flex-basis,opacity;
+will-change:opacity;
 `
 
 export default class View extends Component {

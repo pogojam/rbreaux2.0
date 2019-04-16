@@ -3,18 +3,6 @@ import styled,{keyframes} from "styled-components";
 import posed from "react-pose";
 
 
-const enterAnimation = keyframes`
-        from{
-            opacity:0;
-            transform: translateY(-50%) skew(0deg);        
-        }
-        to{
-            opacity:1;
-            transform: translateY(-50%) skew(20deg);
-        }
-`
-
-
 const Line = posed(styled.a`
 z-index:999;
     position:absolute;
@@ -56,6 +44,7 @@ z-index:999;
     minHeight: "30%"
   },
   neutral:{
+    delay:200,
     x:"0",
     y:"-50%",
     skew:({ShuffleStatus})=>{

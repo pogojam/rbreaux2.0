@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component,Fragment } from 'react';
 import posed from 'react-pose'
 import styled,{css} from "styled-components";
 import PortfolioCard from '../../blocks/projectView/card';
 import PortNav from '../../blocks/projectView/portNav'
 import data from '../../static/section.json'
 import Header from '../SectionHeader'
+import { CSSTransitionGroup } from 'react-transition-group'
 
 
 // Animations
@@ -29,17 +30,43 @@ const subHeaderShuffleIn = css`
         transform:translateX(0px);
 `
 
+const EnterExitCSS = css`
+&.header-enter{
+        opacity:0;
+        transition:opacity .3s .4s;
+    }
+    &.header-enter.header-enter-active{
+        opacity:1;
+    }
+    &.header-leave{
+        opacity:0;
+        /* transform:translateX(-50%); */
+    }
+    &.header-leave.header-leave-active{
+        
+    }
+`
+
 const SectionSubHeader = styled.h3`
 
-@media(max-width:900px){
-    top:0;
-    
-}
-    position:relative;
-    left: -8vw;
-    top: 41vh;
+    position:absolute;
+    left: 35vw;
+    top: 57vh;
     max-width:250px;
     font-size: 1.8em;
+    will-change:opacity;
+    transition:opacity .3s,transform .3s ;
+    
+    ${({ShuffleStatus})=>{if(ShuffleStatus!=='shuffleIn'){
+        return EnterExitCSS
+    }}}
+
+    @media(max-width:900px){
+    top:0;
+    
+    }
+
+
 
 ${({ShuffleStatus})=>{
         if(ShuffleStatus==='shuffleIn'){
@@ -70,13 +97,16 @@ const StyledPort = styled.div`
 @media(max-width:900px){
     padding: 3em;
     padding-top: 10em;
-    background-color: #dcffaf6e;
+
     }
 
 `
 const Container = posed(styled.div`
         opacity:1;
         align-items: center;
+        background-color: #fff7f794;
+        width:100%;
+        height:100%;
 `)({})
 
     const PortfolioSections = ['sites','opensource','productivity']
@@ -161,11 +191,18 @@ class ProjectView extends Component {
         return (
             <Container className='animated fadeIn delay-2s'  pose={ShuffleStatus} >
                 <Header left main={'Projects/Works'} sub="Originals" ></Header>
-            
+                
             { isActive && <StyledPort ref={(e)=>this.port = e} className='portBox' >
-            <SectionSubHeader ShuffleStatus={ShuffleStatus}  >
+            <CSSTransitionGroup 
+                component={Fragment}
+                transitionName='header'
+                transitionEnterTimeout={500}
+                transitionLeaveTimeout={500}
+            >
+            <SectionSubHeader key={PortfolioTitles[activePortSection]} ShuffleStatus={ShuffleStatus}  >
             {PortfolioTitles[activePortSection]}
-                </SectionSubHeader>
+            </SectionSubHeader>
+            </CSSTransitionGroup>
                 {
                 shownProjects.map((el,i)=>{
                     return <PortfolioCard ShuffleStatus={ShuffleStatus} key={i} index={i}   skillsData={data.skills} cardData={el} />

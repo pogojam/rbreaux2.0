@@ -18,8 +18,8 @@
             "index":1
         },{
             "name":"projects",
-            "splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1554668355/branches-bright-Web.jpg",
-            "overlay":" rgba(0, 255, 154, 0.84)",
+            "splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1555359126/ryansWebsite/adventure-alone-arid-1123567.jpg",
+            "overlay":"rgb(255, 255, 255);",
             "side":"right",
             "icon":"gear",
             "shade":"black",
