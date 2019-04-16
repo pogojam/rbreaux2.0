@@ -22,6 +22,10 @@ color: ${({theme})=>theme.card.text};
 width:250px;
 margin-bottom:0px;
 
+@media(max-width:900px){
+    font-size:initial; 
+}
+
 &:after{
     content: '';
     height: 1px;
@@ -36,12 +40,23 @@ margin-bottom:0px;
 
 const HeaderContainer = posed(styled.div`
     z-index:1;
-    ${({left})=>left&&headerLeftCSS}
-    ${({right})=>right&&headerRightCSS}
-    margin-top: .5em;
+    
+
     position: fixed;
     top:0;
     transition:all .3s;
+
+    @media(max-width:900px){
+        right:0;
+        width: calc(100% - 100px);
+        padding-left:5px;
+    }
+
+    @media(min-width:900px){
+        ${({left})=>left&&headerLeftCSS}
+    ${({right})=>right&&headerRightCSS}
+    }
+
 `)({
 
 })

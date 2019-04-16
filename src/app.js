@@ -34,6 +34,14 @@ this.handleSectionChange = this.handleSectionChange.bind(this);
        activeSection:"all"
     }
   }
+
+componentDidMount(){
+
+  setTimeout(()=>{  document.getElementById('loadingscreen').className += " " + 'loadingscreen-out'; },2000)
+
+
+}
+
   
 handleSectionChange(sec){
       

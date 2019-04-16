@@ -1,5 +1,6 @@
 import React, { Component,Fragment } from 'react'
 import styled,{keyframes} from 'styled-components'
+import Nav from '../Nav'
 
 // const downAnimation = keyframes`
 //     from{
@@ -50,9 +51,8 @@ border: solid 1px ${({shade})=>shade};
 
 const Container = styled.div`
 
-transform:${({isActive})=>isActive?'translateX(-70%)':'translateX(0%)'};
+transform:${({isActive})=>isActive?'translateX(-100%)':'translateX(-50%)'};
 
-cursor: pointer;
 z-index:1;
 display: flex;
 top:0;
@@ -66,27 +66,9 @@ justify-content: center;
 transition:transform 1.4s ;
 will-change:transform ;
 
-&::before{
 
-  /* @media(max-width:900px){
-      opacity:.75;
-  } */
 
-  content: "";
-  display:block;
-  position:absolute;
-  top:0;
-  width: 100%;
-  height: 100%;
-  background:${({overlay})=>overlay};
-  opacity:${({isActive})=>isActive?'0':'.75'};
-  transition:${({isActive})=>isActive?'opacity .1s':'opacity .5s 1.4s'};
-  will-change:opacity;
-  z-index: -1;
-}
 
-    &:hover{
-      
   ${BackArrow}{
       transform:rotate(135deg) scale(1.1);
   }
@@ -97,6 +79,7 @@ will-change:transform ;
 
 const Header = styled.h1`
 
+transform:translateX(50%);
 
 &:after{
   transition: min-width .9s cubic-bezier(0.455, 0.03, 0.515, 0.955);
@@ -121,13 +104,15 @@ const Header = styled.h1`
 
 
 
+
 export default class Title extends Component {
     render() {
-        const {isActive,name,handleSectionChange,side} = this.props
+        const {isActive,name,side} = this.props
     return (
-        <Container  {...this.props} onClick={()=> handleSectionChange(side)} >
+        <Container  {...this.props}  >
+          <Nav {...this.props} />
           {this.props.children}
-          <Header {...this.props}>
+          <Header className="Title-Header" {...this.props}>
       {isActive?'':name}
       </Header>
       <BackArrow isActive={isActive} />

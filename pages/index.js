@@ -12,11 +12,22 @@ return<div>
     <meta name="viewport" content="width=device-width"></meta>
     <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet"/>
 </Head>
+<div className='Main-Container'>
+
 <div id='loadingscreen'>
-<div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+    <div className="Splash-Logo animated fadeIn ">
+    <div className="Splash-Logo-Letter-Container" >
+            <span className="Splash-Logo-Letter">R</span>
+    </div>
+    <div className="Splash-Logo-Letter-Container" >
+            <span className="Splash-Logo-Letter">B</span>
+    </div>
+    </div>
+<div className="lds-ring"><div></div><div></div><div></div><div></div></div>
 </div>
 <App/>
  </div>   
+</div>
 }
 
 

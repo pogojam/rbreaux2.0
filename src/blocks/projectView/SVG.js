@@ -222,9 +222,9 @@ const MountainCOLOR ="#000000"
 
 export default class SVG extends Component {
   render() {
-    const {type,isActive} = this.props
+    const {type,isActive,className} = this.props
     return (
-        <Container isActive={isActive} >
+        <Container className={className} isActive={isActive} >
             {type ==='gear'&&<StyledGear gear='#000000' />}
             {type ==='mountains'&&<StyledMountain  mountain1={MountainCOLOR}  mountain2={MountainCOLOR}  mountain3={MountainCOLOR} clouds={'#000000'} />}
             {type ==='suitcase'&&<SuitcaseSVG suitcase='#000000'  />}

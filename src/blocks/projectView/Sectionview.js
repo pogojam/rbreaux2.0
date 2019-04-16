@@ -2,7 +2,7 @@ import React, { Component,Fragment } from 'react'
 import styled,{css} from 'styled-components'
 import View from '../../elements/view/view';
 import Title from './title'
-import SVG from './SVG'
+
 
 
 
@@ -21,6 +21,22 @@ transform:translate3d(${({index,isActive})=>isActive?'0':'calc(100vw/3*-1*'+inde
 filter:${({isActive})=>isActive && ' blur(10px)'};
 transition: transform ${({isActive})=>isActive?'0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.5s':'0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.8s'} , filter .6s;
 will-change:transform filter;
+
+&::before{
+
+content: "";
+display:block;
+position:absolute;
+top:0;
+width: 100%;
+height: 100%;
+background:${({overlay})=>overlay};
+opacity:${({isActive})=>isActive?'0':'.75'};
+transition:${({isActive})=>isActive?'opacity .1s':'opacity .5s 1.4s'};
+will-change:opacity;
+z-index: -1;
+}
+
 `
 
 const animateSectionActive = css`
@@ -45,6 +61,18 @@ overflow:hidden;
 transform:translateX(${({index})=>index*100+"%"});
 transform-origin: ${({index})=>index*100+50+"%"} 50%;
 transition:transform .6s cubic-bezier(0.455, 0.03, 0.515, 0.955) .5s ,width .3s cubic-bezier(0.455, 0.03, 0.515, 0.955) .9s;
+
+
+    &:hover{
+      
+      .nav{
+  ${({isActive})=>isActive?'':'transform:translateX(50%) translateY(45vh);'}
+      }
+      .Title-Header{
+        ${({isActive})=>isActive?'transform:translateX(50%) translateY(-10vh);':'transform:translateX(50%) translateY(-10vh);'}
+        transition:.4s;
+      }
+    }
 
 ${({isActive})=>{
   if(isActive){
@@ -148,11 +176,11 @@ export default class Sectionview extends Component {
 
 
     return (
-      <Container  isActive={isActive} activeSection={activeSection}  {...this.props}  >
+      <Container   isActive={isActive} activeSection={activeSection}  {...this.props}  >
           <SecondaryContainer>
         <Background ref={(e)=> this.background = e } isActive={isActive} {...this.props}/>
       <Title {...this.props} left name={name} isActive={isActive} >
-        <SVG type={icon} isActive={isActive} />
+        
       </Title>
       <View  ref={(e)=>this.view = e } isActive={isActive}  {...this.props} />
           </SecondaryContainer>
