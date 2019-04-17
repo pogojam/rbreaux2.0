@@ -190,7 +190,7 @@ class ProjectView extends Component {
 
         return (
             <Container className='animated fadeIn delay-2s'  pose={ShuffleStatus} >
-                <Header left main={'Projects/Works'} sub="Originals" ></Header>
+                <Header right main={'Projects/Works'} sub="Originals" ></Header>
                 
             { isActive && <StyledPort ref={(e)=>this.port = e} className='portBox' >
             <CSSTransitionGroup 

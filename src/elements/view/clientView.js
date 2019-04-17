@@ -98,7 +98,7 @@ export default class ClientView extends Component {
   render() {
     return (
       <Container>
-        <SectionHeader left main="Web/Productivity Solutions" sub="Contractor" />
+        <SectionHeader right main="Web/Productivity Solutions" sub="Contractor" />
           <SectionContainer>
               <SVG  type='monitor'/>
           <h1>FrontEnd</h1>

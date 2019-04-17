@@ -59,7 +59,7 @@ export default class PersonalView extends Component {
     return (
       <Fragment>
       <Container className='animated fadeIn ' >
-      <Header left main={'Projects/Works'} sub="Originals" ></Header>
+      <Header right main={'Projects/Works'} sub="Originals" ></Header>
           <SubContainer>
                 <h2>The Whole Story</h2>
             <ParagraphContainer>

@@ -53,8 +53,8 @@ const HeaderContainer = posed(styled.div`
     }
 
     @media(min-width:900px){
-        ${({left})=>left&&headerLeftCSS}
-    ${({right})=>right&&headerRightCSS}
+        ${({left})=>left&& headerLeftCSS}
+    ${({right})=>right&& headerRigthCSS}
     }
 
 `)({

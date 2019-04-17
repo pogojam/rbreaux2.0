@@ -5,6 +5,7 @@ import { CSSTransitionGroup } from 'react-transition-group'
 
 import SectionView from './blocks/projectView/Sectionview'
 import Theme from './static/theme'
+import { color } from 'style-value-types';
 
 
 

@@ -66,12 +66,12 @@ transition:transform .6s cubic-bezier(0.455, 0.03, 0.515, 0.955) .5s ,width .3s 
     &:hover{
       
       .nav{
-  ${({isActive})=>isActive?'':'transform:translateX(50%) translateY(45vh);'}
+  ${({isActive})=>isActive?'':'transform:translateX(50%) translateY(35vh);'}
       }
-      .Title-Header{
+      /* .Title-Header{
         ${({isActive})=>isActive?'transform:translateX(50%) translateY(-10vh);':'transform:translateX(50%) translateY(-10vh);'}
         transition:.4s;
-      }
+      } */
     }
 
 ${({isActive})=>{

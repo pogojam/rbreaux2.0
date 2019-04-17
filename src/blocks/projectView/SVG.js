@@ -22,16 +22,16 @@ const LinkedInSVG = ({className})=><svg className={className} xmlns="http://www.
 </svg>
 
 
-const MountainSVG = ({className,mountain1,mountain2,mountain3,clouds})=><svg className={className} width="100%" height="69px" viewBox="0 0 146 69" version="1.1">
+const MountainSVG = ({className,color,clouds})=><svg className={className} width="100%" height="69px" viewBox="0 0 146 69" version="1.1">
     <title>MountainIcon</title>
     <desc>Created with Sketch.</desc>
     <g id="r" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
         <g id="Desktop-HD" transform="translate(-174.000000, -542.000000)">
             <g id="MountainIcon" transform="translate(174.000000, 543.000000)">
                 <g id="Mountains" transform="translate(11.000000, 11.000000)" opacity="0.83140346">
-                    <polygon id="Triangle" fill={mountain1} points="46 13.8102979 92 56.8102979 0 56.8102979"></polygon>
-                    <polygon id="Triangle" fill={mountain2} points="69.5 9.59232693e-14 93 56.8102979 46 56.8102979"></polygon>
-                    <polygon id="Triangle" fill={mountain3} points="88 25.8102979 108 56.8102979 68 56.8102979"></polygon>
+                    <polygon id="Triangle" fill={color} points="46 13.8102979 92 56.8102979 0 56.8102979"></polygon>
+                    <polygon id="Triangle" fill={color} points="69.5 9.59232693e-14 93 56.8102979 46 56.8102979"></polygon>
+                    <polygon id="Triangle" fill={color} points="88 25.8102979 108 56.8102979 68 56.8102979"></polygon>
                 </g>
                 <g id="Clouds" fill={clouds} opacity="0.440964472">
                     <path className='cloud1' d="M8.07334531,11.1053876 C8.02490079,10.7244853 8,10.3370621 8,9.9443518 C8,4.42150431 12.9248678,-0.0556481964 19,-0.0556481964 C24.3244645,-0.0556481964 28.7653648,3.38343184 29.7815415,7.95144703 C29.8791672,7.9467376 29.9758159,7.9443518 30.0714305,7.9443518 C36.0711433,7.9443518 41,12.900353 41,16.3317253 C41,19.7630977 36.1362718,22.5447746 30.1365591,22.5447746 C25.3875676,22.5447746 18.0465379,23.5824432 15.1922411,22.3133846 C13.7801106,22.7171483 12.1864883,22.9443518 10.5,22.9443518 C4.70101013,22.9443518 0,20.2580603 0,16.9443518 C0,14.1079302 3.44432515,11.7312031 8.07334531,11.1053876 Z" id="Combined-Shape"></path>
@@ -42,10 +42,10 @@ const MountainSVG = ({className,mountain1,mountain2,mountain3,clouds})=><svg cla
     </g>
 </svg>
 
-const GearSVG = ({className,gear})=><svg className={className} width="100%" height="69px" viewBox="0 0 100 79" version="1.1" xmlns="http://www.w3.org/2000/svg" >
+const GearSVG = ({className,color})=><svg className={className} width="100%" height="69px" viewBox="0 0 100 79" version="1.1" xmlns="http://www.w3.org/2000/svg" >
     <title>GearSVG</title>
     <g id="r" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" fillOpacity="0.601879371">
-        <g id="Desktop-HD" transform="translate(-1180.000000, -564.000000)" fill={gear}>
+        <g id="Desktop-HD" transform="translate(-1180.000000, -564.000000)" fill={color}>
             <g id="Group-3" transform="translate(1180.000000, 564.000000)">
                 <path className='gear1' d="M28.008238,34.7376372 C29.2714022,34.9552036 30.4960905,35.285238 31.6716213,35.7170587 L34.4387851,34.1565199 L37.874769,36.1402861 L37.9069539,39.3238348 C38.8767982,40.1341128 39.7726643,41.0299789 40.5829423,41.9998231 L43.7664909,42.032008 L45.7502572,45.467992 L44.1897184,48.2351558 C44.6215391,49.4106866 44.9515735,50.6353749 45.1691399,51.8985391 L47.9067771,53.5162338 L47.9067771,57.4837662 L45.1691399,59.1014609 C44.9515735,60.3646251 44.6215391,61.5893134 44.1897184,62.7648442 L45.7502572,65.532008 L43.7664909,68.967992 L40.5829423,69.0001769 C39.7726643,69.9700211 38.8767982,70.8658872 37.9069539,71.6761652 L37.874769,74.8597139 L34.4387851,76.8434801 L31.6716213,75.2829413 C30.4960905,75.714762 29.2714022,76.0447964 28.008238,76.2623628 L26.3905433,79 L22.4230108,79 L20.8053162,76.2623628 C19.542152,76.0447964 18.3174637,75.714762 17.1419329,75.2829413 L14.374769,76.8434801 L10.9387851,74.8597139 L10.9066002,71.6761652 C9.93675593,70.8658872 9.04088988,69.9700211 8.23061185,69.0001769 L5.0470632,68.967992 L3.06329697,65.532008 L4.62383574,62.7648442 C4.19201504,61.5893134 3.86198068,60.3646251 3.64441423,59.1014609 L0.906777075,57.4837662 L0.906777075,53.5162338 L3.64441423,51.8985391 C3.86198068,50.6353749 4.19201504,49.4106866 4.62383574,48.2351558 L3.06329697,45.467992 L5.0470632,42.032008 L8.23061185,41.9998231 C9.04088988,41.0299789 9.93675593,40.1341128 10.9066002,39.3238348 L10.9387851,36.1402861 L14.374769,34.1565199 L17.1419329,35.7170587 C18.3174637,35.285238 19.542152,34.9552036 20.8053162,34.7376372 L22.4230108,32 L26.3905433,32 L28.008238,34.7376372 Z M24.4067771,71.7068966 C33.3575989,71.7068966 40.6136736,64.4508218 40.6136736,55.5 C40.6136736,46.5491782 33.3575989,39.2931034 24.4067771,39.2931034 C15.4559553,39.2931034 8.19988052,46.5491782 8.19988052,55.5 C8.19988052,64.4508218 15.4559553,71.7068966 24.4067771,71.7068966 Z" id="Combined-Shape"></path>
                 <path className='gear2' d="M90.5452405,30.856356 C91.4531799,31.6149141 92.291863,32.4535972 93.0504211,33.3615365 L96.0307645,33.3916671 L97.8879074,36.6083329 L96.4269775,39.1988693 C96.8312351,40.2993662 97.1402035,41.4458829 97.3438827,42.6284196 L99.9067771,44.1428571 L99.9067771,47.8571429 L97.3438827,49.3715804 C97.1402035,50.5541171 96.8312351,51.7006338 96.4269775,52.8011307 L97.8879074,55.3916671 L96.0307645,58.6083329 L93.0504211,58.6384635 C92.291863,59.5464028 91.4531799,60.3850859 90.5452405,61.143644 L90.51511,64.1239875 L87.2984442,65.9811303 L84.7079078,64.5202004 C83.6074109,64.9244581 82.4608942,65.2334264 81.2783575,65.4371056 L79.7639199,68 L76.0496342,68 L74.5351966,65.4371056 C73.3526599,65.2334264 72.2061433,64.9244581 71.1056463,64.5202004 L68.51511,65.9811303 L65.2984442,64.1239875 L65.2683136,61.143644 C64.3603743,60.3850859 63.5216912,59.5464028 62.763133,58.6384635 L59.7827896,58.6083329 L57.9256468,55.3916671 L59.3865767,52.8011307 C58.982319,51.7006338 58.6733507,50.5541171 58.4696714,49.3715804 L55.9067771,47.8571429 L55.9067771,44.1428571 L58.4696714,42.6284196 C58.6733507,41.4458829 58.982319,40.2993662 59.3865767,39.1988693 L57.9256468,36.6083329 L59.7827896,33.3916671 L62.763133,33.3615365 C63.5216912,32.4535972 64.3603743,31.6149141 65.2683136,30.856356 L65.2984442,27.8760125 L68.51511,26.0188697 L71.1056463,27.4797996 C72.2061433,27.0755419 73.3526599,26.7665736 74.5351966,26.5628944 L76.0496342,24 L79.7639199,24 L81.2783575,26.5628944 C82.4608942,26.7665736 83.6074109,27.0755419 84.7079078,27.4797996 L87.2984442,26.0188697 L90.51511,27.8760125 L90.5452405,30.856356 Z M77.9067771,61.1724138 C86.2862698,61.1724138 93.0791909,54.3794928 93.0791909,46 C93.0791909,37.6205072 86.2862698,30.8275862 77.9067771,30.8275862 C69.5272843,30.8275862 62.7343633,37.6205072 62.7343633,46 C62.7343633,54.3794928 69.5272843,61.1724138 77.9067771,61.1724138 Z" id="Combined-Shape"></path>
@@ -55,9 +55,9 @@ const GearSVG = ({className,gear})=><svg className={className} width="100%" heig
     </g>
 </svg>
 
-const SuitcaseSVG = ({className,suitcase})=><svg className={className} width="100%" height="47px" viewBox="0 0 62 47" version="1.1" xmlns="http://www.w3.org/2000/svg" >
+const SuitcaseSVG = ({className,color})=><svg className={className} width="100%" height="47px" viewBox="0 0 62 47" version="1.1" xmlns="http://www.w3.org/2000/svg" >
     <g id="Splash" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" fillOpacity="0.606807255">
-        <g id="Desktop-HD" transform="translate(-736.000000, -564.000000)" fill={suitcase}>
+        <g id="Desktop-HD" transform="translate(-736.000000, -564.000000)" fill={color}>
             <path d="M796.220526,576.192962 L757.563394,611 L742.813187,611 C739.050368,611 736,607.989075 736,604.274911 L736,580.725089 C736,577.010925 739.050368,574 742.813187,574 L753,574 C753,568.477153 757.433473,564 762.902439,564 L772.097561,564 C777.566527,564 782,568.477153 782,574 L791.186813,574 C793.180721,574 794.974578,574.845441 796.220526,576.192962 Z M798,582.664513 L798,604.274911 C798,607.989075 794.949632,611 791.186813,611 L766.530253,611 L798,582.664513 Z M756.536585,574 L778.463415,574 C778.463415,570.055109 775.296648,566.857143 771.390244,566.857143 L763.609756,566.857143 C759.703352,566.857143 756.536585,570.055109 756.536585,574 Z" id="Combined-Shape"></path>
         </g>
     </g>
@@ -222,14 +222,20 @@ const MountainCOLOR ="#000000"
 
 export default class SVG extends Component {
   render() {
-    const {type,isActive,className} = this.props
+    const {type,isActive,className,action} = this.props
+    let {color} = this.props
+    
+        if(!color){
+            color = '#000000'
+        }
+
     return (
-        <Container className={className} isActive={isActive} >
-            {type ==='gear'&&<StyledGear gear='#000000' />}
-            {type ==='mountains'&&<StyledMountain  mountain1={MountainCOLOR}  mountain2={MountainCOLOR}  mountain3={MountainCOLOR} clouds={'#000000'} />}
-            {type ==='suitcase'&&<SuitcaseSVG suitcase='#000000'  />}
+        <Container onClick={action?()=>action():null} className={className} isActive={isActive} >
+            {type ==='gear'&&<StyledGear {...this.props} color={color} />}
+            {type ==='mountains'&&<StyledMountain {...this.props} color={MountainCOLOR}  clouds={color} />}
+            {type ==='suitcase'&&<SuitcaseSVG {...this.props} color={color}  />}
             {type === 'iphone'&& <StyledIphone color='black' className='animated fadeIn delay-3s' />}
-            {type === 'monitor'&& <StyledMonitor color='black' className='animated fadeIn delay-3s' />}
+            {type === 'monitor'&& <StyledMonitor color='black'  />}
             {type === 'robot'&& <StyledRobot color='black' className='animated fadeIn delay-4s' />}
             {type === 'git'&& <GitSVG className='animated fadeIn delay-3s' />}
             {type === 'linked'&& <LinkedInSVG className='animated fadeIn delay-3s' />}
