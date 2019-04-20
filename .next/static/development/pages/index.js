@@ -17864,7 +17864,7 @@ function (_Component) {
 /*! exports provided: sections, default */
 /***/ (function(module) {
 
-module.exports = {"sections":[{"name":"personal","splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1555035590/ryansWebsite/Selfi_B_W.jpg","overlay":"rgb(26, 222, 236)","side":"left","icon":"mountains","shade":"black","index":0},{"name":"client","splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1555699972/architecture_white_room.jpg","overlay":"","side":"center","icon":"suitcase","shade":"black","index":1},{"name":"projects","splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1555359126/ryansWebsite/adventure-alone-arid-1123567.jpg","overlay":"","side":"right","icon":"gear","shade":"black","index":2}]};
+module.exports = {"sections":[{"name":"personal","splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1555035590/ryansWebsite/Selfi_B_W.jpg","overlay":"rgb(26, 222, 236)","side":"left","icon":"mountains","shade":"black","index":0},{"name":"tech/stack","splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1555699972/architecture_white_room.jpg","overlay":"","side":"center","icon":"suitcase","shade":"black","index":1},{"name":"projects","splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1555359126/ryansWebsite/adventure-alone-arid-1123567.jpg","overlay":"","side":"right","icon":"gear","shade":"black","index":2}]};
 
 /***/ }),
 
