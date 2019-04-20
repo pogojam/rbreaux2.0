@@ -27,6 +27,7 @@ box-sizing: border-box;
 flex-basis:100%;
 transition:opacity .4s .8s;
 will-change:opacity;
+
 `
 
 export default class View extends Component {

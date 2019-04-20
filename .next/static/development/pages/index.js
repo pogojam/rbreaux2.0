@@ -14389,7 +14389,7 @@ var _static_data_json__WEBPACK_IMPORTED_MODULE_9___namespace = /*#__PURE__*/__we
 var _jsxFileName = "/Users/Sugarbook/Documents/Web-Projects/node/rbreaux2.0/src/blocks/Nav.js";
 
 function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    position:absolute;\n    background-color:#00000047;\n    right:0;\n    width:5vw;\n    height:100vh;\n    box-shadow: 5px 4px 10px 2px rgba(0,0,0,0.75);\n    border-bottom-left-radius: 29px;\n    border-bottom-right-radius: 29px;\n    top:-90vh;\n    transform:", ";\n    will-change:transform;\n    transition:transform .4s cubic-bezier(0.455, 0.03, 0.515, 0.955) ;\n    display: flex;\n    justify-content: flex-end;\n    flex-direction: column;\n\n\n\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    position:absolute;\n    background-color:#00000047;\n    right:0;\n    width:5vw;\n    height:100vh;\n    box-shadow: 5px 4px 10px 2px rgba(0,0,0,0.75);\n    border-bottom-left-radius: 29px;\n    border-bottom-right-radius: 29px;\n    top:-110vh;\n    transform:", ";\n    will-change:transform;\n    transition:transform .4s cubic-bezier(0.455, 0.03, 0.515, 0.955) ;\n    display: flex;\n    justify-content: flex-end;\n    flex-direction: column;\n    padding:.5em;\n\n\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -14415,7 +14415,7 @@ function _templateObject() {
 var ViewSVG = Object(styled_components__WEBPACK_IMPORTED_MODULE_7__["default"])(_projectView_SVG__WEBPACK_IMPORTED_MODULE_8__["default"])(_templateObject());
 var Container = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject2(), function (_ref) {
   var isActive = _ref.isActive;
-  return isActive ? 'translateX(100%) translateY(35vh)' : 'translateX(50%)';
+  return isActive ? 'translateX(100%) translateY(25vh)' : 'translateX(50%)';
 });
 var SectionsNameArray = ['personal', 'client', 'projects'];
 
@@ -14447,28 +14447,7 @@ function (_Component) {
           lineNumber: 42
         },
         __self: this
-      }, isActive && react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_6__["Fragment"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 43
-        },
-        __self: this
-      }, _static_data_json__WEBPACK_IMPORTED_MODULE_9__.sections.map(function (section) {
-        if (section.name !== name) {
-          return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(ViewSVG, {
-            className: "animated fadeIn",
-            action: function action() {
-              return handleSectionChange(section.side);
-            },
-            type: section.icon,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 46
-            },
-            __self: this
-          });
-        }
-      })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(ViewSVG, {
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(ViewSVG, {
         action: function action() {
           return handleSectionChange(side);
         },
@@ -14550,7 +14529,7 @@ function _templateObject8() {
 }
 
 function _templateObject7() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\nposition: relative;\n    top: 61px;\n\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -15384,14 +15363,14 @@ function (_Component) {
         isActive: isActive,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 233
+          lineNumber: 231
         },
         __self: this
       }, type === 'gear' && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(StyledGear, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, this.props, {
         color: color,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 234
+          lineNumber: 232
         },
         __self: this
       })), type === 'mountains' && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(StyledMountain, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, this.props, {
@@ -15399,58 +15378,55 @@ function (_Component) {
         clouds: color,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 235
+          lineNumber: 233
         },
         __self: this
       })), type === 'suitcase' && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(SuitcaseSVG, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, this.props, {
         color: color,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 236
+          lineNumber: 234
         },
         __self: this
       })), type === 'iphone' && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(StyledIphone, {
         color: "black",
-        className: "animated fadeIn delay-3s",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 237
+          lineNumber: 235
         },
         __self: this
       }), type === 'monitor' && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(StyledMonitor, {
         color: "black",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 238
+          lineNumber: 236
         },
         __self: this
       }), type === 'robot' && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(StyledRobot, {
         color: "black",
-        className: "animated fadeIn delay-4s",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 239
+          lineNumber: 237
         },
         __self: this
       }), type === 'git' && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(GitSVG, {
         className: "animated fadeIn delay-3s",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 240
+          lineNumber: 238
         },
         __self: this
       }), type === 'linked' && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(LinkedInSVG, {
         className: "animated fadeIn delay-3s",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 241
+          lineNumber: 239
         },
         __self: this
       }), type === 'cloud' && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(CloudSVG, {
-        className: "animated fadeIn delay-3s",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 242
+          lineNumber: 240
         },
         __self: this
       }));
@@ -15506,7 +15482,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\nz-index:1;\nwidth:calc(100vw/3);\nheight:100%;\nposition:absolute;\ntop:0;\nleft:0;\noverflow:hidden;\ntransform:translateX(", ");\ntransform-origin: ", " 50%;\ntransition:transform .6s cubic-bezier(0.455, 0.03, 0.515, 0.955) .5s ,width .3s cubic-bezier(0.455, 0.03, 0.515, 0.955) .9s;\n\n\n    &:hover{\n      \n      .nav{\n  ", "\n      }\n      /* .Title-Header{\n        ", "\n        transition:.4s;\n      } */\n    }\n\n", "\nwill-change: transform,width,opacity;\n\n&.section-enter{\n  /* transform: translate3d(", ",0,0); */\n  z-index:0;\n  transform:scale(.5)translate3d(", ",0,0);\n  opacity:.01;\n  transition:transform .5s 1.5;\n}\n&.section-enter.section-enter-active{\n  transform:scale(1) translate3d(", ",0,0);\n  opacity:1;\n}\n\n&.section-leave{\n    transform:scale(.5) translate3d(", ",0,0);\n    opacity:.4;\n    z-index:0;\n    transition:transform .8s cubic-bezier(0.455, 0.03, 0.515, 0.955) , opacity .8s linear;\n}\n\n&:hover  {\n  &::after{\n    opacity:", ";\n  }\n  }\n\n  &::before{\n  /* content:'';\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n\nbackground-image:url(", ");\nbackground-size: 110vh 110vw;\nbackground-attachment: fixed;\nbackground-size: cover;\nfilter: blur(10px);\nopacity:", ";\ntransition:opacity .4s 1s;\nwill-change:opacity; */\n}\n\n\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\nz-index:1;\nwidth:calc(100vw/3);\nheight:100%;\nposition:absolute;\ntop:0;\nleft:0;\noverflow:hidden;\ntransform:translateX(", ");\ntransform-origin: ", " 50%;\ntransition:transform .6s cubic-bezier(0.455, 0.03, 0.515, 0.955) .5s ,width .3s cubic-bezier(0.455, 0.03, 0.515, 0.955) 1.2s;\n\n\n    &:hover{\n      \n      .nav{\n  ", "\n      }\n      .Title-Header{\n        ", "\n      }\n\n      \n\n    }\n\n", "\nwill-change: transform,width,opacity;\n\n&.section-enter{\n  /* transform: translate3d(", ",0,0); */\n  z-index:0;\n  transform:scale(.5)translate3d(", ",0,0);\n  opacity:.01;\n  transition:transform .5s 1.5;\n}\n&.section-enter.section-enter-active{\n  transform:scale(1) translate3d(", ",0,0);\n  opacity:1;\n}\n\n&.section-leave{\n    transform:scale(.5) translate3d(", ",0,0);\n    opacity:.4;\n    z-index:0;\n    transition:transform .8s cubic-bezier(0.455, 0.03, 0.515, 0.955) , opacity .8s linear;\n}\n\n&:hover  {\n  &::after{\n    opacity:", ";\n  }\n  }\n\n  &::before{\n  /* content:'';\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n\nbackground-image:url(", ");\nbackground-size: 110vh 110vw;\nbackground-attachment: fixed;\nbackground-size: cover;\nfilter: blur(10px);\nopacity:", ";\ntransition:opacity .4s 1s;\nwill-change:opacity; */\n}\n\n\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -15582,10 +15558,10 @@ var Container = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_t
   return index * 100 + 50 + "%";
 }, function (_ref10) {
   var isActive = _ref10.isActive;
-  return isActive ? '' : 'transform:translateX(50%) translateY(35vh);';
+  return isActive ? '' : 'transform:translateX(50%) translateY(25vh);';
 }, function (_ref11) {
   var isActive = _ref11.isActive;
-  return isActive ? 'transform:translateX(50%) translateY(-10vh);' : 'transform:translateX(50%) translateY(-10vh);';
+  return isActive ? 'transform:translateX(50%) scale(1.1);' : 'transform:translateX(50%) scale(1.1);';
 }, function (_ref12) {
   var isActive = _ref12.isActive;
 
@@ -15658,13 +15634,13 @@ function (_Component) {
       }, this.props, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 179
+          lineNumber: 181
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(SecondaryContainer, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 180
+          lineNumber: 182
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Background, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
@@ -15675,7 +15651,7 @@ function (_Component) {
       }, this.props, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 181
+          lineNumber: 183
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_title__WEBPACK_IMPORTED_MODULE_10__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, this.props, {
@@ -15684,7 +15660,7 @@ function (_Component) {
         isActive: isActive,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 182
+          lineNumber: 184
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_elements_view_view__WEBPACK_IMPORTED_MODULE_9__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
@@ -15695,7 +15671,7 @@ function (_Component) {
       }, this.props, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 185
+          lineNumber: 187
         },
         __self: this
       }))));
@@ -15733,6 +15709,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _line__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./line */ "./src/blocks/projectView/line.js");
 /* harmony import */ var react_transition_group__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-transition-group */ "./node_modules/react-transition-group/index.js");
 /* harmony import */ var react_transition_group__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react_transition_group__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _SVG__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./SVG */ "./src/blocks/projectView/SVG.js");
 
 
 
@@ -15741,6 +15718,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _jsxFileName = "/Users/Sugarbook/Documents/Web-Projects/node/rbreaux2.0/src/blocks/projectView/card.js";
+
+function _templateObject10() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n      position:absolute;\n      margin:auto;\n      top:0;\n      left:4.4vw;\n      bottom:0;\n\n      width:9vw;\n      height:9vw;\n      border-radius:50%;\n\n      background-image:url(", ");\n      background-size: cover;\n\n\n"]);
+
+  _templateObject10 = function _templateObject10() {
+    return data;
+  };
+
+  return data;
+}
 
 function _templateObject9() {
   var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\npadding-right:'0px';\n"]);
@@ -15793,7 +15780,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n      display:grid;\n      grid-template-columns: 1fr 3fr;\n    grid-template-rows: 1fr 1fr;\n    align-items: center;\n\n        a{\n          transition:all .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);\n          cursor:pointer;\n          &:hover{\n            transform:scale(1.2);\n          }\n        }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n      position:relative;\n      display:grid;\n      grid-template-columns: 1fr 3fr;\n    grid-template-rows: 1fr 1fr;\n    align-items: center;\n    width: 100%;\n\n\n        a{\n          transition:all .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);\n          cursor:pointer;\n          &:hover{\n            transform:scale(1.2);\n          }\n        }\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -15803,7 +15790,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n\ngrid-template-columns: 1fr 1fr 1fr;\n  \n  width:80%;\n  display: grid;\n  justify-items: center;\n  align-content: center;\n  height: 100%;\n  padding: 1em 0 1em;\n  grid-row-gap: 1em;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n\ngrid-template-columns: 1fr 1fr 1fr;\n\n  \n  width:80%;\n  display: grid;\n  justify-items: center;\n  align-content: center;\n  height: 100%;\n  padding: 1em 0 1em;\n  grid-row-gap: 1em;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -15831,6 +15818,7 @@ function _templateObject() {
 
   return data;
 }
+
 
 
 
@@ -16027,6 +16015,10 @@ var Paragraph = Object(react_pose__WEBPACK_IMPORTED_MODULE_9__["default"])(style
   shuffleOut: {
     opacity: 0
   }
+});
+var CirclePreview = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject10(), function (_ref27) {
+  var previewImg = _ref27.previewImg;
+  return previewImg;
 }); // Component Inital State !!!!!!!
 // 2 Boxs for each row has three states left right and center 
 
@@ -16089,7 +16081,7 @@ function (_Component) {
         index: index,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 335
+          lineNumber: 359
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_transition_group__WEBPACK_IMPORTED_MODULE_11__["CSSTransitionGroup"], {
@@ -16099,7 +16091,7 @@ function (_Component) {
         transitionLeaveTimeout: 500,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 340
+          lineNumber: 364
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Header, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
@@ -16109,7 +16101,7 @@ function (_Component) {
         index: index,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 346
+          lineNumber: 370
         },
         __self: this
       }), cardData.name)), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(DisplayBox, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
@@ -16121,7 +16113,7 @@ function (_Component) {
         name: "Details",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 348
+          lineNumber: 372
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(DisplayBox, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
@@ -16134,7 +16126,7 @@ function (_Component) {
         right: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 356
+          lineNumber: 380
         },
         __self: this
       })));
@@ -16146,14 +16138,14 @@ function (_Component) {
 
 
 
-var DisplayBox = function DisplayBox(_ref27) {
-  var cardData = _ref27.cardData,
-      skillsData = _ref27.skillsData,
-      skillsStatus = _ref27.skillsStatus,
-      ShuffleStatus = _ref27.ShuffleStatus,
-      toggle = _ref27.toggle,
-      side = _ref27.side,
-      name = _ref27.name;
+var DisplayBox = function DisplayBox(_ref28) {
+  var cardData = _ref28.cardData,
+      skillsData = _ref28.skillsData,
+      skillsStatus = _ref28.skillsStatus,
+      ShuffleStatus = _ref28.ShuffleStatus,
+      toggle = _ref28.toggle,
+      side = _ref28.side,
+      name = _ref28.name;
 
   // Is Side Active
   var status = function status() {
@@ -16172,7 +16164,7 @@ var DisplayBox = function DisplayBox(_ref27) {
     pose: status(),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 396
+      lineNumber: 420
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(SubContainer, {
@@ -16180,14 +16172,14 @@ var DisplayBox = function DisplayBox(_ref27) {
     pose: status(),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 397
+      lineNumber: 421
     },
     __self: this
   }, side === "left" ? react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Info, {
     cardData: cardData,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 399
+      lineNumber: 423
     },
     __self: this
   }) : react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Skills, {
@@ -16195,7 +16187,7 @@ var DisplayBox = function DisplayBox(_ref27) {
     skillsData: skillsData,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 401
+      lineNumber: 425
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_line__WEBPACK_IMPORTED_MODULE_10__["default"], {
@@ -16204,7 +16196,7 @@ var DisplayBox = function DisplayBox(_ref27) {
     side: side,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 404
+      lineNumber: 428
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Button, {
@@ -16216,60 +16208,74 @@ var DisplayBox = function DisplayBox(_ref27) {
     side: side,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 405
+      lineNumber: 429
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Paragraph, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 411
+      lineNumber: 435
     },
     __self: this
   }, name)));
 };
 
-var Info = function Info(_ref28) {
-  var cardData = _ref28.cardData;
+var Info = function Info(_ref29) {
+  var cardData = _ref29.cardData;
   return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Container_Info, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 420
+      lineNumber: 444
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
     href: cardData.gitLink,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 421
+      lineNumber: 445
     },
     __self: this
-  }, "Github"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+  }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_SVG__WEBPACK_IMPORTED_MODULE_12__["default"], {
+    type: "git",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 446
+    },
+    __self: this
+  }, "Github")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(CirclePreview, {
+    previewImg: cardData.previewImg,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 450
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
     style: {
       gridRow: "1 / 3",
       gridColumn: "2/3"
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 422
+      lineNumber: 451
     },
     __self: this
   }, cardData.discription), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
     href: cardData.pageLink,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 423
+      lineNumber: 452
     },
     __self: this
   }, "Visit"));
 };
 
-var Skills = function Skills(_ref29) {
-  var skillsData = _ref29.skillsData,
-      cardData = _ref29.cardData;
+var Skills = function Skills(_ref30) {
+  var skillsData = _ref30.skillsData,
+      cardData = _ref30.cardData;
   return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Container_Skills, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 430
+      lineNumber: 459
     },
     __self: this
   }, skillsData.map(function (el, i) {
@@ -16284,7 +16290,7 @@ var Skills = function Skills(_ref29) {
           alt: "",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 438
+            lineNumber: 467
           },
           __self: this
         });
@@ -16347,7 +16353,6 @@ var Line = Object(react_pose__WEBPACK_IMPORTED_MODULE_4__["default"])(styled_com
       var box = document.querySelector('.portBox');
       var boxComputedStyled = getComputedStyle(box);
       var boxWidth = box.getBoundingClientRect().width - _babel_runtime_corejs2_core_js_parse_float__WEBPACK_IMPORTED_MODULE_0___default()(boxComputedStyled.paddingLeft) * 2;
-      console.log(boxComputedStyled.paddingLeft, boxWidth);
       return side === "left" ? boxWidth / 2 + "px" : "-" + boxWidth / 2 + "px";
     },
     skew: "0deg"
@@ -16420,7 +16425,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/Sugarbook/Documents/Web-Projects/node/rbreaux2.0/src/blocks/projectView/portNav.js";
 
 function _templateObject4() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n\n@media(max-width:900px){\n    width:100vw\n}\n        background-color: #ffffff3b;\n        bottom: 0;\n        display:flex;\n      min-height:10vh;\n        width:100%;\n        align-items: center;\n        justify-content:center;\n        position: fixed;\n        right: 0;\n        will-change: transform;\n        &.portNav-leave{\n                opacity:0;\n                transition:.3s linear;\n        }        \n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n\n@media(max-width:900px){\n    width:100vw\n}\n        /* background-color: #ffffff3b; */\n        bottom: 0;\n        display:flex;\n      min-height:10vh;\n        width:100%;\n        align-items: center;\n        justify-content:center;\n        position: fixed;\n        right: 0;\n        will-change: transform;\n        &.portNav-leave{\n                opacity:0;\n                transition:.3s linear;\n        }        \n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -16640,7 +16645,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/Sugarbook/Documents/Web-Projects/node/rbreaux2.0/src/blocks/projectView/title.js";
 
 function _templateObject4() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n\ntransform:translateX(50%);\n\n&:after{\n  transition: min-width .9s cubic-bezier(0.455, 0.03, 0.515, 0.955);\n    content: '';  \n    position: absolute;\n    left: 50%;\n    top:130%;\n    transform: translateX(-50%);\n    background-color: white;\n    min-width: 0%;\n    height: 1px;\n\n  &:before{\n    \n  }\n\n  }\n\n\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\ncursor:pointer;\ntransform:translateX(50%);\ntransition:.4s;\n&:after{\n  transition: min-width .9s cubic-bezier(0.455, 0.03, 0.515, 0.955);\n    content: '';  \n    position: absolute;\n    left: 50%;\n    top:130%;\n    transform: translateX(-50%);\n    background-color: white;\n    min-width: 0%;\n    height: 1px;\n\n  &:before{\n    \n  }\n\n  }\n\n\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -16737,7 +16742,8 @@ function (_Component) {
       var _this$props = this.props,
           isActive = _this$props.isActive,
           name = _this$props.name,
-          side = _this$props.side;
+          side = _this$props.side,
+          handleSectionChange = _this$props.handleSectionChange;
       return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Container, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, this.props, {
         __source: {
           fileName: _jsxFileName,
@@ -16751,6 +16757,9 @@ function (_Component) {
         },
         __self: this
       })), this.props.children, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Header, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+        onClick: function onClick() {
+          return handleSectionChange(side);
+        },
         className: "Title-Header"
       }, this.props, {
         __source: {
@@ -16827,7 +16836,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n    font-size: 2.5em;\nposition:relative;\ncolor: ", ";\nwidth:250px;\nmargin-bottom:0px;\n\n@media(max-width:900px){\n    font-size:initial; \n}\n\n&:after{\n    content: '';\n    height: 1px;\n    background: black;\n    width: 144px;\n    position: absolute;\n    bottom: 0;\n    left: 0;\n}\n\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n    font-size: 2.5em;\nposition:relative;\ncolor: ", ";\nwidth:250px;\nmargin-bottom:0px;\n\n@media(max-width:900px){\n    font-size:initial; \n}\n\n&:after{\n    content: '';\n    height: 1px;\n    background: black;\n    width: 144px;\n    position: absolute;\n    bottom: 0;\n    right:0;\n}\n\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -16837,7 +16846,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\njustify-self: end;\ntext-align:left;\nleft:0;\npadding-left: 1.5em;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\njustify-self: end;\ntext-align:left;\nleft:0;\npadding-right: 1.5em;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -16847,7 +16856,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\njustify-self: end;\ntext-align:right;\nright: 0;\npadding-right: 1.5em;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\njustify-self: end;\ntext-align:right;\nright: 30px;\npadding-right: 1.5em;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -16953,8 +16962,18 @@ var _static_section_json__WEBPACK_IMPORTED_MODULE_10___namespace = /*#__PURE__*/
 
 var _jsxFileName = "/Users/Sugarbook/Documents/Web-Projects/node/rbreaux2.0/src/elements/view/clientView.js";
 
-function _templateObject7() {
+function _templateObject8() {
   var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n  width:40px;\n"]);
+
+  _templateObject8 = function _templateObject8() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject7() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n      flex-basis: 100%;\n      height:10vh;\n      border:none;\n      background:none;\n      \n    :focus{\n      outline:none;\n    }\n\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -16964,7 +16983,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n          grid-template-columns: 1fr 1fr 1fr;\n    width: 48%;\n    display: grid;\n    justify-items: center;\n    background-color: #00000061;\n    border-radius:30px;\n    padding:3em;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\ndisplay:flex;\nflex-direction:column;\nflex-basis:100%;\nalign-items: center;\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -16974,7 +16993,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n      flex-basis: 100%;\n      height:10vh;\n      border:none;\n      background:none;\n      \n    :focus{\n      outline:none;\n    }\n\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n          grid-template-columns: 1fr 1fr 1fr;\n    width: 48%;\n    min-height:9vh;\n    display: grid;\n    justify-items: center;\n    align-items: center;\n    background-color: #808d98e0;\n    border-radius:6px;\n    padding:2em;\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -16984,7 +17003,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\nposition:relative;\ndisplay:flex;\njustify-content: space-around;\nalign-items: center;\nheight: 19vh;\n\n&::after{\n    content: '';\n    height: 1px;\n    position: absolute;\n    background: black;\n    top: 0;\n    width: 87%;\n    transform-origin: left;\n    animation:", " .5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 3s   forwards;\n    will-change:transform;\n    transform: skewY(3deg);\n}\n\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\nposition:relative;\ndisplay:flex;\njustify-content: space-around;\nalign-items: center;\nheight: 19vh;\n\n&::after{\n    content: '';\n    height: 1px;\n    position: absolute;\n    background: black;\n    top: 0;\n    width: 87%;\n    transform-origin: left;\n    animation:", " .5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 3s   forwards;\n    will-change:transform;\n    transform: skewY(3deg);\n}\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -16994,7 +17013,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\ndisplay: flex;\n\n    align-self: center;\n    min-width: 100%;\n    align-items: center;\n    justify-content:center;\n    flex-direction:column;\n    height:100vh;\n    /* height:27vh; */\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    position:absolute;\n    top:0;\n    left:0;\n    display: flex;\n    align-self: center;\n    min-width: 100%;\n    align-items: center;\n    justify-content:center;\n    flex-direction:row;\n    height:100vh;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -17004,7 +17023,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n        display:flex;\n        text-align:center;\n\n        flex-direction: column;\n        justify-content: center;\n        padding: 3em;\n        padding-left:5em;\n        padding-right:5em;\n        box-sizing: border-box;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n        display:flex;\n        text-align:center;\n\n        flex-direction: column;\n        justify-content: center;\n        padding: 3em;\n        padding-left:5em;\n        padding-right:5em;\n        box-sizing: border-box;\n        animation-delay:2s;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -17032,12 +17051,13 @@ var enterAnimationLine = Object(styled_components__WEBPACK_IMPORTED_MODULE_8__["
 var Container = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject2());
 var SectionContainer = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject3());
 var ButtonsContainer = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject4(), enterAnimationLine);
-var Button = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].button(_templateObject5());
-var ImgContainer = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject6());
-var Img = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].img(_templateObject7());
-var FrontEndSkills = ['css', 'react', 'git', 'node', 'webpack', 'apollo'];
+var ImgContainer = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject5());
+var SubContainer = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div(_templateObject6());
+var Button = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].button(_templateObject7());
+var Img = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].img(_templateObject8());
+var FrontEndSkills = ['css', 'react', 'git', 'node', 'webpack', 'apollo', 'styled'];
 var FrameWorks = ['meteor', 'gatsby', 'nextjs'];
-var BackEndSkills = ['firebase', 'mongoDB', 'express'];
+var BackEndSkills = ['firebase', 'mongoDB', 'express', 'graphql'];
 
 var ClientView =
 /*#__PURE__*/
@@ -17054,9 +17074,10 @@ function (_Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(Container, {
+        className: "animated fadeIn",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 100
+          lineNumber: 111
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_SectionHeader__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -17065,89 +17086,134 @@ function (_Component) {
         sub: "Contractor",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 101
+          lineNumber: 112
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(SectionContainer, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 102
+          lineNumber: 113
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(SubContainer, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 114
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_blocks_projectView_SVG__WEBPACK_IMPORTED_MODULE_9__["default"], {
         type: "monitor",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 103
+          lineNumber: 115
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("h1", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 116
         },
         __self: this
       }, "FrontEnd"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(ImgContainer, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 105
+          lineNumber: 118
         },
         __self: this
       }, _static_section_json__WEBPACK_IMPORTED_MODULE_10__.skills.map(function (skill) {
         if (FrontEndSkills.includes(skill.name)) {
           return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(Img, {
+            key: skill.name,
             src: skill.img,
             alt: "",
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 108
+              lineNumber: 121
             },
             __self: this
           });
         }
-      }))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(SectionContainer, {
+      }))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(SubContainer, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 113
+          lineNumber: 126
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_blocks_projectView_SVG__WEBPACK_IMPORTED_MODULE_9__["default"], {
         type: "cloud",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 114
+          lineNumber: 128
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("h1", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 115
+          lineNumber: 129
         },
         __self: this
       }, "BackEnd"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(ImgContainer, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 116
+          lineNumber: 130
         },
         __self: this
       }, _static_section_json__WEBPACK_IMPORTED_MODULE_10__.skills.map(function (skill) {
         if (BackEndSkills.includes(skill.name)) {
           return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(Img, {
+            key: skill.name,
             src: skill.img,
             alt: "",
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 119
+              lineNumber: 133
             },
             __self: this
           });
         }
-      }))));
+      }))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(SubContainer, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 140
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_blocks_projectView_SVG__WEBPACK_IMPORTED_MODULE_9__["default"], {
+        type: "robot",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 142
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("h1", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 143
+        },
+        __self: this
+      }, "Site Generator"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(ImgContainer, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 144
+        },
+        __self: this
+      }, _static_section_json__WEBPACK_IMPORTED_MODULE_10__.skills.map(function (skill) {
+        if (FrameWorks.includes(skill.name)) {
+          return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(Img, {
+            src: skill.img,
+            alt: "",
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 147
+            },
+            __self: this
+          });
+        }
+      })))));
     }
   }]);
 
   return ClientView;
-}(react__WEBPACK_IMPORTED_MODULE_6__["Component"]); //sds
+}(react__WEBPACK_IMPORTED_MODULE_6__["Component"]); //sdss
 
 
 
@@ -17331,7 +17397,6 @@ function (_Component) {
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_blocks_projectView_SVG__WEBPACK_IMPORTED_MODULE_9__["default"], {
         type: "git",
-        href: "www.google.com",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 70
@@ -17440,7 +17505,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n        opacity:1;\n        transform:translateX(0px);\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n        opacity:1;\n        transform:translateY(0px);\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -17450,7 +17515,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n        transform:translateX(-30px);\n        opacity:0;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n        transform:translateY(-40vw);\n        opacity:1;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -17491,7 +17556,7 @@ var EnterExitCSS = Object(styled_components__WEBPACK_IMPORTED_MODULE_9__["css"])
 var SectionSubHeader = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].h3(_templateObject4(), function (_ref) {
   var ShuffleStatus = _ref.ShuffleStatus;
 
-  if (ShuffleStatus !== 'shuffleIn') {
+  if (ShuffleStatus) {
     return EnterExitCSS;
   }
 }, function (_ref2) {
@@ -17539,7 +17604,6 @@ function (_Component) {
 
       if (page && section < PortfolioSections.length - 1) {
         section = section + 1;
-        console.log(section);
         return this.setState({
           activePortSection: section
         });
@@ -17547,7 +17611,6 @@ function (_Component) {
 
       if (!page && section <= PortfolioSections.length - 1 && section > 0) {
         section = section - 1;
-        console.log('section');
         return this.setState({
           activePortSection: section
         });
@@ -17600,7 +17663,7 @@ function (_Component) {
         pose: ShuffleStatus,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 192
+          lineNumber: 190
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_SectionHeader__WEBPACK_IMPORTED_MODULE_13__["default"], {
@@ -17609,7 +17672,7 @@ function (_Component) {
         sub: "Originals",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 193
+          lineNumber: 191
         },
         __self: this
       }), isActive && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(StyledPort, {
@@ -17619,7 +17682,7 @@ function (_Component) {
         className: "portBox",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 195
+          lineNumber: 193
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_transition_group__WEBPACK_IMPORTED_MODULE_14__["CSSTransitionGroup"], {
@@ -17629,7 +17692,7 @@ function (_Component) {
         transitionLeaveTimeout: 500,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 196
+          lineNumber: 194
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(SectionSubHeader, {
@@ -17637,7 +17700,7 @@ function (_Component) {
         ShuffleStatus: ShuffleStatus,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 202
+          lineNumber: 200
         },
         __self: this
       }, PortfolioTitles[activePortSection])), shownProjects.map(function (el, i) {
@@ -17649,7 +17712,7 @@ function (_Component) {
           cardData: el,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 208
+            lineNumber: 206
           },
           __self: this
         });
@@ -17659,7 +17722,7 @@ function (_Component) {
         handleShuffle: this.handleShuffle,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 212
+          lineNumber: 210
         },
         __self: this
       }));
@@ -17706,7 +17769,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/Sugarbook/Documents/Web-Projects/node/rbreaux2.0/src/elements/view/view.js";
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n\n&.view-enter{\n  flex-basis:0;\n}\n\n&.view-leave{\n  opacity:0;\n  transition:opacity .4s;\n}\n\nposition: absolute;\nwidth:100vw;\n\nleft: 0;\ntop: 0;\nheight: 100%;\ncolor:", ";\noverflow-x:hidden;\nbox-sizing: border-box;\nflex-basis:100%;\ntransition:opacity .4s .8s;\nwill-change:opacity;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\n\n&.view-enter{\n  flex-basis:0;\n}\n\n&.view-leave{\n  opacity:0;\n  transition:opacity .4s;\n}\n\nposition: absolute;\nwidth:100vw;\n\nleft: 0;\ntop: 0;\nheight: 100%;\ncolor:", ";\noverflow-x:hidden;\nbox-sizing: border-box;\nflex-basis:100%;\ntransition:opacity .4s .8s;\nwill-change:opacity;\n\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -17750,7 +17813,7 @@ function (_Component) {
         component: react__WEBPACK_IMPORTED_MODULE_7__["Fragment"],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 39
         },
         __self: this
       }, isActive ? react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Container, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
@@ -17761,26 +17824,26 @@ function (_Component) {
       }, this.props, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 45
         },
         __self: this
       }), side === 'left' && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(___WEBPACK_IMPORTED_MODULE_9__["PersonalView"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, this.props, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 46
         },
         __self: this
       })), side === 'center' && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(___WEBPACK_IMPORTED_MODULE_9__["ClientView"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, this.props, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 47
         },
         __self: this
       })), side === 'right' && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(___WEBPACK_IMPORTED_MODULE_9__["ProjectlView"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, this.props, {
         refViewContainer: this.viewContainer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 48
         },
         __self: this
       }))) : null);
@@ -17801,7 +17864,7 @@ function (_Component) {
 /*! exports provided: sections, default */
 /***/ (function(module) {
 
-module.exports = {"sections":[{"name":"personal","splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1555035590/ryansWebsite/Selfi_B_W.jpg","overlay":"rgb(26, 222, 236)","side":"left","icon":"mountains","shade":"black","index":0},{"name":"client","splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1545683959/autumn-autumn-colours-bright-756903.jpg","overlay":"rgba(240,4,4)","side":"center","icon":"suitcase","shade":"black","index":1},{"name":"projects","splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1555359126/ryansWebsite/adventure-alone-arid-1123567.jpg","overlay":"rgb(255, 255, 255);","side":"right","icon":"gear","shade":"black","index":2}]};
+module.exports = {"sections":[{"name":"personal","splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1555035590/ryansWebsite/Selfi_B_W.jpg","overlay":"rgb(26, 222, 236)","side":"left","icon":"mountains","shade":"black","index":0},{"name":"client","splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1555699972/architecture_white_room.jpg","overlay":"","side":"center","icon":"suitcase","shade":"black","index":1},{"name":"projects","splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1555359126/ryansWebsite/adventure-alone-arid-1123567.jpg","overlay":"","side":"right","icon":"gear","shade":"black","index":2}]};
 
 /***/ }),
 
@@ -17812,7 +17875,7 @@ module.exports = {"sections":[{"name":"personal","splashImg":"https://res.cloudi
 /*! exports provided: business, personal, education, skills, sites, opensource, productivity, default */
 /***/ (function(module) {
 
-module.exports = {"business":{"title":"Startups","content":[{"title":"Phantrix","type":"Clothing Company"},{"title":"JackTheHelper","type":"Student Staffing Company"},{"title":"Black Box Group","type":"Real Estate Group"}],"viewImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1537298665/Portfolio/Phantrix.jpg"},"personal":{"title":"Personal","content":["Health Nut","Rock Climber","Life Long Learner","Mindful"],"viewImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1537298666/Portfolio/glen-canyon.jpg","pageLink":"","gitLink":""},"education":{"title":"Education","content":["NAU","Chemisty/Psychology"],"viewImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/e_brightness:-57/v1545683959/autumn-autumn-colours-bright-756903.jpg","pageLink":"","gitLink":""},"skills":[{"name":"react","img":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1540233824/reactLogo.png","level":"90"},{"name":"meteor","img":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1540234749/58480fcfcef1014c0b5e4942.png","level":"85"},{"name":"firebase","img":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1540346207/firebaseLogo.png","level":"20"},{"name":"apollo","img":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1540234062/apolloLogo.png","level":"60"},{"name":"graphql","img":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1540234014/graphql.svg","level":"60"},{"name":"html","img":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1540233628/css3-html5-logo.png"},{"name":"css","img":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1540233588/CSS3_logo_and_wordmark.png"},{"name":"mongoDB","img":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1540235002/MongoDB.png"},{"name":"node","img":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1540233489/if_nodejs-512_339733.png","level":"90"},{"name":"express","img":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1551337498/expressjs-logo.png.png","level":"60"},{"name":"git","img":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1555309238/Stack_Icons/Git-Icon-1788C.png","level":"60"},{"name":"webpack","img":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1555311857/Stack_Icons/icon-square-big.png","level":"20"}],"sites":[{"name":"Bellcaptian","discription":"A tool for distributing cash for Bell and Valet departments. This tool allows employees to log into a dashboard and keep track of all past cash distributions. Managers can input all cash drops and hours worked and the app distributes the cash accordingly using an algorithm and then sends an automated text to all users of their new adjusted cash amount.","pageLink":"https://bellcaptain.herokuapp.com","previewImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1548393916/screencapture-bellcaptain-herokuapp-Dash-2019-01-24-22_24_37.png","gitLink":"https://github.com/pogojam/bellcaptain","imgLink":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1545432169/Screen_Shot_2018-12-21_at_3.40.44_PM.png","skills":["react","node","meteor","graphql","react","mongoDB"]},{"name":"AZButler","discription":"A single page website for Arizona Butler Services.","url":"www.azbutler.com","gitLink":"https://github.com/pogojam/AZButler","skills":["node","react","express"]},{"name":"Thegirlimetathifi","discription":"","url":"www.theguyimetathifi.com","skills":["react","node"]}],"opensource":[{"name":"FolderImporter","discription":"Automatically generate imports for new .js files created in your folders","url":"https://github.com/pogojam/folderImporter","gitLink":"https://github.com/pogojam/folderImporter","skills":["node"]}],"productivity":[{"name":"CraigslistBot","discription":"This scrapper is build primarily as a tool to automate the buying and selling of products using craigslist. One can simply enter the name of a product and out comes an average selling price on the market a recommendation on a sell and buy price. CraigScraper will monitor Craigslist for any new entries and send an alert if any items match the recommended buy price.","url":"","gitLink":"https://github.com/pogojam/craigScraper","skills":["node","react","express"]},{"name":"Slipgen","previewImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1548394165/screencapture-slipgen-herokuapp-2019-01-24-22_26_55.png","gitLink":"https://github.com/pogojam/SlipGen","pageLink":"https://slipgen.herokuapp.com","discription":"Tool used to generate welcome slips for front desk agents. Slipgen excepts an xml document with guests names and generates a printable welcome slips with the companies logo.","url":"","skills":["react","node"]}]};
+module.exports = {"business":{"title":"Startups","content":[{"title":"Phantrix","type":"Clothing Company"},{"title":"JackTheHelper","type":"Student Staffing Company"},{"title":"Black Box Group","type":"Real Estate Group"}],"viewImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1537298665/Portfolio/Phantrix.jpg"},"personal":{"title":"Personal","content":["Health Nut","Rock Climber","Life Long Learner","Mindful"],"viewImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1537298666/Portfolio/glen-canyon.jpg","pageLink":"","gitLink":""},"education":{"title":"Education","content":["NAU","Chemisty/Psychology"],"viewImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/e_brightness:-57/v1545683959/autumn-autumn-colours-bright-756903.jpg","pageLink":"","gitLink":""},"skills":[{"name":"react","img":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1540233824/reactLogo.png","level":"90"},{"name":"meteor","img":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1540234749/58480fcfcef1014c0b5e4942.png","level":"85"},{"name":"firebase","img":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1540346207/firebaseLogo.png","level":"20"},{"name":"apollo","img":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1540234062/apolloLogo.png","level":"60"},{"name":"graphql","img":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1540234014/graphql.svg","level":"60"},{"name":"html","img":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1540233628/css3-html5-logo.png"},{"name":"css","img":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1540233588/CSS3_logo_and_wordmark.png"},{"name":"mongoDB","img":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1540235002/MongoDB.png"},{"name":"node","img":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1540233489/if_nodejs-512_339733.png","level":"90"},{"name":"express","img":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1551337498/expressjs-logo.png.png","level":"60"},{"name":"git","img":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1555309238/Stack_Icons/Git-Icon-1788C.png","level":"60"},{"name":"webpack","img":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1555311857/Stack_Icons/icon-square-big.png","level":"20"},{"name":"gatsby","img":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1555719956/undefined.svg","level":"20"},{"name":"nextjs","img":"https://camo.githubusercontent.com/1f8dec51cb01842d7bb7a7cd50ade17c75c5e3bd/68747470733a2f2f6173736574732e7a6569742e636f2f696d6167652f75706c6f61642f76313533383336313039312f7265706f7369746f726965732f6e6578742d6a732f6e6578742d6a732e706e67","level":"20"},{"name":"styled","img":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1555720270/Stack_Icons/logo.png","level":"20"}],"sites":[{"name":"Bellcaptian","discription":"A tool for distributing cash for Bell and Valet departments. This tool allows employees to log into a dashboard and keep track of all past cash distributions. Managers can input all cash drops and hours worked and the app distributes the cash accordingly using an algorithm and then sends an automated text to all users of their new adjusted cash amount.","pageLink":"https://bellcaptain.herokuapp.com","previewImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1548393916/screencapture-bellcaptain-herokuapp-Dash-2019-01-24-22_24_37.png","gitLink":"https://github.com/pogojam/bellcaptain","imgLink":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1545432169/Screen_Shot_2018-12-21_at_3.40.44_PM.png","skills":["react","node","meteor","graphql","react","mongoDB"]},{"name":"AZButler","discription":"A single page website for Arizona Butler Services.","pageLink":"https://www.azbutler.com/","previewImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1555701058/Screen_Shot_2019-04-19_at_12.09.47_PM.png","gitLink":"https://github.com/pogojam/AZButler","skills":["node","react","express"]},{"name":"Thegirlimetathifi","discription":"","url":"www.theguyimetathifi.com","skills":["react","node"]}],"opensource":[{"name":"FolderImporter","discription":"Automatically generate import statements for all your vital libraries at the top of your js files.Specify which modules should be automatically imported with local settingsRC file.","url":"https://github.com/pogojam/folderImporter","gitLink":"https://github.com/pogojam/folderImporter","previewImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1555702059/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f363131383131392f313734393434302f36336632323334342d363531362d313165332d396433372d3339656566333761393139322e706e67.png","skills":["node"]}],"productivity":[{"name":"CraigslistBot","discription":"This scrapper is build primarily as a tool to automate the buying and selling of products using craigslist. One can simply enter the name of a product and out comes an average selling price on the market a recommendation on a sell and buy price. CraigScraper will monitor Craigslist for any new entries and send an alert if any items match the recommended buy price.","url":"","gitLink":"https://github.com/pogojam/craigScraper","skills":["node","react","express"]},{"name":"Slipgen","previewImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1548394165/screencapture-slipgen-herokuapp-2019-01-24-22_26_55.png","gitLink":"https://github.com/pogojam/SlipGen","pageLink":"https://slipgen.herokuapp.com","discription":"Tool used to generate welcome slips for front desk agents. Slipgen excepts an xml document with guests names and generates a printable welcome slips with the companies logo.","url":"","skills":["react","node"]}]};
 
 /***/ }),
 

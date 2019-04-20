@@ -190,8 +190,6 @@ const StyledGear = styled(GearSVG)`
 
 
 const StyledRobot = styled(RobotSVG)`
-position: relative;
-    top: 61px;
 
 `
 const StyledIphone = styled(IphoneSVG)`
@@ -234,12 +232,12 @@ export default class SVG extends Component {
             {type ==='gear'&&<StyledGear {...this.props} color={color} />}
             {type ==='mountains'&&<StyledMountain {...this.props} color={MountainCOLOR}  clouds={color} />}
             {type ==='suitcase'&&<SuitcaseSVG {...this.props} color={color}  />}
-            {type === 'iphone'&& <StyledIphone color='black' className='animated fadeIn delay-3s' />}
+            {type === 'iphone'&& <StyledIphone color='black'  />}
             {type === 'monitor'&& <StyledMonitor color='black'  />}
-            {type === 'robot'&& <StyledRobot color='black' className='animated fadeIn delay-4s' />}
+            {type === 'robot'&& <StyledRobot color='black'  />}
             {type === 'git'&& <GitSVG className='animated fadeIn delay-3s' />}
             {type === 'linked'&& <LinkedInSVG className='animated fadeIn delay-3s' />}
-            {type === 'cloud'&& <CloudSVG className='animated fadeIn delay-3s' />}
+            {type === 'cloud'&& <CloudSVG  />}
         </Container>        
     )
   }

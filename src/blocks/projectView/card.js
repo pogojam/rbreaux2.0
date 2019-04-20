@@ -3,6 +3,8 @@ import styled from "styled-components";
 import posed from "react-pose";
 import Line from './line'
 import { CSSTransitionGroup } from 'react-transition-group'
+import SVG from './SVG'
+
 
 const Container = posed(styled.div`
 
@@ -98,6 +100,7 @@ border:none;
 const Container_Skills = posed(styled.div`
 
 grid-template-columns: 1fr 1fr 1fr;
+
   
   width:80%;
   display: grid;
@@ -120,10 +123,13 @@ grid-template-columns: 1fr 1fr 1fr;
 })
 
 const Container_Info = posed(styled.div`
+      position:relative;
       display:grid;
       grid-template-columns: 1fr 3fr;
     grid-template-rows: 1fr 1fr;
     align-items: center;
+    width: 100%;
+
 
         a{
           transition:all .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -285,6 +291,24 @@ padding-right:'0px';
 })
 
 
+const CirclePreview = styled.div`
+      position:absolute;
+      margin:auto;
+      top:0;
+      left:4.4vw;
+      bottom:0;
+
+      width:9vw;
+      height:9vw;
+      border-radius:50%;
+
+      background-image:url(${({previewImg})=>previewImg});
+      background-size: cover;
+
+
+`
+
+
 
 // Component Inital State !!!!!!!
     // 2 Boxs for each row has three states left right and center 
@@ -418,7 +442,12 @@ const Info = ({ cardData }) => {
   
   return (
     <Container_Info  >
-      <a href={cardData.gitLink}>Github</a>
+    <a href={cardData.gitLink}>
+      <SVG type='git' >
+        Github
+      </SVG>
+        </a>
+        <CirclePreview previewImg={cardData.previewImg}  />
       <p  style={{gridRow:"1 / 3",gridColumn:"2/3"}} >{cardData.discription}</p>
       <a href={cardData.pageLink}>Visit</a>
     </Container_Info>

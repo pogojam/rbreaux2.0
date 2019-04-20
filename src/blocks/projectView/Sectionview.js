@@ -60,18 +60,20 @@ left:0;
 overflow:hidden;
 transform:translateX(${({index})=>index*100+"%"});
 transform-origin: ${({index})=>index*100+50+"%"} 50%;
-transition:transform .6s cubic-bezier(0.455, 0.03, 0.515, 0.955) .5s ,width .3s cubic-bezier(0.455, 0.03, 0.515, 0.955) .9s;
+transition:transform .6s cubic-bezier(0.455, 0.03, 0.515, 0.955) .5s ,width .3s cubic-bezier(0.455, 0.03, 0.515, 0.955) 1.2s;
 
 
     &:hover{
       
       .nav{
-  ${({isActive})=>isActive?'':'transform:translateX(50%) translateY(35vh);'}
+  ${({isActive})=>isActive?'':'transform:translateX(50%) translateY(25vh);'}
       }
-      /* .Title-Header{
-        ${({isActive})=>isActive?'transform:translateX(50%) translateY(-10vh);':'transform:translateX(50%) translateY(-10vh);'}
-        transition:.4s;
-      } */
+      .Title-Header{
+        ${({isActive})=>isActive?'transform:translateX(50%) scale(1.1);':'transform:translateX(50%) scale(1.1);'}
+      }
+
+      
+
     }
 
 ${({isActive})=>{
@@ -178,7 +180,7 @@ export default class Sectionview extends Component {
     return (
       <Container   isActive={isActive} activeSection={activeSection}  {...this.props}  >
           <SecondaryContainer>
-        <Background ref={(e)=> this.background = e } isActive={isActive} {...this.props}/>
+        <Background  ref={(e)=> this.background = e } isActive={isActive} {...this.props}/>
       <Title {...this.props} left name={name} isActive={isActive} >
         
       </Title>

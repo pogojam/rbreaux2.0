@@ -31,7 +31,6 @@ z-index:999;
       let box = document.querySelector('.portBox')
       let boxComputedStyled = getComputedStyle(box)
       let boxWidth = box.getBoundingClientRect().width - (parseFloat(boxComputedStyled.paddingLeft)*2)
-        console.log(boxComputedStyled.paddingLeft,boxWidth);
         
       return side==="left"?boxWidth/2+"px":"-"+boxWidth/2+"px"
     },

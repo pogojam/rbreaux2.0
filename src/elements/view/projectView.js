@@ -22,12 +22,12 @@ const Animations = {
 // Styled Compnents
 
 const subHeaderShuffleOut = css`
-        transform:translateX(-30px);
-        opacity:0;
+        transform:translateY(-40vw);
+        opacity:1;
 `
 const subHeaderShuffleIn = css`
         opacity:1;
-        transform:translateX(0px);
+        transform:translateY(0px);
 `
 
 const EnterExitCSS = css`
@@ -57,7 +57,7 @@ const SectionSubHeader = styled.h3`
     will-change:opacity;
     transition:opacity .3s,transform .3s ;
     
-    ${({ShuffleStatus})=>{if(ShuffleStatus!=='shuffleIn'){
+    ${({ShuffleStatus})=>{if(ShuffleStatus){
         return EnterExitCSS
     }}}
 
@@ -134,14 +134,12 @@ class ProjectView extends Component {
         
         if(page && section<PortfolioSections.length-1){
             section = section+1
-            console.log(section);
          return   this.setState({
                 activePortSection:section
         })
         }
         if(!page && section<=PortfolioSections.length-1 && section>0){
                 section = section -1
-                console.log('section');
                 
               return  this.setState({
             activePortSection:section

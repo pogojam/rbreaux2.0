@@ -88,6 +88,18 @@
       "name":"webpack",
       "img":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1555311857/Stack_Icons/icon-square-big.png",
       "level":"20"
+    },{
+      "name":"gatsby",
+      "img":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1555719956/undefined.svg",
+      "level":"20"
+    },{
+      "name":"nextjs",
+      "img":"https://camo.githubusercontent.com/1f8dec51cb01842d7bb7a7cd50ade17c75c5e3bd/68747470733a2f2f6173736574732e7a6569742e636f2f696d6167652f75706c6f61642f76313533383336313039312f7265706f7369746f726965732f6e6578742d6a732f6e6578742d6a732e706e67",
+      "level":"20"
+    },{
+      "name":"styled",
+      "img":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1555720270/Stack_Icons/logo.png",
+      "level":"20"
     }
   ],
   "sites": [
@@ -103,7 +115,8 @@
     {
       "name": "AZButler",
       "discription": "A single page website for Arizona Butler Services.",
-      "url": "www.azbutler.com",
+      "pageLink": "https://www.azbutler.com/",
+      "previewImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1555701058/Screen_Shot_2019-04-19_at_12.09.47_PM.png",
       "gitLink": "https://github.com/pogojam/AZButler",
       "skills": ["node", "react", "express"]
     },
@@ -117,9 +130,10 @@
   "opensource":[
     {
       "name": "FolderImporter",
-      "discription": "Automatically generate imports for new .js files created in your folders",
+      "discription": "Automatically generate import statements for all your vital libraries at the top of your js files.Specify which modules should be automatically imported with local settingsRC file.",
       "url": "https://github.com/pogojam/folderImporter",
       "gitLink": "https://github.com/pogojam/folderImporter",
+      "previewImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1555702059/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f363131383131392f313734393434302f36336632323334342d363531362d313165332d396433372d3339656566333761393139322e706e67.png",
       "skills": ["node"]
     }
   ],

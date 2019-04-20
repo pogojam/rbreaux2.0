@@ -78,9 +78,9 @@ will-change:transform ;
 
 
 const Header = styled.h1`
-
+cursor:pointer;
 transform:translateX(50%);
-
+transition:.4s;
 &:after{
   transition: min-width .9s cubic-bezier(0.455, 0.03, 0.515, 0.955);
     content: '';  
@@ -107,12 +107,12 @@ transform:translateX(50%);
 
 export default class Title extends Component {
     render() {
-        const {isActive,name,side} = this.props
+        const {isActive,name,side,handleSectionChange} = this.props
     return (
         <Container  {...this.props}  >
           <Nav {...this.props} />
           {this.props.children}
-          <Header className="Title-Header" {...this.props}>
+          <Header onClick={()=> handleSectionChange(side)} className="Title-Header" {...this.props}>
       {isActive?'':name}
       </Header>
       <BackArrow isActive={isActive} />

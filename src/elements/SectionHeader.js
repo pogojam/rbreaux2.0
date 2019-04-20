@@ -5,14 +5,14 @@ import posed from 'react-pose'
 const headerRigthCSS = css`
 justify-self: end;
 text-align:right;
-right: 0;
+right: 30px;
 padding-right: 1.5em;
 `
 const headerLeftCSS = css`
 justify-self: end;
 text-align:left;
 left:0;
-padding-left: 1.5em;
+padding-right: 1.5em;
 `
 
 const Header = styled.h2`
@@ -33,7 +33,7 @@ margin-bottom:0px;
     width: 144px;
     position: absolute;
     bottom: 0;
-    left: 0;
+    right:0;
 }
 
 `

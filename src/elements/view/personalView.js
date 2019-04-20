@@ -67,7 +67,7 @@ export default class PersonalView extends Component {
             </ParagraphContainer>
           <SocialContainer>
               <a href="https://github.com/pogojam">
-            <SVG type='git' href='www.google.com'/>
+            <SVG type='git' />
               </a>
               <a href="https://www.linkedin.com/in/ryan-breaux-4603396a/">
             <SVG type='linked' href='' />

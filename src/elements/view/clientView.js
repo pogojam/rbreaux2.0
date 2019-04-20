@@ -23,19 +23,21 @@ const Container = styled.div`
         padding-left:5em;
         padding-right:5em;
         box-sizing: border-box;
+        animation-delay:2s;
 `
 
 
 const SectionContainer = styled.div`
-display: flex;
-
+    position:absolute;
+    top:0;
+    left:0;
+    display: flex;
     align-self: center;
     min-width: 100%;
     align-items: center;
     justify-content:center;
-    flex-direction:column;
+    flex-direction:row;
     height:100vh;
-    /* height:27vh; */
 `
 
 const ButtonsContainer = styled.div`
@@ -57,7 +59,24 @@ height: 19vh;
     will-change:transform;
     transform: skewY(3deg);
 }
+`
+const ImgContainer = styled.div`
+          grid-template-columns: 1fr 1fr 1fr;
+    width: 48%;
+    min-height:9vh;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: #808d98e0;
+    border-radius:6px;
+    padding:2em;
+`
 
+const SubContainer = styled.div`
+display:flex;
+flex-direction:column;
+flex-basis:100%;
+align-items: center;
 `
 
 const Button = styled.button`
@@ -72,23 +91,15 @@ const Button = styled.button`
 
 `
 
-const ImgContainer = styled.div`
-          grid-template-columns: 1fr 1fr 1fr;
-    width: 48%;
-    display: grid;
-    justify-items: center;
-    background-color: #00000061;
-    border-radius:30px;
-    padding:3em;
-`
+
 const Img = styled.img`
   width:40px;
 `
 
 
-const FrontEndSkills = ['css','react','git','node','webpack','apollo']
+const FrontEndSkills = ['css','react','git','node','webpack','apollo','styled']
 const FrameWorks = ['meteor','gatsby','nextjs']
-const BackEndSkills = ['firebase','mongoDB','express']
+const BackEndSkills = ['firebase','mongoDB','express','graphql']
 
 
 
@@ -97,33 +108,53 @@ const BackEndSkills = ['firebase','mongoDB','express']
 export default class ClientView extends Component {
   render() {
     return (
-      <Container>
+      <Container className='animated fadeIn' >
         <SectionHeader right main="Web/Productivity Solutions" sub="Contractor" />
           <SectionContainer>
+            <SubContainer>
               <SVG  type='monitor'/>
           <h1>FrontEnd</h1>
+          {/* <p>I use React and StyledComponents with almost all of my projects. </p> */}
       <ImgContainer>
         {data.skills.map((skill)=>{
           if(FrontEndSkills.includes(skill.name)){
-            return <Img src={skill.img} alt=""/>
+            return <Img key={skill.name} src={skill.img} alt=""/>
           }
         })}          
       </ImgContainer>
-          </SectionContainer>
-          <SectionContainer>
+            </SubContainer>
+        <SubContainer>
+
           <SVG type="cloud" />
           <h1>BackEnd</h1>
       <ImgContainer>
         {data.skills.map((skill)=>{
           if(BackEndSkills.includes(skill.name)){
-            return <Img src={skill.img} alt=""/>
+            return <Img key={skill.name} src={skill.img} alt=""/>
           }
         })}          
       </ImgContainer>
+
+        </SubContainer>
+
+        <SubContainer>
+
+<SVG type="robot" />
+<h1>Site Generator</h1>
+<ImgContainer>
+{data.skills.map((skill)=>{
+if(FrameWorks.includes(skill.name)){
+  return <Img src={skill.img} alt=""/>
+}
+})}
+</ImgContainer>
+
+</SubContainer>
+
           </SectionContainer>
       </Container>
     )
   }
 }
 
-//sds
+//sdss

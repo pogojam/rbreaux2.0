@@ -114,7 +114,7 @@ const Container = posed(styled.div`
 @media(max-width:900px){
     width:100vw
 }
-        background-color: #ffffff3b;
+        /* background-color: #ffffff3b; */
         bottom: 0;
         display:flex;
       min-height:10vh;
