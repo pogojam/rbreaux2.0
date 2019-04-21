@@ -105,7 +105,7 @@
   "sites": [
     {
       "name": "Bellcaptian",
-      "discription": "A tool for distributing cash for Bell and Valet departments. This tool allows employees to log into a dashboard and keep track of all past cash distributions. Managers can input all cash drops and hours worked and the app distributes the cash accordingly using an algorithm and then sends an automated text to all users of their new adjusted cash amount.",
+      "discription": "A tool for distributing cash for Bell and Valet departments. This tool allows employees to log into a dashboard and keep track of all past cash distributions. Managers can input all cash drops and hours worked and the app distributes the cash accordingly using an algorithm and then sends an automated text to all users of their new adjusted cash amount.  \n Guest email:guest@gmail.com pass:1234  \n",
       "pageLink": "https://bellcaptain.herokuapp.com",
       "previewImg": "https://res.cloudinary.com/dxjse9tsv/image/upload/v1548393916/screencapture-bellcaptain-herokuapp-Dash-2019-01-24-22_24_37.png",
       "gitLink": "https://github.com/pogojam/bellcaptain",

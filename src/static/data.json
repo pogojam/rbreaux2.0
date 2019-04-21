@@ -19,7 +19,7 @@
         },{
             "name":"projects",
             "splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1555359126/ryansWebsite/adventure-alone-arid-1123567.jpg",
-            "overlay":"#ed14e4",
+            "overlay":"#ffffff",
             "side":"right",
             "icon":"gear",
             "shade":"black",
