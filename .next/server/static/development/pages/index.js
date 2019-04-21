@@ -570,90 +570,98 @@ var Home = function Home() {
       lineNumber: 13
     },
     __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
+    href: "https://fonts.googleapis.com/css?family=Roboto+Condensed",
+    rel: "stylesheet",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "Main-Container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 16
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "loadingscreen",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 18
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "Splash-Logo animated fadeIn ",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 19
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "Splash-Logo-Letter-Container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 20
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "Splash-Logo-Letter",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 21
     },
     __self: this
   }, "R")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "Splash-Logo-Letter-Container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 23
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "Splash-Logo-Letter",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 24
     },
     __self: this
   }, "B"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "lds-ring",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 27
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 27
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 27
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 27
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 27
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_src_app__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 29
     },
     __self: this
   })));
@@ -853,7 +861,7 @@ var _static_data_json__WEBPACK_IMPORTED_MODULE_9___namespace = /*#__PURE__*/__we
 var _jsxFileName = "/Users/Sugarbook/Documents/Web-Projects/node/rbreaux2.0/src/blocks/Nav.js";
 
 function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    position:absolute;\n    background-color:#00000047;\n    right:0;\n    width:5vw;\n    height:100vh;\n    box-shadow: 5px 4px 10px 2px rgba(0,0,0,0.75);\n    border-bottom-left-radius: 29px;\n    border-bottom-right-radius: 29px;\n    top:-110vh;\n    transform:", ";\n    will-change:transform;\n    transition:transform .4s cubic-bezier(0.455, 0.03, 0.515, 0.955) ;\n    display: flex;\n    justify-content: flex-end;\n    flex-direction: column;\n    padding:.5em;\n\n\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n    position:absolute;\n    background-color:#00000047;\n    right:0;\n    width:5vw;\n    height:100vh;\n    box-shadow: 5px 4px 10px 2px rgba(0,0,0,0.75);\n    border-bottom-left-radius: 29px;\n    border-bottom-right-radius: 29px;\n    top:-110vh;\n    transform:", ";\n    will-change:transform;\n    transition:transform .4s cubic-bezier(0.455, 0.03, 0.515, 0.955) 1.8s ;\n    display: flex;\n    justify-content: flex-end;\n    flex-direction: column;\n    padding:.5em;\n\n\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -879,7 +887,7 @@ function _templateObject() {
 var ViewSVG = styled_components__WEBPACK_IMPORTED_MODULE_7___default()(_projectView_SVG__WEBPACK_IMPORTED_MODULE_8__["default"])(_templateObject());
 var Container = styled_components__WEBPACK_IMPORTED_MODULE_7___default.a.div(_templateObject2(), function (_ref) {
   var isActive = _ref.isActive;
-  return isActive ? 'translateX(100%) translateY(25vh)' : 'translateX(50%)';
+  return isActive ? 'translateX(100%) translateY(25vh)' : 'translateX(100%)';
 });
 var SectionsNameArray = ['personal', 'client', 'projects'];
 
@@ -908,7 +916,7 @@ function (_Component) {
         className: "nav",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 48
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(ViewSVG, {
@@ -919,7 +927,7 @@ function (_Component) {
         type: icon,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51
+          lineNumber: 57
         },
         __self: this
       }));
@@ -1948,7 +1956,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\nz-index:1;\nwidth:calc(100vw/3);\nheight:100%;\nposition:absolute;\ntop:0;\nleft:0;\noverflow:hidden;\ntransform:translateX(", ");\ntransform-origin: ", " 50%;\ntransition:transform .6s cubic-bezier(0.455, 0.03, 0.515, 0.955) .5s ,width .3s cubic-bezier(0.455, 0.03, 0.515, 0.955) 1.2s;\n\n\n    &:hover{\n      \n      .nav{\n  ", "\n      }\n      .Title-Header{\n        ", "\n      }\n\n      \n\n    }\n\n", "\nwill-change: transform,width,opacity;\n\n&.section-enter{\n  /* transform: translate3d(", ",0,0); */\n  z-index:0;\n  transform:scale(.5)translate3d(", ",0,0);\n  opacity:.01;\n  transition:transform .5s 1.5;\n}\n&.section-enter.section-enter-active{\n  transform:scale(1) translate3d(", ",0,0);\n  opacity:1;\n}\n\n&.section-leave{\n    transform:scale(.5) translate3d(", ",0,0);\n    opacity:.4;\n    z-index:0;\n    transition:transform .8s cubic-bezier(0.455, 0.03, 0.515, 0.955) , opacity .8s linear;\n}\n\n&:hover  {\n  &::after{\n    opacity:", ";\n  }\n  }\n\n  &::before{\n  /* content:'';\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n\nbackground-image:url(", ");\nbackground-size: 110vh 110vw;\nbackground-attachment: fixed;\nbackground-size: cover;\nfilter: blur(10px);\nopacity:", ";\ntransition:opacity .4s 1s;\nwill-change:opacity; */\n}\n\n\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\nz-index:1;\nwidth:calc(100vw/3);\nheight:100%;\nposition:absolute;\ntop:0;\nleft:0;\noverflow:hidden;\ntransform:translateX(", ");\ntransform-origin: ", " 50%;\ntransition:transform .6s cubic-bezier(0.455, 0.03, 0.515, 0.955) .5s ,width .3s cubic-bezier(0.455, 0.03, 0.515, 0.955) 1.2s;\n\n\n    &:hover{\n      \n      .nav{\n  /* ", " */\n      }\n      .Title-Header{\n        ", ";\n  \n      }\n      \n\n    }\n\n", "\nwill-change: transform,width,opacity;\n\n&.section-enter{\n  /* transform: translate3d(", ",0,0); */\n  z-index:0;\n  transform:scale(.5)translate3d(", ",0,0);\n  opacity:.01;\n  transition:transform .5s 1.5;\n}\n&.section-enter.section-enter-active{\n  transform:scale(1) translate3d(", ",0,0);\n  opacity:1;\n}\n\n&.section-leave{\n    transform:scale(.5) translate3d(", ",0,0);\n    opacity:.4;\n    z-index:0;\n    transition:transform .8s cubic-bezier(0.455, 0.03, 0.515, 0.955) , opacity .8s linear;\n}\n\n&:hover  {\n  &::after{\n    opacity:", ";\n  }\n  }\n\n  &::before{\n  /* content:'';\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n\nbackground-image:url(", ");\nbackground-size: 110vh 110vw;\nbackground-attachment: fixed;\nbackground-size: cover;\nfilter: blur(10px);\nopacity:", ";\ntransition:opacity .4s 1s;\nwill-change:opacity; */\n}\n\n\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -1978,7 +1986,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\nz-index: -1;\nposition:absolute;\nheight:100%;\nwidth:100vw;\n\nbackground-image:url(", ");\nbackground-size:cover;\nbackground-repeat: no-repeat;\n\ntransform:translate3d(", "),0,0);\nfilter:", ";\ntransition: transform ", " , filter .6s;\nwill-change:transform filter;\n\n&::before{\n\ncontent: \"\";\ndisplay:block;\nposition:absolute;\ntop:0;\nwidth: 100%;\nheight: 100%;\nbackground:", ";\nopacity:", ";\ntransition:", ";\nwill-change:opacity;\nz-index: -1;\n}\n\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\nz-index: -1;\nposition:absolute;\nheight:100%;\nwidth:100vw;\n\nbackground-image:url(", ");\nbackground-size:cover;\nbackground-repeat: no-repeat;\n\ntransform:translate3d(", "),0,0);\nfilter:", ";\ntransition: transform ", " , filter .6s;\nwill-change:transform filter;\n\n&::before{\n\ncontent: \"\";\ndisplay:block;\nposition:absolute;\ntop:0;\nwidth: 100%;\nheight: 100%;\nbackground:", ";\nopacity:", ";\ntransition:", ";\nwill-change:opacity;\nz-index: -1;\n}\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -2027,7 +2035,7 @@ var Container = styled_components__WEBPACK_IMPORTED_MODULE_8___default.a.div(_te
   return isActive ? '' : 'transform:translateX(50%) translateY(25vh);';
 }, function (_ref11) {
   var isActive = _ref11.isActive;
-  return isActive ? 'transform:translateX(50%) scale(1.1);' : 'transform:translateX(50%) scale(1.1);';
+  return isActive ? '' : 'transform:translateX(50%) scale(1.1);opacity:1;';
 }, function (_ref12) {
   var isActive = _ref12.isActive;
 
@@ -2100,16 +2108,17 @@ function (_Component) {
       }, this.props, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 181
+          lineNumber: 180
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(SecondaryContainer, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 182
+          lineNumber: 181
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Background, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+        className: "background",
         ref: function ref(e) {
           return _this2.background = e;
         },
@@ -2117,7 +2126,7 @@ function (_Component) {
       }, this.props, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 183
+          lineNumber: 182
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_title__WEBPACK_IMPORTED_MODULE_10__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, this.props, {
@@ -2126,7 +2135,7 @@ function (_Component) {
         isActive: isActive,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 184
+          lineNumber: 183
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_elements_view_view__WEBPACK_IMPORTED_MODULE_9__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
@@ -2137,7 +2146,7 @@ function (_Component) {
       }, this.props, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 187
+          lineNumber: 186
         },
         __self: this
       }))));
@@ -3118,7 +3127,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/Sugarbook/Documents/Web-Projects/node/rbreaux2.0/src/blocks/projectView/title.js";
 
 function _templateObject4() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\ncursor:pointer;\ntransform:translateX(50%);\ntransition:.4s;\n&:after{\n  transition: min-width .9s cubic-bezier(0.455, 0.03, 0.515, 0.955);\n    content: '';  \n    position: absolute;\n    left: 50%;\n    top:130%;\n    transform: translateX(-50%);\n    background-color: white;\n    min-width: 0%;\n    height: 1px;\n\n  &:before{\n    \n  }\n\n  }\n\n\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__["default"])(["\ncursor:pointer;\ntransform:translateX(50%);\nfont-family: 'Roboto Condensed', sans-serif;\ncolor: #2f33339c;\ntext-shadow: 0px 0px 3px rgba(242,22,22,1);\nfont-size:3.2em;\nopacity:", ";\n\ntransition: transform .3s , opacity .3s;\nwill-change:opacity transform;\n&:after{\n    content: '';  \n    position: absolute;\n    left: 50%;\n    top:130%;\n    transform: translateX(-50%);\n    background-color: white;\n    min-width: 0%;\n    height: 1px;\n  &:before{\n    \n  }\n\n  }\n\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -3196,7 +3205,10 @@ var Container = styled_components__WEBPACK_IMPORTED_MODULE_8___default.a.div(_te
   var shade = _ref8.shade;
   shade;
 }, BackArrow);
-var Header = styled_components__WEBPACK_IMPORTED_MODULE_8___default.a.h1(_templateObject4());
+var Header = styled_components__WEBPACK_IMPORTED_MODULE_8___default.a.h1(_templateObject4(), function (_ref9) {
+  var isActive = _ref9.isActive;
+  return isActive ? '0' : '.4';
+});
 
 var Title =
 /*#__PURE__*/
@@ -3220,13 +3232,13 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Container, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, this.props, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 112
+          lineNumber: 120
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_9__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, this.props, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 113
+          lineNumber: 121
         },
         __self: this
       })), this.props.children, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Header, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
@@ -3237,14 +3249,14 @@ function (_Component) {
       }, this.props, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 115
+          lineNumber: 123
         },
         __self: this
-      }), isActive ? '' : name), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(BackArrow, {
+      }), name), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(BackArrow, {
         isActive: isActive,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 118
+          lineNumber: 126
         },
         __self: this
       }));
@@ -4355,7 +4367,7 @@ function (_Component) {
 /*! exports provided: sections, default */
 /***/ (function(module) {
 
-module.exports = {"sections":[{"name":"personal","splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1555035590/ryansWebsite/Selfi_B_W.jpg","overlay":"rgb(26, 222, 236)","side":"left","icon":"mountains","shade":"black","index":0},{"name":"tech/stack","splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1555699972/architecture_white_room.jpg","overlay":"","side":"center","icon":"suitcase","shade":"black","index":1},{"name":"projects","splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1555359126/ryansWebsite/adventure-alone-arid-1123567.jpg","overlay":"","side":"right","icon":"gear","shade":"black","index":2}]};
+module.exports = {"sections":[{"name":"personal","splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1555035590/ryansWebsite/Selfi_B_W.jpg","overlay":"rgb(238, 239, 241)","side":"left","icon":"mountains","shade":"black","index":0},{"name":"tech/stack","splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1555699972/architecture_white_room.jpg","overlay":"bisque","side":"center","icon":"suitcase","shade":"black","index":1},{"name":"projects","splashImg":"https://res.cloudinary.com/dxjse9tsv/image/upload/v1555359126/ryansWebsite/adventure-alone-arid-1123567.jpg","overlay":"#ed14e4","side":"right","icon":"gear","shade":"black","index":2}]};
 
 /***/ }),
 

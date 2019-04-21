@@ -3,6 +3,12 @@ import styled,{keyframes} from 'styled-components'
 import SVG from './projectView/SVG'
 import data from '../static/data.json'
 
+
+
+
+
+
+
 const ViewSVG = styled(SVG)`
 cursor:pointer;
   padding-bottom: 15px;
@@ -20,9 +26,9 @@ const Container = styled.div`
     border-bottom-left-radius: 29px;
     border-bottom-right-radius: 29px;
     top:-110vh;
-    transform:${({isActive})=>isActive?'translateX(100%) translateY(25vh)':'translateX(50%)'};
+    transform:${({isActive})=>isActive?'translateX(100%) translateY(25vh)':'translateX(100%)'};
     will-change:transform;
-    transition:transform .4s cubic-bezier(0.455, 0.03, 0.515, 0.955) ;
+    transition:transform .4s cubic-bezier(0.455, 0.03, 0.515, 0.955) 1.8s ;
     display: flex;
     justify-content: flex-end;
     flex-direction: column;

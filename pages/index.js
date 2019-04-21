@@ -11,6 +11,7 @@ return<div>
     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     <meta name="viewport" content="width=device-width"></meta>
     <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"/>
 </Head>
 <div className='Main-Container'>
 

@@ -77,12 +77,22 @@ will-change:transform ;
 `
 
 
+
+
+
+
 const Header = styled.h1`
 cursor:pointer;
 transform:translateX(50%);
-transition:.4s;
+font-family: 'Roboto Condensed', sans-serif;
+color: #2f33339c;
+text-shadow: 0px 0px 3px rgba(242,22,22,1);
+font-size:3.2em;
+opacity:${({isActive})=>isActive?'0':'.4'};
+
+transition: transform .3s , opacity .3s;
+will-change:opacity transform;
 &:after{
-  transition: min-width .9s cubic-bezier(0.455, 0.03, 0.515, 0.955);
     content: '';  
     position: absolute;
     left: 50%;
@@ -91,13 +101,11 @@ transition:.4s;
     background-color: white;
     min-width: 0%;
     height: 1px;
-
   &:before{
     
   }
 
   }
-
 
 `
 
@@ -113,7 +121,7 @@ export default class Title extends Component {
           <Nav {...this.props} />
           {this.props.children}
           <Header onClick={()=> handleSectionChange(side)} className="Title-Header" {...this.props}>
-      {isActive?'':name}
+      {name}
       </Header>
       <BackArrow isActive={isActive} />
         </Container>

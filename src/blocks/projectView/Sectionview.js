@@ -36,7 +36,6 @@ transition:${({isActive})=>isActive?'opacity .1s':'opacity .5s 1.4s'};
 will-change:opacity;
 z-index: -1;
 }
-
 `
 
 const animateSectionActive = css`
@@ -66,12 +65,12 @@ transition:transform .6s cubic-bezier(0.455, 0.03, 0.515, 0.955) .5s ,width .3s 
     &:hover{
       
       .nav{
-  ${({isActive})=>isActive?'':'transform:translateX(50%) translateY(25vh);'}
+  /* ${({isActive})=>isActive?'':'transform:translateX(50%) translateY(25vh);'} */
       }
       .Title-Header{
-        ${({isActive})=>isActive?'transform:translateX(50%) scale(1.1);':'transform:translateX(50%) scale(1.1);'}
+        ${({isActive})=>isActive?'':'transform:translateX(50%) scale(1.1);opacity:1;'};
+  
       }
-
       
 
     }
@@ -180,7 +179,7 @@ export default class Sectionview extends Component {
     return (
       <Container   isActive={isActive} activeSection={activeSection}  {...this.props}  >
           <SecondaryContainer>
-        <Background  ref={(e)=> this.background = e } isActive={isActive} {...this.props}/>
+        <Background className='background'  ref={(e)=> this.background = e } isActive={isActive} {...this.props}/>
       <Title {...this.props} left name={name} isActive={isActive} >
         
       </Title>
