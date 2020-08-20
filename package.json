@@ -22,7 +22,7 @@
     "normalize.css": "^8.0.1",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "react-pose": "^4.0.8",
+    "react-pose": "^4.0.10",
     "react-transition-group": "^1.2.1",
     "styled-components": "^4.1.3"
   }
